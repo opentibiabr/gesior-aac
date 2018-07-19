@@ -3,17 +3,17 @@
 Confira o projeto em [Ferobra](https://ferobraglobal.com) 
 > **Lembrando que esse repositório não está com a ultima versão do Ferobra.**
 ### Entre em contato
-> +55 (62) 9 9934-0570. ![whatsapp](https://cdn.icon-icons.com/icons2/373/PNG/256/Whatsapp_37229.png)
+> +55 (62) 9 9934-0570. ![whatsapp](https://cdn.icon-icons.com/icons2/373/PNG/32/Whatsapp_37229.png) <br>
 > Ricardo Souza#8938 Discord
 
-####PT-BR
+#### PT-BR
 * Bem vindo ao tutorial de instalação desse lindo website feito com amor e carinho pra vcs meus queridos tibianos.
 * Lembrando que o Projeto todo em si não é de minha autoria ele tem diversos participantes.
 * Essa se trata de uma versão Estável do produto, isso não a deixa livre de bugs.
 * Se encontrar bugs ou tiver interesse que seja desenvolvido alguma nova funcionalidade fique a vontade para abrir um Issue.
 * sem mais delongas segue o tutorial.
 
-####EN
+#### EN
 * Welcome to the installation tutorial of this beautiful website made with love and care for you my dear Tibians.
 * Remembering that the Project itself is not my own, it has several participants.
 * This is a Stable version of the product, this does not leave it free of bugs.

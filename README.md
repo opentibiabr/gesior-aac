@@ -77,7 +77,7 @@ sudo /etc/init.d/apache2 restart
 ```
 
 ## Main Dev
-* @riicksouzaa
+@riicksouzaa
 
 ## credits
 @gesior <br>

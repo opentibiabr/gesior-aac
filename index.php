@@ -12,9 +12,9 @@ if(!defined('ONLY_PAGE'))
 	define('ONLY_PAGE', false);
 
 define('AJAXREQUEST', false);
-header("X-Content-Type-Options: nosniff");
-header("X-FRAME-OPTIONS: DENY");
-header("X-XSS-Protection: 1");
+//header("X-Content-Type-Options: nosniff");
+//header("X-FRAME-OPTIONS: DENY");
+//header("X-XSS-Protection: 1");
 	
 // check if site is disabled/requires installation
 include_once('./system/load.loadCheck.php');

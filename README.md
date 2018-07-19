@@ -60,7 +60,6 @@ and search for something like this:
 ```
 
 * and add something like this /\
-* now restart a apache2 server and enjoy your new security. (sudo service apache2 restart)
 
 ### PHP NEEDS THAT FOLLOWING
 ```bash
@@ -74,6 +73,10 @@ extension=curl.so
 now restart apache.:
 ```bash
 sudo /etc/init.d/apache2 restart
+```
+or
+```bash
+sudo service apache2 restart
 ```
 
 ## Main Dev

@@ -1,0 +1,25 @@
+ErrorDocument 403 https://ferobraglobal.com/?subtopic=erro
+ErrorDocument 404 https://ferobraglobal.com/?subtopic=erro
+#ErrorDocument 500 https://ferobraglobal.com/?subtopic=erro
+
+# Security to css and js files
+<FilesMatch "\.(html|htm|js|css|png|jpeg|jpg|pdf)$">
+    FileETag None
+    <ifModule mod_headers.c>
+        Header unset ETag
+        Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+        Header set X-Content-Type-Options "nosniff"
+        Header set Pragma "no-cache"
+        Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+    </ifModule>
+</FilesMatch>
+
+RewriteEngine on
+Options All -Indexes
+
+# WC HTTPS Redirect
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond $1 !^(index\.php|css|js|assets|img|static|uploads|favicon\.ico)
+RewriteRule ^(.*)$ $1 [L]

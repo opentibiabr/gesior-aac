@@ -1,0 +1,11 @@
+{
+    "name": "therealgesiorferobra/website",
+    "description": "The most intersting gesior on the planet",
+    "authors": [
+        {
+            "name": "Ricardo Souza",
+            "email": "souzaariick@gmail.com"
+        }
+    ],
+    "require": {}
+}

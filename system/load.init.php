@@ -30,7 +30,12 @@ if(Website::getWebsiteConfig()->getValue('useServerConfigCache'))
 	else
 	{
 		// if file isn't cached we should load .lua file and make .php cache
-		$tmp_lua_config = new ConfigLUA(Website::getWebsiteConfig()->getValue('serverPath') . 'config.lua');
+		if(is_file(Website::getWebsiteConfig()->getValue('serverPath') . 'config.lua')):
+			$tmp_lua_config = new ConfigLUA(Website::getWebsiteConfig()->getValue('serverPath') . 'config.lua');
+		else:
+			$tmp_lua_config = new ConfigLUA(Website::getWebsiteConfig()->getValue('serverPath') . 'config.lua.dist');
+		endif;
+
 		$config['server'] = $tmp_lua_config->getConfig();
 		$tmp_php_config = new ConfigPHP();
 		$tmp_php_config->setConfig($tmp_lua_config->getConfig());

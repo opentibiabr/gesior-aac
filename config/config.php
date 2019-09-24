@@ -1,4 +1,8 @@
 <?PHP
+
+$config['site']['serverPath'] = "/usr/local/server/";
+
+
 if ( ! function_exists('is_https'))
 {
     function is_https()
@@ -107,7 +111,6 @@ $config['site']['quests'] = array(
 $config['site']['private-servlist.com_server_id'] = 0;
 
 # Account Maker Config
-$config['site']['serverPath'] = "";
 $config['site']['encryptionType'] = 'sha1';
 $config['site']['useServerConfigCache'] = false;
 $towns_list = array(

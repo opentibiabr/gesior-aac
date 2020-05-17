@@ -2,6 +2,9 @@
 // comment to show E_NOTICE [undefinied variable etc.], comment if you want make script and see all errors
 error_reporting(E_ALL ^ E_STRICT ^ E_NOTICE);
 
+//COMPOSER AUTOLOAD
+require __DIR__ . '/vendor/autoload.php';
+
 // true = show sent queries and SQL queries status/status code/error message
 define('DEBUG_DATABASE', false);
 

@@ -35,6 +35,7 @@ if ($is_https) {
 }
 
 $config['base_url'] = $base_url;
+$config['site']['realurl'] = $base_url; //Colocar a url real para seu website sem www
 
 # Using Ajax Field Validation, this is important if you want to use ajax check in your create account.
 $config['site']['sqlHost'] = "localhost";

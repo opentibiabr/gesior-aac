@@ -1,10 +1,7 @@
-## PREMIUM GESIOR BY RICARDO SOUZA 
+## Gesior-Ferobra BY RICARDO SOUZA 
 
 Confira o projeto em [Ferobra](https://ferobraglobal.com) 
 > **Lembrando que esse repositório não está com a ultima versão do Ferobra.**
-### Entre em contato
-> +55 (62) 9 9934-0570. ![whatsapp](https://cdn.icon-icons.com/icons2/373/PNG/32/Whatsapp_37229.png) <br>
-> Ricardo Souza#8938 Discord
 
 #### PT-BR
 * Bem vindo ao tutorial de instalação desse lindo website feito com amor e carinho pra vcs meus queridos tibianos.
@@ -83,15 +80,15 @@ sudo service apache2 restart
 
 ```bash
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php -r "if (hash_file('sha384', 'composer-setup.php') === 'e0012edf3e80b6978849f5eff0d4b4e4c79ff1609dd1e613307e16318854d24ae64f26d17af3ef0bf7cfb710ca74755a') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'e5325b19b381bfd88ce90a5ddb7823406b2a38cff6bb704b0acc289a09c8128d4a8ce2bbafcd1fcbdc38666422fe2806') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
 php composer-setup.php
 php -r "unlink('composer-setup.php');"
 mv composer.phar /usr/local/bin/composer
-
 ```
+
 Depois disso no terminal entre na pasta do site e rode o commando
 ```bash
-composer install
+cd /var/www/html && composer install
 ```
 
 ## Main Dev

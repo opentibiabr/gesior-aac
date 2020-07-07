@@ -12,11 +12,9 @@ use GDText\Color;
 
 $text = $_REQUEST['txt'];
 
-
-$im = imagecreatetruecolor(250, 28);
+$im = imagecreatetruecolor(500, 35);
 $backgroundColor = imagecolorallocate($im, 0, 0, 0);
-imagefill($im, 0, 0, imagecolortransparent($im, null));
-
+imagefill($im, 0, 0, imagecolortransparent($im, NULL));
 
 $box = new Box($im);
 $box->setFontFace("../images/martel.ttf"); // http://www.dafont.com/elevant-by-pelash.font
@@ -31,7 +29,7 @@ $box->setStrokeSize(0); // Stroke size in pixels
 $box->draw($text); // Text to draw
 
 header("Content-type: image/png;");
-imagepng($im, null, 0, PNG_ALL_FILTERS);
+imagepng($im, NULL, 9, PNG_ALL_FILTERS);
 die();
 
 /*
@@ -48,9 +46,9 @@ die();
 		$blue = (int)hexdec(substr($color,4,2));
 	$img = imagecreatetruecolor($sizex,$sizey);
 	ImageColorTransparent($img, ImageColorAllocate($img,0,0,0));
-	
+
 	imagefttext($img, $size, 0, $x, $y, ImageColorAllocate($img,$red,$green,$blue), '../images/martel.ttf', $text);
-	
+
 	header('Content-type: image/png');
 	imagepng($img);
 	imagedestroy($img);

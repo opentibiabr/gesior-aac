@@ -1,6 +1,6 @@
 <?php
-if(!defined('INITIALIZED'))
-    exit;
+if (!defined('INITIALIZED'))
+	exit;
 $main_content .= '	
 	<div class="panel panel-default">
 	<div class="panel-body">
@@ -15,9 +15,9 @@ $main_content .= '
 		<center>
 			<form action="?subtopic=latestnews" method="post">
 					<tr>
-						<td style="border:0px;" ><div class="BigButton" style="background-image:url('.$layout_name.'/images/global/buttons/sbutton_red.gif)" >
-						<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url('.$layout_name.'/images/global/buttons/sbutton_red_over.gif);" ></div>
-						<input class="ButtonText" type="image" name="Back" alt="Back" src="'.$layout_name.'/images/global/buttons/_sbutton_back.gif" >
+						<td style="border:0px;" ><div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_red.gif)" >
+						<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_red_over.gif);" ></div>
+						<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
 					</div>
 				</div>
 			</form>

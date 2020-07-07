@@ -1,0 +1,129 @@
+/* Backgrounds will cover all the body
+* --------------------------------------- */
+
+/* Defining each body background and styles
+* --------------------------------------- */
+body {
+	background: #041121 url(images/backgrounds/Background_Artwork_9.4.jpg) no-repeat fixed;
+	background-size: cover;
+}
+
+.bg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(images/backgrounds/lights.gif) fixed;
+	background-size: cover;
+	opacity: 0.2;
+	z-index: -1;
+}
+
+.download-section {
+	padding: 50px;
+	background-image: url(images/backgrounds/Background_Artwork_10.94.jpg);
+}
+
+.bgwhitetransp {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.bgwhitetransp1 {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.bg-black-transp {
+	background-color: rgba(33, 29, 29, 0.7) !important;
+}
+
+.col[class*="l25"] {
+	position: relative;
+}
+
+.row .col.l25 {
+	left: 30%;
+}
+
+.btn-primary {
+	cursor: pointer;
+	border: 3px solid rgba(192, 252, 253, .7);
+	border-radius: 0;
+	padding: 13px 35px 12px;
+	color: #f0e6d2;
+	font-size: 18px;
+	font-weight: 400;
+	font-style: normal;
+	text-transform: uppercase;
+	box-shadow: 0 0 0 0 transparent;
+	background: #041121;
+	border-image: linear-gradient(to bottom, #08abac 0, #01698b 100%);
+	border-image-slice: 1;
+	transition: all ease .5s;
+}
+
+.btn-primary:hover {
+	background: url(images/backgrounds/btn.jpg) center center;
+	background-size: cover;
+	box-shadow: 0 0 10px 4px rgba(192, 252, 253, .4), inset 0 0 5px 2px rgba(192, 252, 253, .3);
+	border: 3px solid rgba(192, 252, 253, .7);
+}
+
+/* label color */
+.input-field label {
+	color: white;
+}
+
+/* label focus color */
+.input-field input[type=text]:focus + label {
+	color: white;
+}
+
+/* label underline focus color */
+.input-field input[type=text]:focus {
+	border-bottom: 1px solid white;
+	box-shadow: 0 1px 0 0 rgba(0, 0, 0, 1);
+}
+
+/* valid color */
+.input-field input[type=text].valid {
+	border-bottom: 1px solid white;
+	box-shadow: 0 1px 0 0 white;
+}
+
+/* invalid color */
+.input-field input[type=text].invalid {
+	border-bottom: 1px solid white;
+	box-shadow: 0 1px 0 0 white;
+}
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+	color: white;
+}
+
+input[type=text]:not(.browser-default):disabled {
+	color: rgba(255, 255, 255, 0.5);
+	border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+}
+
+input[type=text]:not(.browser-default):disabled + label {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.fluid-width-video-wrapper {
+	width: 100%;
+	position: relative;
+	padding: 0;
+}
+
+.fluid-width-video-wrapper iframe, .fluid-width-video-wrapper object, .fluid-width-video-wrapper embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+embed, iframe, object {
+	max-width: 100%;
+}

@@ -1,0 +1,906 @@
+[
+	{
+		"title": "Genesis",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_lore.png\" width=\"80\" height=\"80\" /></p></td><td><p>To this day, nobody knows precisely what it was that caused it. Perhaps the power that had been spent lured another entity out of the void, or it might be that it simply awoke another divine entity from its slumber. Some even claim that in some mysterious way the power that had been spent by Uman and Fardos actually created a new entity.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Genesis",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_lore.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />A new goddess stepped out of the void like a new-born mermaid from her shell.<br />The amazed elder gods watched her divine beauty in awed admiration, for everything in her was perfect harmony. They agreed to call her Tibiasula.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Genesis",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_lore.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Uman and Fardos decided to create something new from the elements, something that would resemble Tibiasula or at the very least honour her memory.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Genesis",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_lore.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Zathroth flattered Fafnar with compliments and before long he succeeded in seducing her. Thus Brog the Raging Titan was conceived. An exceedingly ugly abomination that had only one eye in its huge head.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Genesis",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_lore.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />For centuries they had propagated and expanded in silence, largely unnoticed by all other creatures. But now as Garsharak, the very first and strongest of their race, sent them into the world, the dragons knew neither restraint nor mercy.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Genesis",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_lore.png\" width=\"80\" height=\"80\" /></p></td><td><p><br /><br />Uman introduced the race into the arcane art of magic, and many a human followed his vocation to become a powerful sorcerer.<br /><br /></p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Genesis",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_lore.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Fafnar and Suon chose to live in the sky. Therefore, it came to pass that two suns rose above creation to shed their light on it. Unfortunately, they were quite different in character. While Suon was calm and considerate, his sister was reckless and wild.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Genesis",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_lore.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Fardos and Uman created a race marked by far more flexibility than any other race before. Banor, the Divine Warrior, and with him the humans were born.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Genesis",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_lore.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Uman introduced those who were willing into the art of magic, thus shaping the vocation of sorcerers. Crunor the Lord of the Trees offered to teach the secrets of life and many humans followed his call to become a druid.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Genesis",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_lore.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />From the searing fire mixed with Brog's rage rose Garsharak, the very first dragon, who later sired a whole race of intelligent, giant lizards, a race that would eventually bring terror and chaos into Tibia.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Genesis",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_lore.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Tibia, the living core of all creation, derived from the element of the earth, whereas Sula, the mighty sea lapping gently against Tibia's shores, was created from the element of water.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Optional PvP",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><img src=\"https://static.tibia.com/images/news/optionalpvp.gif\" width=\"48\" height=\"48\" /></p></td><td><p><br />On Optional PvP game worlds, player killing is only possible within the scope of a guild war.<br />Therefore, only characters who are involved in a war can attack or inflict damage on each other.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Open PvP",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><img src=\"https://static.tibia.com/images/news/open_pvp.gif\" width=\"48\" height=\"48\" /></p></td><td><p><br />On Open PvP game worlds a limited amount of player killing is allowed and kills are divided into 2 categories, in ok kills, i.e. kills of marked characters, and in unjustified kills, i.e. kills of unmarked characters.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Hardcore PvP",
+		"richText": "<table style=\"width: 468px;\"><tbody><tr><td style=\"width: 53px;\"><p style=\"margin-right: 5px;\"><br /><img src=\"https://static.tibia.com/images/news/option_server_pvp_type_hardcore.gif\" width=\"48\" height=\"48\" /></p></td><td style=\"width: 401px;\"><p><br />On Hardcore PvP worlds there are no restrictions whatsoever on player killing. As you cannot walk through other characters on Hardcore PvP game worlds, blocking is not rated as an attack on another character.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Retro Open PvP",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><img src=\"https://static.tibia.com/images/news/retropvpicon.png\" width=\"48\" height=\"48\" /></p></td><td><p><br />On Retro Open PvP game worlds, the PvP blessing 'Twist of Fate' is not available. Only 2 characters will be identified and punished as killer of a character: the one which dealt the most damage and the one which dealt the fatal hit.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Retro Hardcore PvP",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><img src=\"https://static.tibia.com/images/news/retrohardcorepvpicon.png\" width=\"48\" height=\"48\" /></p></td><td><p><br />On Retro Hardcore PvP game worlds, there is no skull system and you will receive XP for player killing. There are no fair fight rules and the PvP blessing 'Twist of Fate' is not available. Also, there is a harsher death penalty and blessings protect you less than on other game worlds.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "XP Boost",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/motd_xpboost.png\" width=\"64\" height=\"64\" /></p></td><td><p><br />XP boosts increase your experience points your character gains from hunting for a certain time limit. Similar to stamina, the duration of the XP boost will only be reduced while you are hunting.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Express Character World Transfer",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><img src=\"https://static.tibia.com/images/news/motd_worldcex.png\" width=\"64\" height=\"64\" /></p></td><td><p><br />If you have already transferred your character to another game world in the last six months but would like to transfer it again, you can do that with an Express Character World Transfer.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Gold Pouch",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><img src=\"https://static.tibia.com/images/news/motd_purse.png\" width=\"64\" height=\"64\" /></p></td><td><p><br />In a Gold Pouch you can carry as many gold, platinum or crystal coins as your capacity allows.<br />The Gold Pouch can only be stored in the depot or the first place of the Store inbox of the character who has completed the purchase.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Gold Converter",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/motd_coincon.png\" width=\"64\" height=\"64\" /></p></td><td><p><br />A Gold Converter comes in handy when you need capacity and your bags are packed with gold. <br />Once you have used the Gold Converter for the 500th time, it will break and vanish into thin air.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Temple Teleport",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><br /><img src=\"https://static.tibia.com/images/news/templeteleport.png\" width=\"44\" height=\"39\" /></p></td><td><p><br /><br />If you buy a temple teleport in the Store, your character will be teleported to its home temple instantly.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Prey Wildcard",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><img src=\"https://static.tibia.com/images/news/preywildcard.png\" width=\"45\" height=\"48\" /></p></td><td><p><br />Use Prey Wildcards to lock your active prey, to reroll the bonus of an active prey, to use the feature Automatic Bonus Reroll or to select a prey of your choice.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Magic Gold Converter",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><br /><img src=\"https://static.tibia.com/images/news/magicgoldconverter.png\" width=\"25\" height=\"32\" /></p></td><td><p><br />Activate the Magic Gold Converter to automatically change either a stack of 100 gold pieces into 1 platinum coin, or a stack of 100 platinum coins into 1 crystal coin. It comes with 500 charges.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Character Sex Change",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/motd_sexchange.png\" width=\"64\" height=\"64\" /></p></td><td><p><br />If you are playing a male character, but would rather play a female one - or vice versa, you can purchase a Character Sex Change.<br /><br /></p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Tibia Coins",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/motd_tc.png\" width=\"128\" height=\"64\" /></p></td><td><p>Tibia Coins are a special currency in Tibia, which you can buy in the Webshop. They are available in packages of different sizes and can be used to buy character-based Extra Services, Mounts, Outfits, Blessings, XP Boosts, House Equipment, Premium Time and other Useful Things.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Blessings",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><img src=\"https://static.tibia.com/images/news/product_blessing_all.png\" width=\"64\" height=\"64\" /></p></td><td><p><br />There are 7 regular blessings a character can own. Depending on how many blessings a character owns, the chance to lose any items upon death can be reduced up to 100%, a character's skill and experience loss can be reduced up to 56%.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Categories",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><img src=\"https://static.tibia.com/images/news/category_newproducts.png\" width=\"64\" height=\"64\" /></p></td><td><p><br />There are various categories in the Store from which players can choose: Premium Time, Consumables, Cosmetics, Boosts and Extras. Some categories contain further subcategories as well. Recently added products are displayed in the Home section of the Store.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Twist of Fate",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><img src=\"https://static.tibia.com/images/news/motd_tof.png\" width=\"64\" height=\"64\" /></p></td><td><p><br />Characters that die in a PvP fight but own the 'Twist of Fate' blessing will not lose any charges of their regular blessings or a possible 'Amulet of Loss' - only a charge of the PvP blessing.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Death Redemption",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><img src=\"https://static.tibia.com/images/news/product_blessing_death_red.png\" width=\"64\" height=\"64\" /></p></td><td><p><br />In case your character is not protected by all available regular blessings at the time of death, you can purchase the Death Redemption in the Store.<br />Death Redemption will restore all skill and XP points you would not have lost if you had been protected by all available regular blessings.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Potion Casks",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><img src=\"https://static.tibia.com/images/news/ultimatemanapotioncask.png\" width=\"64\" height=\"64\" /></p></td><td><p><br />Potion casks can be purchased in the Store and placed in your house afterwards. They contain enough magical liquid to refill 1,000 of your empty potion flasks.<br />Depending on your needs, there is a cask for each size of mana, health and spirit potion available.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Potion Kegs",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><img src=\"https://static.tibia.com/images/news/ultimatemanapotionkeg.png\" width=\"64\" height=\"64\" /></p></td><td><p><br />Potion kegs can be purchased in the Store and contain enough magical liquid to refill 500 of your empty potion flasks.<br />Depending on your needs, there is a keg for each size of mana, health and spirit potion available.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Inbox",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><img src=\"https://static.tibia.com/images/news/randomhint_storeinbox.png\" width=\"112\" height=\"76\" /></p></td><td><p><br />All portable items you have bought in the Store will be sent to your Store inbox.<br />Most of the items you have picked up from your 'Daily Rewards' will be directly delivered to your Store Inbox as well.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Security Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_security.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Your password should contain a mix of upper and lower case letters, numbers and special characters.<br />Never choose your account name as your password and do not use common words because hackers can guess them easily.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Security Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_security.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />An authenticator offers players an additional layer of security since you will be asked to enter a valid authenticator token in addition to your account name and password whenever you try to log into the game or the Tibia website.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Security Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_security.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />As a registered user you can request a new recovery key via postal mail for a small fee. Make sure to enter your correct and complete address and keep your registration data up to date, as our letter may not reach you if you have not given your correct postal address.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Security Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_security.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />There are websites which claim to do surveys, promise you free items or offer cheat tools etc.<br />You are usually asked to enter your password there, but the only goal of the website is to steal your account.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Security Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_security.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Tibians, who have registered a valid mobile phone number to their account, will receive a recovery TAN via SMS when they order a new Recovery Key. This recovery TAN can be used to change the email address of an account. The actual Recovery Key will still be sent via postal services.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Security Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_security.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Old versions of your operating system or other software frequently contains security holes that have been removed in newer versions. Ideally, all programs on your computer should be updated to the latest available version.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Security Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_security.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />People pretending to be members of the CipSoft Team might contact you and ask for your password, or your recovery key. Please always keep in mind that members of the CipSoft Team will never ask you for your password or your recovery key.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />The widget for unjustified points in the Tibia client gives an overview of unjustified PvP kills, the remaining time of red and black skulls, as well as the number of open PvP situations you have participated in.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />You can 'hide' your character via your account management page. Other players will then only see basic information about your character, and all other characters on your account will not be displayed along with the information.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />All characters except for those who are on Dawnport or Rookgaard must be citizens of one of Tibia's cities. Once characters are citizens they are teleported back to the temple of their home city whenever they die.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />In the guild activity log, each guild member can view important data of the last 30 days such as the date when characters have applied or joined a guild, have been promoted or degraded, or who deposited to or withdrew money from the guild bank account.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />If you enable antialiasing in your graphics options, the Tibia graphics will appear in smoother look. However, if you are a fan of retro-games, you should disable antialiasing and enjoy a pixelated old-school look.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br /><br />Any administrative action such as founding, editing or joining guilds is done through the guild section of the official website www.tibia.com.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />In order to fish, you need to have some worms in your inventory and a fishing rod, which has to be 'used' on water. Your chances to catch a fish will increase with the fishing skill. Each time you catch a fish, a worm will disappear from your inventory.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Magic shops provide adepts of magic with everything they need to carry out their trade. From magical equipment such as spellbooks or all kinds of runes including blank runes to potions and spells, you can get it all at your local magic shop.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Characters that have died often enough to have their level reduced to 5 will be completely reset.<br />They will only keep all their achievements, as well as items stored in depots. Reset characters are taken back to Dawnport.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Wheat is cultivated in many areas on Tibia. Once it is ripe, it can be harvested by using a scythe. A bunch of wheat can be used to bake the delicious Tibia bread.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />If you are on a ship and happen to arrive in a large crowd of Tibia adventurers, most captains can bring you to a random nearby place outside their ship. Just greet them and ask for a 'kick'.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Nobody can survive without breathing fresh air! Think about that if you try walking underwater in Tibia's underwater areas.<br />The only chance to survive there is to put on a life-saving diving helmet.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Since temples are sacred places dedicated to the worship of the gods, characters that have died are sent there. Please note that priests can cure minor wounds if your character is seriously injured. Simply ask them to heal you.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />If you inspect another character, you are able to see the character's body slots including all equipped items as well as general information, such as character name, level, guild, vocation or active preys.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Players can form groups called 'parties'. You will have certain advantages like shared experience or certain party spells.<br />Keep in mind, only characters that are of similar levels can share experience when hunting together.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br /><br />Place yourself in front of a door of your house and say 'aleta grav' to edit the door rights. This way you can create private spaces within buildings.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />You can kick a character out of your home if you say 'alana sio' followed by the character name.<br />Owners and sub-owners can use this spell, but characters can also kick themselves if they wish to.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />To edit the guest list of your house, stand in your home and say 'aleta sio'. Enter the name of any character you would like to invite. Make sure only one name is entered per line. To un-invite characters simply erase their names from this list.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />To appoint sub-owners of your house, stand in your home and say 'aleta som'. Enter their names, one per line, on the list. Sub-owners are invited to houses automatically, and they are entitled to invite or un-invite other characters to it themselves.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />If a guild leader places a bid for a guildhall, it will be checked if there is a sufficient amount of money on the guild bank account. If the money on the guild bank account is not sufficient, the bid system will take the money from the guild leader's bank account.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br /><br />Characters that wish to found a new guild must recruit at least 4 vice leaders within three days after the guild's foundation.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Some creatures can be pushed away from you if you need to escape, for example.<br />Keep in mind that not all monsters are pushable, some can rather push objects or weaker monsters themselves in order to get a good hit at you.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />If you have named your hotkey presets like your characters and have checked the option 'Auto-Switch Hotkey Preset', the preset with the same name as the corresponding character will be activated upon login automatically.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Arenas are special zones where premium players can test and practise their combat skills without losing any experience, skills or items. Moreover, players have the chance to win a nice bit of money in these fights.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Promoted druids and sorcerers will regenerate mana at an increased rate, while knights take less time to heal their wounds. Promoted paladins, on the other hand, have both their mana and their hit point regeneration speed increased.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Promoted characters have 200 soul points instead of 100. Also, the regeneration speed of soul points is increased. A promoted character will regain 1 soul point every 15 seconds.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />The counter for your stamina indicates the time that is left until a character is too tired to gain experience while hunting. During the final 14 hours defeated creatures will only yield half the experience.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />The taverns on Tibia are popular places, and many adventurers enjoy relaxing from their wearisome travels over a pint of cold beer. However, Tibian beer is pretty strong, so don't be surprised if your character has problems with walking in a straight line for a while.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Characters on Open PvP game worlds up to level 20 are automatically protected by the Adventurer's Blessing.<br />If your character dies in a PvP fight being protected by this blessing, your character will not lose any items, experience and skill points.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />If you already have a character and want to play on Rookgaard instead of Dawnport with your next char, talk to Inigo on Dawnport. He will be able to send you to Rookgaard.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Kazordoon has a unique transportation system, since little ore wagons serve the most important locations.<br />Once you have paid your weekly fare, hop in the correct wagon and get quickly to the destination of your choice.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Do not simply throw away your empty flasks in Tibia.<br />Each flask has a deposit of 5 gold pieces on it.<br />Return them to any magic shop and reclaim your money.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />If you have decided to delete a character from your account, you have 60 days to change your mind.<br />During this period of time you can click the button 'Undelete Character' in your account management page.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Even though there is a special underwater area, it is not possible to move on water fields, so to cross rivers or other bodies of water you will have to find a bridge or perhaps a ferry.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br /><br />Be careful when handling items close to water, because any items thrown into it are lost forever.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br /><br />Every player can have up to two action bars with 50 action buttons per bar. You can activate the second action bar in the 'Action Bars' options.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Action bars can be used to assign objects, spells, text or hotkeys to different action buttons.<br />To assign objects, simply drag &amp; drop them with your mouse onto one of the action buttons.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />If you are a free account player you can safely store up to 2,000 items in your depot chest, while premium players are allowed to store a maximum of 10,000 items.<br />You can reach your depot chest from any depot, no matter in which city you currently are.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br /><br />Highly grown jungle grass is impassable. However, adventurers can remove it using machetes.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br /><br />Press Alt+F8 to show or hide your current frame rate and ping in the game window.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />'Quick Login' allows a faster client start and login to the game. Keep in mind that it might lead to temporary invisible game graphics if you are using slow hardware. <br />You can disable the feature in your Misc. options.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />If you spend gold, e.g. at an NPC, in the Market, via imbuing or the prey system, the gold will first be deducted from containers in your inventory, then from your Gold Pouch (if purchased for your character), and finally, from your bank account.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br /><br />To read messages from two channels at once, you can drag one channel of your choice to the very right end of the console to enable the split chat feature.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />You can activate 'Automatic Bonus Reroll' in order to automatically reroll the respective bonus just before the time runs out and your lucrative prey monster remains. However, this only works as long as you have enough Prey Wildcards in stock.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br /><br />Right-click on an action button in your action bar and choose whether you like to assign a spell, an object, a text or an action button.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br /><br />If a vice leader leaves an existing guild and there are not enough possible vice leaders anymore, the guild leader must find a replacement within 2 weeks.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br /><br />The Antialiasing Mode 'Smooth Retro' combines the smoothness of the already known antialiasing mode with the crisp and clear look of the pixel mode.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />If you have checked 'Ask Before Stowing Container Content' in your 'Misc.' options, a confirmation dialog will pop up whenever you try to stow container content in your Supply Stash.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />SHIFT+Left-click in your Cyclopedia Map and your character starts walking to the desired position as long as the destination is reachable, within range and on the same layer.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br /><br />The customisable status bar includes big health and mana bars and can be placed on the bottom, the top, or on the side of your game window.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br /><br />Right-click on your customisable status bar to choose between different styles and pick additional skills which will then be shown in your status bar.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br /><br />The Supply Stash offers different filters and a search bar to quickly sort your item collection and is directly connected to the imbuement shrines.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Items can have up to three imbuement slots which can be used for different imbuements. Depending on the type and the quality of the respective imbuement, different astral sources are required to carry out the imbuement.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Random Hint",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br /><br />The Compendium offers you short, illustrated ingame summaries of various Tibia topics, game features and contents. </p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><img src=\"https://static.tibia.com/images/news/mercenary.png\" width=\"51\" height=\"58\" /></p></td><td><p><br />The Mercenary carries a powerful, razor-sharp axe on his shoulders that effortlessly cuts through any armour and bone. Heads will roll over the blood-soaked battleground after a powerful swing of yours.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><br /><img src=\"https://static.tibia.com/images/news/sinister_archer.png\" width=\"49\" height=\"39\" /></p></td><td><p><br />From an early age, Sinister Archers have been fascinated by people's dark machinations and perversions. They claim that they advocate the good and that they only use their arrows to pierce the hearts of those who have committed many crimes and misdeeds.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "General Game Options",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Check 'Stay Logged In for Session' to stay logged in until you log out or until server save.<br />Otherwise, you will be asked to enter your account data and, if available, your authenticator token whenever you log out of the game.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "General Game Options",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />If 'Highlight Mouse Target' is enabled, you can always see which tile, object or creature your mouse pointer is currently aiming at. Note, however, that an object is only highlighted when you can interact with it, e.g. open it.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "General Game Options",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br /><br />Enable 'Use Native Mouse Cursor' if you prefer to use the mouse cursor design of your operating system instead of the Tibia design.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "General Game Options",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p>If 'Auto Chase Off' is enabled, your character will automatically interrupt his chase of an opponent whenever you move manually.<br />Deselecting this option will cause the movement mode 'Chase Opponent' to remain active, i.e. characters will resume the chase as soon as you stop moving them manually.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "General Game Options",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Whenever you cast a spell, this spell and the spell groups it belongs to have a certain cooldown which is displayed in the cooldown bar.<br />If you prefer not to see the cooldown bar, simply uncheck 'Show Cooldown Bar'.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "General Game Options",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />If you have checked 'Ask Before Buying Products', a confirmation dialog will open up whenever you try to buy something via the Store.<br />If you uncheck that box, a click on 'Buy Now' will get you the selected product without any delay.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "General Game Options",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Check 'Allow All to Inspect Me' to allow other players to see details about your character, such as your equipped items, guild, outfit or active preys.<br />Keep in mind that the permission to let others inspect you is valid for all your characters using this client.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "General Game Options",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br /><br />If you enable 'Press CTRL to Drag Complete Stacks', you will also drag the complete stack if you press CTRL while moving several of the same item.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "General Game Options",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />If you open the Options menu for the first time, only the most important settings are displayed.<br />Click on 'Show Advanced Options' in the bottom left corner to get access to all available options.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Messages Options",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Whenever you examine characters or items you receive a green message that will be displayed both in the game window and in the console. By deselecting 'Show Info Messages' it is possible to deactivate info messages in the console.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Messages Options",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Whenever another character casts a spell, you will see the magic words in your game window. You can deactivate the display of other character's spells in the game window by removing the tick in front of 'Show Spells of Others' in the Game Window options.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Messages Options",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p><br />Whenever you cast a spell, you will see the magic words in your game window.<br />You can deactivate the display of your spells in the game window by removing the tick in front of 'Show Spells' in the Game Window options.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Skullfrost",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"https://static.tibia.com/images/news/skullfrost.gif\" width=\"64\" height=\"64\" /></p></td><td><p><br />According to ancient stories, Skullfrost originated from the freezing depths of the Ice Islands.<br />Skullfrost conserved the power of ice and death within his floating and fragile body, making him an ice-cold killer, an unstoppable guardian without mercy.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Emberwing",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><img src=\"https://static.tibia.com/images/news/emberwing.gif\" width=\"64\" height=\"64\" /></p></td><td><p><br />Once held prisoner in the Pits of Inferno, Emberwing is thirsting after revenge and retaliation.<br />Granted immense power by a divine force, a deadly mixture of the elements of holy and fire literally burns within this creature's heart.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Grovebeast",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><img src=\"https://static.tibia.com/images/news/grovebeast.png\" width=\"64\" height=\"64\" /></p></td><td><p><br />Rumours have it that Grovebeast's ancestors were the very first of Mother Nature's creations.<br />Its wooden body is protected by an impenetrable layer of dense foliage making it able to withstand any evil force trying to damage the bond.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Thundergiant",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><img src=\"https://static.tibia.com/images/news/thundergiant.gif\" width=\"64\" height=\"64\" /></p></td><td><p><br />Thundergiant originated from a group of stone golems who tried to climb Kha'zeel.<br />When he finally reached the top his body was struck by a mysterious bolt of lightning, which granted him an endless supply of destructive energy and power.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/armouredwarhorse.png\" width=\"51\" height=\"53\" /></p></td><td><p><br />The Armoured War Horse is a dangerous black beauty! When you see its threatening, blood-red eyes coming towards you, you'll know trouble is on its way. Protected by its heavy armour plates, the warhorse is the perfect partner for dangerous hunting sessions.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/shadowdraptor.png\" width=\"55\" height=\"48\" /></p></td><td><p><br />A wild, ancient creature, which had been hiding in the depths of the shadows for a very long time, has been spotted in Tibia again! The almighty Shadow Draptor has returned and only the bravest Tibians can control such a beast!</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/steelbeak.png\" width=\"49\" height=\"53\" /></p></td><td><p><br />Forged by the highest skilled blacksmiths in the depths of Kazordoon's furnaces, a wild animal wrought of the finest steel arose from glowing embers and blazing heat. Protected by impenetrable armour, the Steelbeak is ready to accompany its master on every battleground.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/crimsonray.png\" width=\"43\" height=\"53\" /></p></td><td><p><br />Have you ever dreamed of gliding through the air on the back of a winged creature? With its deep red wings, the majestic Crimson Ray is a worthy mount for courageous heroes. Feel like a king on its back as you ride into your next adventure.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/arcticunicorn.png\" width=\"55\" height=\"57\" /></p></td><td><p><br />The Arctic Unicorn lives in a deep rivalry with its cousin the Blazing Unicorn. Even though they were born in completely different areas, they somehow share the same bloodline. The eternal battle between fire and ice continues. Tangerine vs. crystal blue!</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/blazingunicorn.png\" width=\"55\" height=\"57\" /></p></td><td><p><br />The Blazing Unicorn lives in a deep rivalry with its cousin the Arctic Unicorn. Even though they were born in completely different areas, they somehow share the same bloodline. The eternal battle between fire and ice continues. Crystal blue vs. tangerine!</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/prismaticunicorn.png\" width=\"55\" height=\"57\" /></p></td><td><p><br />Influenced by the mystical power of the rainbow, a mare gave birth to an exceptional foal: Not only the big, strong horn on its forehead but the unusual colouring of its hair makes the Prismatic Unicorn a unique mount in every respect.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/batcat.png\" width=\"47\" height=\"64\" /></p></td><td><p><br />Rumour has it that many years ago elder witches had gathered to hold a magical feast high up in the mountains. They had crossbred Batcat to easily conquer rocky canyons and deep valleys. Nobody knows what happened on their way up but only the mount has been seen ever since.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/venompaw.png\" width=\"45\" height=\"63\" /></p></td><td><p><br />Rumour has it that many years ago elder witches had gathered to hold a magical feast high up in the mountains. They had crossbred Venom Paw to easily conquer rocky canyons and deep valleys. Nobody knows what happened on their way up but only the mount has been seen ever since.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/flitterkatzen.png\" width=\"47\" height=\"64\" /></p></td><td><p><br />Rumour has it that many years ago elder witches had gathered to hold a magical feast high up in the mountains. They had crossbred Flitterkatzen to easily conquer rocky canyons and deep valleys. Nobody knows what happened on their way up but only the mount has been seen ever since.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/bloodcurl.png\" width=\"58\" height=\"56\" /></p></td><td><p><br />You are fascinated by insectoid creatures and can picture yourself riding one during combat or just for travelling?<br />The Bloodcurl will carry you through the Tibian wilderness with ease.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/mouldpincer.png\" width=\"58\" height=\"56\" /></p></td><td><p><br />You are fascinated by insectoid creatures and can picture yourself riding one during combat or just for travelling?<br />The Mouldpincer will carry you through the Tibian wilderness with ease.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/leafscuttler.png\" width=\"61\" height=\"60\" /></p></td><td><p><br />You are fascinated by insectoid creatures and can picture yourself riding one during combat or just for travelling?<br />The Leafscuttler will carry you through the Tibian wilderness with ease.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/cinderhoof.png\" width=\"62\" height=\"57\" /></p></td><td><p><br />If you are more of an imp than an angel, you may prefer riding out on a Cinderhoof to scare fellow Tibians on their festive strolls. Its devilish mask, claw-like hands and sharp hooves makes it the perfect companion for any daring adventurer who likes to stand out.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/nightdweller.png\" width=\"61\" height=\"55\" /></p></td><td><p><br />If you are more of an imp than an angel, you may prefer riding out on a Nightdweller to scare fellow Tibians on their festive strolls. Its devilish mask, claw-like hands and sharp hooves makes it the perfect companion for any daring adventurer who likes to stand out.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/frostflare.png\" width=\"62\" height=\"57\" /></p></td><td><p><br />If you are more of an imp than an angel, you may prefer riding out on a Frostflare to scare fellow Tibians on their festive strolls. Its devilish mask, claw-like hands and sharp hooves makes it the perfect companion for any daring adventurer who likes to stand out.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><br /><img src=\"https://static.tibia.com/images/news/coralripper.png\" width=\"46\" height=\"52\" /></p></td><td><p><br />When the Coralripper moves its fins, it generates enough air pressure that it can even float over land. His numerous eyes allow him to quickly detect dangers even in confusing situations and eliminate them with one powerful bite. If you watch your fingers, you are going to be good friends.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><br /><img src=\"https://static.tibia.com/images/news/seadevil.png\" width=\"43\" height=\"48\" /></p></td><td><p><br />When the Sea Devil moves its fins, it generates enough air pressure that it can even float over land. His numerous eyes allow him to quickly detect dangers even in confusing situations and eliminate them with one powerful bite. If you watch your fingers, you are going to be good friends.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><br /><img src=\"https://static.tibia.com/images/news/plumfish.png\" width=\"43\" height=\"48\" /></p></td><td><p><br />When the Plumfish moves its fins, it generates enough air pressure that it can even float over land. His numerous eyes allow him to quickly detect dangers even in confusing situations and eliminate them with one powerful bite. If you watch your fingers, you are going to be good friends.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/cavetarantula.png\" width=\"40\" height=\"48\" /></p></td><td><p><br />While its parents died in the war against Zathroth's cruel hordes, the Cave Tarantula survived by hiding in skulls of burned enemies. It never left its hiding spot and as it grew older, the skulls merged into its body. Fully-grown, it now thirsts for revenge.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/craniumspider.png\" width=\"40\" height=\"48\" /></p></td><td><p><br />While its parents died in the war against Zathroth's cruel hordes, the Cranium Spider survived by hiding in skulls of burned enemies. It never left its hiding spot and as it grew older, the skulls merged into its body. Fully-grown, it now thirsts for revenge.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/gloomwidow.png\" width=\"40\" height=\"48\" /></p></td><td><p><br />While its parents died in the war against Zathroth's cruel hordes, the Gloom Widow survived by hiding in skulls of burned enemies. It never left its hiding spot and as it grew older, the skulls merged into its body. Fully-grown, it now thirsts for revenge.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/emeraldwaccoon.png\" width=\"43\" height=\"54\" /></p></td><td><p><br />Waccoons are cuddly creatures that love nothing more than to be petted and snuggled!<br />Share a hug, ruffle the fur of the Emerald Waccoon and scratch it behind its ears to make it happy.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/nightwaccoon.png\" width=\"43\" height=\"54\" /></p></td><td><p><br />Waccoons are cuddly creatures that love nothing more than to be petted and snuggled!<br />Share a hug, ruffle the fur of the Night Waccoon and scratch it behind its ears to make it happy.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/ringtailwaccoon.png\" width=\"43\" height=\"54\" /></p></td><td><p><br />Waccoons are cuddly creatures that love nothing more than to be petted and snuggled!<br />Share a hug, ruffle the fur of the Ringtail Waccoon and scratch it behind its ears to make it happy.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/emperordeer.png\" width=\"64\" height=\"52\" /></p></td><td><p><br />Treat your character to a new travelling companion with a gentle nature and an impressive antler: The noble Emperor Deer will carry you through the deepest snow.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/blackstag.png\" width=\"64\" height=\"52\" /></p></td><td><p><br />Treat your character to a new travelling companion with a gentle nature and an impressive antler: The noble Black Stag will carry you through the deepest snow.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/shadowhart.png\" width=\"64\" height=\"50\" /></p></td><td><p><br />Treat your character to a new travelling companion with a gentle nature and an impressive antler: The noble Shadow Hart will carry you through the deepest snow.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/floatingkashmir.png\" width=\"38\" height=\"52\" /></p></td><td><p><br />Are you afraid that an animal mount would eat you out of house and home? The Floating Kashmir is the perfect mount for those who are too busy to take care of an animal mount or simply like to travel on a beautiful, magic hand-woven carpet.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/magiccarpet.png\" width=\"38\" height=\"52\" /></p></td><td><p><br />Are you afraid that an animal mount would eat you out of house and home? The Magic Carpet is the perfect mount for those who are too busy to take care of an animal mount or simply like to travel on a beautiful, magic hand-woven carpet.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/flyingdivan.png\" width=\"38\" height=\"52\" /></p></td><td><p><br />Are you afraid that an animal mount would eat you out of house and home? The Flying Divan is the perfect mount for those who are too busy to take care of an animal mount or simply like to travel on a beautiful, magic hand-woven carpet.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/goldendragonfly.png\" width=\"47\" height=\"49\" /></p></td><td><p><br />If you are interested in the achievements of science, you may enjoy a ride on the Golden Dragonfly, one of the insect-like flying machines. Even if you do not move around, the wings of these unusual vehicles are always in motion.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/copperfly.png\" width=\"47\" height=\"49\" /></p></td><td><p><br />If you are interested in the achievements of science, you may enjoy a ride on the Copper Fly, one of the insect-like flying machines. Even if you do not move around, the wings of these unusual vehicles are always in motion.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/steelbee.png\" width=\"43\" height=\"46\" /></p></td><td><p><br />If you are interested in the achievements of science, you may enjoy a ride on the Steel Bee, one of the insect-like flying machines. Even if you do not move around, the wings of these unusual vehicles are always in motion.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/gorongra.png\" width=\"44\" height=\"43\" /></p></td><td><p><br />Get yourself a mighty travelling companion with broad shoulders and a gentle heart. Gorongra is a physically imposing creature that is much more peaceful than its relatives, Tiquanda's wild kongras, and will carry you safely wherever you ask it to go.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><br /><img src=\"https://static.tibia.com/images/news/noctungra.png\" width=\"43\" height=\"42\" /></p></td><td><p><br />Get yourself a mighty travelling companion with broad shoulders and a gentle heart. Noctungra is a physically imposing creature that is much more peaceful than its relatives, Tiquanda's wild kongras, and will carry you safely wherever you ask it to go.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><br /><img src=\"https://static.tibia.com/images/news/silverneck.png\" width=\"43\" height=\"42\" /></p></td><td><p><br />Get yourself a mighty travelling companion with broad shoulders and a gentle heart. Silverneck is a physically imposing creature that is much more peaceful than its relatives, Tiquanda's wild kongras, and will carry you safely wherever you ask it to go.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/highlandyak.png\" width=\"50\" height=\"51\" /></p></td><td><p><br />With its thick, shaggy hair, the Highland Yak will keep you warm even in the chilly climate of the Ice Islands.<br />Due to its calm and peaceful nature, it is not letting itself getting worked up easily.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/glaciervagabond.png\" width=\"50\" height=\"51\" /></p></td><td><p><br />With its thick, shaggy hair, the Glacier Vagabond will keep you warm even in the chilly climate of the Ice Islands.<br />Due to its calm and peaceful nature, it is not letting itself getting worked up easily.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/tundrarambler.png\" width=\"50\" height=\"51\" /></p></td><td><p><br />With its thick, shaggy hair, the Tundra Rambler will keep you warm even in the chilly climate of the Ice Islands. Due to its calm and peaceful nature, it is not letting itself getting worked up easily.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><br /><img src=\"https://static.tibia.com/images/news/ivoryfang.png\" width=\"42\" height=\"48\" /></p></td><td><p><br />Incredible strength and smartness, an irrepressible will to survive, passionately hunting in groups. If these attributes apply to your character, have a proper look at Ivory Fang, which stands loyally by its master's side in every situation.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><br /><img src=\"https://static.tibia.com/images/news/snowpelt.png\" width=\"42\" height=\"48\" /></p></td><td><p><br />Incredible strength and smartness, an irrepressible will to survive, passionately hunting in groups. If these attributes apply to your character, have a proper look at Snow Pelt, which stands loyally by its master's side in every situation.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><br /><img src=\"https://static.tibia.com/images/news/shadowclaw.png\" width=\"42\" height=\"48\" /></p></td><td><p><br />Incredible strength and smartness, an irrepressible will to survive, passionately hunting in groups. If these attributes apply to your character,have a proper look at Shadow Claw, which stands loyally by its master's side in every situation.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/jadelion.png\" width=\"39\" height=\"56\" /></p></td><td><p><br />Its roaring is piercing through marrow and bone and can be heard over ten miles away. The Jade Lion is the undisputed ruler of its territory and no one messes with this animal. Prove yourself worthy of its trust and you will get yourself a valuable companion for your adventures.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/desertking.png\" width=\"39\" height=\"56\" /></p></td><td><p><br />Its roaring is piercing through marrow and bone and can be heard over ten miles away. The Desert King is the undisputed ruler of its territory and no one messes with this animal. Prove yourself worthy of its trust and you will get yourself a valuable companion for your adventures.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/winterking.png\" width=\"38\" height=\"56\" /></p></td><td><p><br />Its roaring is piercing through marrow and bone and can be heard over ten miles away. The Winter King is the undisputed ruler of its territory and no one messes with this animal. Prove yourself worthy of its trust and you will get yourself a valuable companion for your adventures.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/junglesaurian.png\" width=\"52\" height=\"59\" /></p></td><td><p><br />Thousands of years ago, its ancestors ruled the world. Only recently, it found its way into Tibia.<br />The Jungle Saurian likes to hide in dense wood and overturned trees and feeds on juicy plants and smaller animals.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/embersaurian.png\" width=\"52\" height=\"59\" /></p></td><td><p><br />Thousands of years ago, its ancestors ruled the world.<br />Only recently, it found its way into Tibia.<br />The Ember Saurian has been spotted in a sea of flames and fire deep down in the depths of Kazordoon.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/lagoonsaurian.png\" width=\"52\" height=\"59\" /></p></td><td><p><br />Thousands of years ago, its ancestors ruled the world. Only recently, it found its way into Tibia.<br />The Lagoon Saurian feels most comfortable in torrential rivers and behind dangerous waterfalls.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/marshtoad.png\" width=\"42\" height=\"44\" /></p></td><td><p><br />Discarded, old, rusty weapons, stale mana and broken runes have turned some of the swamp dwellers into gigantic frogs. Benefit from those mutations and make the Marsh Toad a faithful mount for your adventures.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/toxictoad.png\" width=\"41\" height=\"44\" /></p></td><td><p><br />Discarded, old, rusty weapons, stale mana and broken runes have turned some of the swamp dwellers into gigantic frogs. Benefit from those mutations and make the Toxic Toad a faithful mount for your adventures.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/sanguinefrog.png\" width=\"42\" height=\"44\" /></p></td><td><p><br />Discarded, old, rusty weapons, stale mana and broken runes have turned some of the swamp dwellers into gigantic toads. Benefit from those mutations and make the Sanguine Frog a faithful mount for your adventures.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/nethersteed.png\" width=\"54\" height=\"54\" /></p></td><td><p><br />Once a majestic and proud warhorse, the Nethersteed has fallen in a horrible battle many years ago. Driven by agony and pain, its spirit once again took possession of its rotten corpse to avenge its death. Stronger than ever, it seeks a master to join the battlefield.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/flamesteed.png\" width=\"54\" height=\"54\" /></p></td><td><p><br />Once a majestic and proud warhorse, the Flamesteed has fallen in a horrible battle many years ago. Driven by agony and pain, its spirit once again took possession of its rotten corpse to avenge its death. Stronger than ever, it seeks a master to join the battlefield.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/tempest.png\" width=\"54\" height=\"54\" /></p></td><td><p><br />Once a majestic and proud warhorse, the Tempest has fallen in a horrible battle many years ago. Driven by agony and pain, its spirit once again took possession of its rotten corpse to avenge its death. Stronger than ever, it seeks a master to join the battlefield.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/nightstinger.png\" width=\"45\" height=\"57\" /></p></td><td><p><br />The Nightstinger has external characteristics of different breeds. It is assumed that his brain is also composed of many different species, which makes it completely unpredictable. Only few have managed to approach this creature unharmed and only the best could tame it.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/slagnare.png\" width=\"45\" height=\"57\" /></p></td><td><p><br />The Slagsnare has external characteristics of different breeds. It is assumed that his brain is also composed of many different species, which makes it completely unpredictable. Only few have managed to approach this creature unharmed and only the best could tame it.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/razorcreep.png\" width=\"45\" height=\"57\" /></p></td><td><p><br />The Razorcreep has external characteristics of different breeds. It is assumed that his brain is also composed of many different species, which makes it completely unpredictable. Only few have managed to approach this creature unharmed and only the best could tame it.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/poisonbane.png\" width=\"34\" height=\"43\" /></p></td><td><p><br />The Poisonbane is out searching for the best bamboo in Tibia. Its heavy armour allows it to visit even the most dangerous places. Treat it nicely with its favourite food from time to time and it will become a loyal partner.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/blackpelt.png\" width=\"36\" height=\"45\" /></p></td><td><p><br />The Blackpelt is out searching for the best bamboo in Tibia. Its heavy armour allows it to visit even the most dangerous places. Treat it nicely with its favourite food from time to time and it will become a loyal partner.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/siegebreaker.png\" width=\"34\" height=\"43\" /></p></td><td><p><br />The Siegebreaker is out searching for the best bamboo in Tibia. Its heavy armour allows it to visit even the most dangerous places. Treat it nicely with its favourite food from time to time and it will become a loyal partner.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><br /><img src=\"https://static.tibia.com/images/news/reedlurker.png\" width=\"33\" height=\"45\" /></p></td><td><p><br />You are intrigued by tortoises and would love to throne on a tortoise shell when travelling the Tibian wilderness? The Reed Lurker might become your new trustworthy companion then, which will transport you safely and even carry you during combat.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><br /><img src=\"https://static.tibia.com/images/news/mouldshell.png\" width=\"33\" height=\"45\" /></p></td><td><p><br />You are intrigued by tortoises and would love to throne on a tortoise shell when travelling the Tibian wilderness? The Mould Shell might become your new trustworthy companion then, which will transport you safely and even carry you during combat.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><br /><img src=\"https://static.tibia.com/images/news/swampsnapper.png\" width=\"33\" height=\"45\" /></p></td><td><p><br />You are intrigued by tortoises and would love to throne on a tortoise shell when travelling the Tibian wilderness? The Swamp Snapper might become your new trustworthy companion then, which will transport you safely and even carry you during combat.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/shadowsphinx.png\" width=\"45\" height=\"57\" /></p></td><td><p><br />During excavations in the pyramids of Ankrahmun, scientists have discovered an amazing creature. Ride a Shadow Sphinx on your way through ancient chambers and tombs and have a loyal friend by your side while fighting countless mummies and other creatures.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/goldsphinx.png\" width=\"45\" height=\"57\" /></p></td><td><p><br />During excavations in the pyramids of Ankrahmun, scientists have discovered an amazing creature. Ride a Gold Sphinx on your way through ancient chambers and tombs and have a loyal friend by your side while fighting countless mummies and other creatures.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/emeraldsphinx.png\" width=\"45\" height=\"57\" /></p></td><td><p><br />During excavations in the pyramids of Ankrahmun, scientists have discovered an amazing creature. Ride a Emerald Sphinx on your way through ancient chambers and tombs and have a loyal friend by your side while fighting countless mummies and other creatures.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/tombstinger.png\" width=\"41\" height=\"62\" /></p></td><td><p><br />The Tombstinger is a scorpion that has surpassed the natural boundaries of its own kind. Way bigger, stronger and faster than ordinary scorpions, it makes a perfect companion for fearless heroes and explorers. Just be careful of his poisonous sting when you mount it.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/jadepincer.png\" width=\"41\" height=\"62\" /></p></td><td><p><br />The Jade Pincer is a scorpion that has surpassed the natural boundaries of its own kind. Way bigger, stronger and faster than ordinary scorpions, it makes a perfect companion for fearless heroes and explorers. Just be careful of his poisonous sting when you mount it.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/deathcrawler.png\" width=\"41\" height=\"62\" /></p></td><td><p><br />The Deathcrawler is a scorpion that has surpassed the natural boundaries of its own kind. Way bigger, stronger and faster than ordinary scorpions, it makes a perfect companion for fearless heroes and explorers. Just be careful of his poisonous sting when you mount it.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/wolpertinger.png\" width=\"53\" height=\"53\" /></p></td><td><p><br />Do you like fluffy bunnies but think they are too small? Do you admire the majesty of stags and their antlers but are afraid of their untameable wilderness? Do not worry, the mystic creature Wolpertinger consolidates the best qualities of both animals. Hop on its backs and enjoy the ride.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/jackalope.png\" width=\"53\" height=\"53\" /></p></td><td><p><br />Do you like fluffy bunnies but think they are too small? Do you admire the majesty of stags and their antlers but are afraid of their untameable wilderness? Do not worry, the mystic creature Jackalope consolidates the best qualities of both animals. Hop on its backs and enjoy the ride.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/dreadhare.png\" width=\"53\" height=\"53\" /></p></td><td><p><br />Do you like fluffy bunnies but think they are too small? Do you admire the majesty of stags and their antlers but are afraid of their untameable wilderness? Do not worry, the mystic creature Dreadhare consolidates the best qualities of both animals. Hop on its backs and enjoy the ride.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style='margin-right: 8px;' ><br><img src='https://static.tibia.com/images/news/woodlandprince.png' width='64' height='50' /></p></td><td><p><br />Fed only with demon dust and blood, the Woodland Prince had to endure a dreadful transformation. The demonic liquid that is now running through its veins, however, provides incredible strength and endurance.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style='margin-right: 8px;' ><br><img src='https://static.tibia.com/images/news/hailstormfury.png' width='63' height='50' /></p></td><td><p><br />Fed only with demon dust and blood, the Hailstorm Fury had to endure a dreadful transformation. The demonic liquid that is now running through its veins, however, provides incredible strength and endurance.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style='margin-right: 8px;' ><br><img src='https://static.tibia.com/images/news/doombringer.png' width='63' height='50' /></p></td><td><p><br />Fed only with demon dust and blood, the Doombringer had to endure a dreadful transformation. The demonic liquid that is now running through its veins, however, provides incredible strength and endurance.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><img src=\"https://static.tibia.com/images/news/jungletiger.png\" width=\"35\" height=\"51\" /></p></td><td><p><br />It is said that in ancient times, the sabre-tooth tiger was already used as a mount by elder warriors of Svargrond. Influenced by the new environment and climatic changes, the fur of the Jungle Tiger has developed its extraordinary colouring over several generations.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><img src=\"https://static.tibia.com/images/news/ebonytiger.png\" width=\"35\" height=\"51\" /></p></td><td><p><br />It is said that in ancient times, the sabre-tooth tiger was already used as a mount by elder warriors of Svargrond. Influenced by the new environment and climatic changes, the fur of the Ebony Tiger has developed its extraordinary colouring over several generations.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><img src=\"https://static.tibia.com/images/news/feraltiger.png\" width=\"35\" height=\"51\" /></p></td><td><p><br />It is said that in ancient times, the sabre-tooth tiger was already used as a mount by elder warriors of Svargrond. Influenced by the new environment and climatic changes, the fur of the Feral Tiger has developed its extraordinary colouring over several generations.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><img src=\"https://static.tibia.com/images/news/tawnyowl.png\" width=\"38\" height=\"52\" /></p></td><td><p><br />Having a Tawny Owl as a trustworthy companion provides you with a silent guide whose ever-watchful eyes will cut through the shadows, help you navigate the darkness and unravel great secrets.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><img src=\"https://static.tibia.com/images/news/snowyowl.png\" width=\"38\" height=\"52\" /></p></td><td><p><br />Having a Snowy Owl as a trustworthy companion provides you with a silent guide whose ever-watchful eyes will cut through the shadows, help you navigate the darkness and unravel great secrets.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Mount",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><img src=\"https://static.tibia.com/images/news/borealowl.png\" width=\"38\" height=\"52\" /></p></td><td><p><br />Having a Boreal Owl as a trustworthy companion provides you with a silent guide whose ever-watchful eyes will cut through the shadows, help you navigate the darkness and unravel great secrets.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/arenachampion.png\" width=\"43\" height=\"39\" /></p></td><td><p><br />Fight your battles in the arena and become a darling of the crowd. Once you have made it to the top and everyone is cheering your name, the fashionable outfit of an Arena Champion will show the world what you are made of.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/beastmaster.png\" width=\"44\" height=\"36\" /></p></td><td><p><br />Do you have enough authority to make wild animals subservient to you? Become a Beastmaster and surround yourself with fearsome companions. When your beasts bare their teeth, your enemies will turn tails and run.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/ceremonialgarb.png\" width=\"53\" height=\"52\" /></p></td><td><p><br />If you want to make a great entrance at a Tibian costume party, the Ceremonial Garb is certainly a good choice. With a drum over your shoulder and adorned with feathers you are perfectly dressed to lead a carnival parade through the streets of Thais.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/champion.png\" width=\"42\" height=\"41\" /></p></td><td><p><br />Protect your body with heavy armour plates and spiky bones to teach your enemies the meaning of fear! The Champion outfit perfectly suits battle-hardened warriors who rely on their trusty sword and shield.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><br /><img src=\"https://static.tibia.com/images/news/chaosacolyt.png\" width=\"42\" height=\"41\" /></p></td><td><p><br />You have always felt like the cat among the pigeons and have a fable for dark magic? The Chaos Acolyte outfit is a perfect way to express your inner nature. Show your commitment for the higher cause and wreak havoc on your enemies in this unique outfit.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/conjurer.png\" width=\"60\" height=\"57\" /></p></td><td><p><br />You recently graduated from the Magic Academy and want to bring your knowledge to good use? Congratulations, you are now an honourable disciple of magic! Open up a bottle of well-aged mana and treat yourself with the fashionable Conjurer outfit.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><br /><img src=\"https://static.tibia.com/images/news/deathherald.png\" width=\"43\" height=\"37\" /></p></td><td><p><br />Death and decay are your ever-present companions? Your enemies are dropping like flies and your path is covered with their bodies? However, as decency demands, you want to at least give them a proper funeral? Then the Death Herald is just the right outfit for you.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/entrepreneur.png\" width=\"35\" height=\"42\" /></p></td><td><p><br />Slaughter through hordes of monsters during your early morning hunt and kiss the hand of Queen Eloise later on at the evening reception in her historical residence. With the Entrepreneur outfit you will cut a fine figure on every occasion.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/evoker.png\" width=\"46\" height=\"48\" /></p></td><td><p><br /><br />Dance around flickering fires in the Evoker outfit while singing unholy chants to praise witchcraft and wizardry. Your faithful bat will always be by your side.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/grovekeeper.png\" width=\"48\" height=\"43\" /></p></td><td><p><br />Feeling the springy grass under your feet and inhaling the spicy air of the forest is pure satisfaction for your soul? Every animal is your friend and you caringly look after trees and plants all the time? Then it is time to become one with nature: Become a Grove Keeper!</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><br /><img src=\"https://static.tibia.com/images/news/herbalist.png\" width=\"60\" height=\"43\" /></p></td><td><p><br />The Herbalist outfit is the perfect outfit for Tibians who are aware that you do not necessarily have to reach into a hydra's mouth to get a hydra tongue. Those who know exactly where to get blood- and shadow-herbs will find a matching outfit for their daily hobby.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><br /><img src=\"https://static.tibia.com/images/news/lupinwarden.png\" width=\"52\" height=\"36\" /></p></td><td><p><br />Do you feel the adrenaline rushing through your veins when the sun goes down and a full moon lightens the night? Do you have the urge to hunt down your target no matter what? Unleash the beast inside of you and lead your friends to battle with the Lupine Warden outfit!</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><br /><img src=\"https://static.tibia.com/images/news/pharaoh.png\" width=\"41\" height=\"42\" /></p></td><td><p><br />You admire the exceptional architectural abilities and the unsolved mysteries of an ancient high culture? Next time you visit your friends, tell them to prepare a bathtub full of milk and honey for you because a Pharaoh is now walking through the streets of Ankrahmun!</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><br /><img src=\"https://static.tibia.com/images/news/philosopher.png\" width=\"42\" height=\"40\" /></p></td><td><p><br />Do you feel the urge to tell people what is really going on in the world? Do you know all answers to the important questions of life? Are you a true philosopher? Then dress like one to showcase the latest fashion for all wise theorists.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/puppeteer.png\" width=\"47\" height=\"40\" /></p></td><td><p><br />Are you a fan of puppetry? You like to travel the world together with one or two little acting fellows? Or are you simply the one who likes to pull the strings? Then the Puppeteer outfit is the right choice for you.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/ranger.png\" width=\"50\" height=\"49\" /></p></td><td><p><br />Most of the day, the Ranger is looking over his forest. He is taking care of all animals and plants and tries to keep everything in balance. Intruders are greeted by a warning shot from his deadly longbow. It is the perfect outfit for Paladins who live in close touch with nature.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><br /><img src=\"https://static.tibia.com/images/news/retrocitizen.png\" width=\"32\" height=\"33\" /></p></td><td><p><br /><br />Do you still remember your first stroll through the streets of Thais? For old times' sake, walk the paths of Nostalgia as a Retro Citizen!</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><br /><img src=\"https://static.tibia.com/images/news/retrohunter.png\" width=\"33\" height=\"33\" /></p></td><td><p><br />Whenever you pick up your bow and spears, you walk down memory lane and think of your early days? Treat yourself with the fashionable Retro Hunter outfit and hunt some good old monsters from your childhood.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><br /><img src=\"https://static.tibia.com/images/news/retroknight.png\" width=\"33\" height=\"33\" /></p></td><td><p><br />Who needs a fancy looking sword with bling-bling and ornaments? <br />Back in the days, we survived without such unnecessary accessories! Time to show those younkers what a Retro Knight is made of.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><br /><img src=\"https://static.tibia.com/images/news/retromage.png\" width=\"32\" height=\"33\" /></p></td><td><p><br /><br />Dress up as a Retro Mage and you will always cut a fine figure on the battleground while eliminating your enemies with your magical powers the old-fashioned way.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><br /><img src=\"https://static.tibia.com/images/news/retronoblewoman.png\" width=\"33\" height=\"33\" /></p></td><td><p><br />King Tibianus has invited you to a summer ball and you have nothing to wear for this special event? <br />Do not worry, the Retro Noble(wo)man outfit makes you a real eye catcher on every festive occasion.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><br /><img src=\"https://static.tibia.com/images/news/retrosummoner.png\" width=\"32\" height=\"33\" /></p></td><td><p><br />While the Retro Mage usually throws runes and mighty spells directly at the enemies, the Retro Summoner outfit might be the better choice for Tibians who prefer to send mighty summons to the battlefield to keep their enemies at distance.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><br /><img src=\"https://static.tibia.com/images/news/retrowarrior.png\" width=\"33\" height=\"33\" /></p></td><td><p><br />You are fearless and strong as a behemoth but have problems finding the right outfit for your adventures?<br /> The Retro Warrior outfit is a must-have for all fashion-conscious old-school Tibians out there.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/royalpumpkin.png\" width=\"46\" height=\"43\" /></p></td><td><p><br />The mutated pumpkin is too weak for your mighty weapons? Time to show that evil vegetable how to scare the living daylight out of people! Put on a scary looking pumpkin on your head and spread terror and fear amongst the Tibian population.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/seadog.png\" width=\"39\" height=\"39\" /></p></td><td><p><br />Ahoy mateys! Flaunt the swashbuckling Sea Dog outfit and strike a pose with your hook to impress both landlubbers and fellow pirates. Board your next ship in style!</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/seaweaver.png\" width=\"47\" height=\"39\" /></p></td><td><p><br />The Seaweaver outfit is the perfect choice if you want to show the world that you are indeed a son or a daughter of the submarine kingdom. You can almost feel the salty taste and the rough wind of the sea when wearing it.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/siegemaster.png\" width=\"39\" height=\"47\" /></p></td><td><p><br />Neither thick stone walls nor heavily armoured gates can stop the Siege Master, who brings down hostile fortifications in the blink of an eye. Whenever he tenses his muscular arms to lift the powerful battering ram, his enemies' knees begin to buckle.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/spiritcaller.png\" width=\"41\" height=\"44\" /></p></td><td><p><br />You are in love with the deep soul of Mother Earth and prefer to walk in the shadows of her wooden children? Choose the Spirit Caller outfit to live in harmony with nature.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/sunpriest.png\" width=\"39\" height=\"49\" /></p></td><td><p><br />Do you refuse to spend countless evenings in front of your chimney while ice-cold wind whistles through the cracks and niches of your house? It is time to stop freezing and to become an honourable Sun Priest!</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><img src=\"https://static.tibia.com/images/news/trophyhunter.png\" width=\"45\" height=\"40\" /></p></td><td><p><br />The Trophy Hunter spends hours in the forest hunting wild and rare animals. Cover your shoulders with the finest bear skulls and hunt the finest trophies all over Tibia.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 8px;\"><br /><img src=\"https://static.tibia.com/images/news/winterwarden.png\" width=\"59\" height=\"46\" /></p></td><td><p><br />The warm and cosy cloak of the Winter Warden outfit will keep you warm in every situation. Best thing, it is not only comfortable but fashionable as well. You will be the envy of any snow queen or king, guaranteed!</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "Store Outfit",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><br /><img src=\"https://static.tibia.com/images/news/pumpkinmummy.png\" width=\"39\" height=\"41\" /></p></td><td><p><br />If you cannot decide whether to wrap yourself up as a mummy or flaunt an enormous pumpkin head for your next hunting party, why not combine both? The Pumpkin Mummy outfit is the perfect costume for scary nights and spooky days.</p></td></tr></tbody></table>"
+	},
+	{
+		"title": "General Game Options",
+		"richText": "<table><tbody><tr><td><p style=\"margin-right: 5px;\"><img src=\"http://static.tibia.com/images/news/rh_misc.png\" width=\"80\" height=\"80\" /></p></td><td><p>In order to take a screenshot, you can set a hotkey in the options menu. You can also decide whether to only capture the game window or the entire interface.</p></td></tr></tbody></table>"
+	}
+]

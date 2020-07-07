@@ -1,3 +1,4 @@
-.idea
+#ignore
 vendor/
-composer.lock
+cache/serverstatus.txt
+cache/usercounter.txt

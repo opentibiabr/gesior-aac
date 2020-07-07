@@ -1,11 +1,21 @@
 <?php
 require_once 'config/config.php';
+/*
+ ************************************************************************
+ PagSeguro Config File
+ ************************************************************************
+ */
 
+/**
+ * PAGSEGURO WORKING
+ * FIXED BY RICARDO SOUZA
+ * http://codenome.com
+ */
 $PagSeguroConfig = array();
-if($config['pagseguro']['testing'] === true){
-    $PagSeguroConfig['environment'] = "sandbox"; // production, sandbox
-}else{
-    $PagSeguroConfig['environment'] = "production"; // production, sandbox
+if ($config['pagseguro']['testing'] === true) {
+	$PagSeguroConfig['environment'] = "sandbox"; // production, sandbox
+} else {
+	$PagSeguroConfig['environment'] = "production"; // production, sandbox
 }
 
 

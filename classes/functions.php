@@ -1,5 +1,5 @@
 <?php
-if(!defined('INITIALIZED'))
+if (!defined('INITIALIZED'))
 	exit;
 
 class Functions
@@ -10,7 +10,7 @@ class Functions
 	{
 		$lv--;
 		$lv = (string) $lv;
-		return bcdiv(bcadd(bcsub(bcmul(bcmul(bcmul("50", $lv), $lv), $lv),  bcmul(bcmul("150", $lv), $lv)), bcmul("400", $lv)), "3", 0);
+		return bcdiv(bcadd(bcsub(bcmul(bcmul(bcmul("50", $lv), $lv), $lv), bcmul(bcmul("150", $lv), $lv)), bcmul("400", $lv)), "3", 0);
 	}
 
 	public static function isValidFolderName($string)
@@ -30,8 +30,7 @@ class Functions
 
 	public function getBanReasonName($reasonId)
 	{
-		switch($reasonId)
-		{
+		switch ($reasonId) {
 			case 0:
 				return "Offensive Name";
 			case 1:
@@ -85,8 +84,8 @@ class Functions
 
 	public function limitTextLength($text, $length_limit)
 	{
-		if(strlen($text) > $length_limit)
-			return substr($text, 0, strrpos(substr($text, 0, $length_limit), " ")).'...';
+		if (strlen($text) > $length_limit)
+			return substr($text, 0, strrpos(substr($text, 0, $length_limit), " ")) . '...';
 		else
 			return $text;
 	}

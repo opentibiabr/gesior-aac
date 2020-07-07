@@ -1,11 +1,11 @@
 <?php
-if(!defined('INITIALIZED'))
+if (!defined('INITIALIZED'))
 	exit;
 
 class Vocation
 {
 	private $data;
-	
+
 	public function __construct($data)
 	{
 		$this->data = $data;

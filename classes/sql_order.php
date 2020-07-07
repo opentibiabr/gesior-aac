@@ -1,18 +1,19 @@
 <?php
-if(!defined('INITIALIZED'))
+if (!defined('INITIALIZED'))
 	exit;
 
 class SQL_Order
 {
 	const ASC = 'ASC';
 	const DESC = 'DESC';
+	/** @var SQL_Order */
 	public $field;
 	public $order = self::ASC;
 
-	public function __construct($field, $order = null)
+	public function __construct($field, $order = NULL)
 	{
 		$this->field = $field;
-		if($order !== null)
+		if ($order !== NULL)
 			$this->order = $order;
 	}
 
@@ -27,7 +28,7 @@ class SQL_Order
 	}
 
 	public function __toString()
-    {
-        return $this->field->__toString() . ' ' . $this->order;
-    }
+	{
+		return $this->field->__toString() . ' ' . $this->order;
+	}
 }

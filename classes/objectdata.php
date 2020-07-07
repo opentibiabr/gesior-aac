@@ -1,18 +1,18 @@
 <?php
-if(!defined('INITIALIZED'))
+if (!defined('INITIALIZED'))
 	exit;
 
 class ObjectData extends DatabaseHandler
 {
 	public static function addField($name)
 	{
-		if(!in_array($name, self::$fields))
+		if (!in_array($name, self::$fields))
 			self::$fields[] = $name;
 	}
 
 	public static function removeField($name)
 	{
-		if(in_array($name, self::$fields))
+		if (in_array($name, self::$fields))
 			unset(self::$fields[$name]);
 	}
 
@@ -33,10 +33,10 @@ class ObjectData extends DatabaseHandler
 
 	public function get($fieldName)
 	{
-		if(isset($this->data[$fieldName]))
+		if (isset($this->data[$fieldName]))
 			return $this->data[$fieldName];
 		else
-			new Error_Critic(__METHOD__ . ' - Field ' . htmlspecialchars($fieldName) . ' does not exist in data / is not loaded.');
+			throw new RuntimeException('Field ' . htmlspecialchars($fieldName) . ' does not exist in data / is not loaded.');
 	}
 
 	public function set($fieldName, $value)
@@ -46,25 +46,24 @@ class ObjectData extends DatabaseHandler
 
 	public function getCustomField($fieldName)
 	{
-		if(isset($this->data[$fieldName]))
+		if (isset($this->data[$fieldName]))
 			return $this->data[$fieldName];
 		else
-			new Error_Critic(__METHOD__ . ' - Field ' . htmlspecialchars($fieldName) . ' does not exist in data / is not loaded.');
+			throw new RuntimeException('Field ' . htmlspecialchars($fieldName) . ' does not exist in data / is not loaded.');
 	}
 
 	public function setCustomField($fieldName, $value)
 	{
-		if(isset($this->data[$fieldName]))
-		{
+		if (isset($this->data[$fieldName])) {
 			$this->data[$fieldName] = $value;
 			$this->save();
-		}
-		else
-			new Error_Critic(__METHOD__ . ' - Field ' . htmlspecialchars($fieldName) . ' does not exist in data / is not loaded. Cannot save it.');
+		} else
+			throw new RuntimeException('Field ' . htmlspecialchars($fieldName) . ' does not exist in data / is not loaded. Cannot save it.');
 	}
-/*
- * for compability with old scripts
-*/
+
+	/*
+	 * for compability with old scripts
+	*/
 	public function getId()
 	{
 		return $this->data['id'];

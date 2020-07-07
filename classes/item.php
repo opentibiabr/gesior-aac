@@ -1,14 +1,9 @@
 <?php
-if(!defined('INITIALIZED'))
+if (!defined('INITIALIZED'))
 	exit;
 
 class Item
 {
-	public $data = array('pid' => null, 'sid' => null, 'itemtype' => null, 'count' => null, 'attributes' => null);
-	public static $fields = array('player_id', 'pid', 'sid', 'itemtype', 'count', 'attributes');
-	public static $table = 'player_items';
-	public $attributes;
-
 	const SLOT_FIRST = 1;
 	const SLOT_HEAD = 1;
 	const SLOT_NECKLACE = 2;
@@ -20,16 +15,32 @@ class Item
 	const SLOT_FEET = 8;
 	const SLOT_RING = 9;
 	const SLOT_AMMO = 10;
+	public static $fields = array('player_id', 'pid', 'sid', 'itemtype', 'count', 'attributes');
+	public static $table = 'player_items';
+	public $data = array('pid' => NULL, 'sid' => NULL, 'itemtype' => NULL, 'count' => NULL, 'attributes' => NULL);
+	/** @var ItemAttributes */
+	public $attributes;
+
+	public function __construct($data = NULL)
+	{
+		if ($data != NULL)
+			$this->loadData($data);
+	}
+
+	public function loadData(&$data)
+	{
+		$this->data = $data;
+	}
 
 	public static function addField($name)
 	{
-		if(!in_array($name, self::$fields))
+		if (!in_array($name, self::$fields))
 			self::$fields[] = $name;
 	}
 
 	public static function removeField($name)
 	{
-		if(in_array($name, self::$fields))
+		if (in_array($name, self::$fields))
 			unset(self::$fields[$name]);
 	}
 
@@ -38,37 +49,66 @@ class Item
 		return self::$fields;
 	}
 
-    public function __construct($data = null)
-    {
-		if($data != null)
-			$this->loadData($data);
-    }
-
-	public function loadData(&$data)
+	public function getPID()
 	{
-		$this->data = $data;
+		return $this->data['pid'];
 	}
-	public function getPID(){return $this->data['pid'];}
-	public function setPID($value){$this->data['pid'] = $value;}
-	public function getSID(){return $this->data['sid'];}
-	public function setSID($value){$this->data['sid'] = $value;}
-	public function getID(){return $this->data['itemtype'];}
-	public function setID($value){$this->data['itemtype'] = $value;}
-	public function getCount(){return $this->data['count'];}
-	public function setCount($value){$this->data['count'] = $value;}
-	public function getAttributes(){return $this->data['attributes'];}
-	public function setAttributes($value){$this->data['attributes'] = $value;}
 
-	public function loadAttributes()
+	public function setPID($value)
 	{
-		if(!isset($this->attributes))
-			$this->attributes = new ItemAttributes($this->getAttributes());
+		$this->data['pid'] = $value;
+	}
+
+	public function getSID()
+	{
+		return $this->data['sid'];
+	}
+
+	public function setSID($value)
+	{
+		$this->data['sid'] = $value;
+	}
+
+	public function getID()
+	{
+		return $this->data['itemtype'];
+	}
+
+	public function setID($value)
+	{
+		$this->data['itemtype'] = $value;
+	}
+
+	public function getCount()
+	{
+		return $this->data['count'];
+	}
+
+	public function setCount($value)
+	{
+		$this->data['count'] = $value;
 	}
 
 	public function getAttributesList()
 	{
 		$this->loadAttributes();
 		return $this->attributes->getAttributesList();
+	}
+
+	public function loadAttributes()
+	{
+		if (!isset($this->attributes))
+			$this->attributes = new ItemAttributes($this->getAttributes());
+	}
+
+	public function getAttributes()
+	{
+		return $this->data['attributes'];
+	}
+
+	public function setAttributes($value)
+	{
+		$this->data['attributes'] = $value;
 	}
 
 	public function hasAttribute($attributeName)
@@ -80,6 +120,10 @@ class Item
 	public function getAttribute($attributeName)
 	{
 		$this->loadAttributes();
-		return $this->attributes->getAttribute($attributeName);
+		try {
+			return $this->attributes->getAttribute($attributeName);
+		} catch (Exception $e) {
+			return $e->getMessage();
+		}
 	}
 }

@@ -12,8 +12,8 @@ if($action == "guildwars") {
 		//check is it vice or/and leader account (leader has vice + leader rights)
 		$guild_leader_char = $guild->getOwner();
 		$rank_list = $guild->getGuildRanksList();
-		$guild_leader = FALSE;
-		$guild_vice = FALSE;
+		$guild_leader = false;
+		$guild_vice = false;
 		if($logged)
 		{
 			$account_players = $account_logged->getPlayers();
@@ -305,7 +305,7 @@ if($action == 'declarewar')
 		if(empty($guild_errors))
 		{
 			$guild_leader_char = $guild->getOwner();
-			$guild_leader = FALSE;
+			$guild_leader = false;
 			$account_players = $account_logged->getPlayers();
 			foreach($account_players as $player)
 			{
@@ -398,7 +398,7 @@ if($action == 'guildwar_invite')
 		if(empty($guild_errors))
 		{
 			$guild_leader_char = $guild->getOwner();
-			$guild_leader = FALSE;
+			$guild_leader = false;
 			$account_players = $account_logged->getPlayers();
 			foreach($account_players as $player)
 			{
@@ -486,7 +486,7 @@ if($action == 'guildwar_cancel')
 		if(empty($guild_errors))
 		{
 			$guild_leader_char = $guild->getOwner();
-			$guild_leader = FALSE;
+			$guild_leader = false;
 			$account_players = $account_logged->getPlayers();
 			foreach($account_players as $player)
 			{
@@ -546,7 +546,7 @@ if($action == 'guildwar_reject')
 		if(empty($guild_errors))
 		{
 			$guild_leader_char = $guild->getOwner();
-			$guild_leader = FALSE;
+			$guild_leader = false;
 			$account_players = $account_logged->getPlayers();
 			foreach($account_players as $player)
 			{
@@ -606,7 +606,7 @@ if($action == 'guildwar_accept')
 		if(empty($guild_errors))
 		{
 			$guild_leader_char = $guild->getOwner();
-			$guild_leader = FALSE;
+			$guild_leader = false;
 			$account_players = $account_logged->getPlayers();
 			foreach($account_players as $player)
 			{

@@ -130,7 +130,7 @@ class Color
     }
 
     /**
-     * @return bool TRUE when alpha channel is specified, FALSE otherwise
+     * @return bool true when alpha channel is specified, false otherwise
      */
     public function hasAlphaChannel()
     {

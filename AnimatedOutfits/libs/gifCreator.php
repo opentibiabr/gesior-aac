@@ -129,7 +129,7 @@ class GifCreator
                 throw new \Exception($this->version.': '.$i.' '.$this->errors['ERR01']);
 			}
             
-			for ($j = (13 + 3 * (2 << (ord($this->frameSources[$i] { 10 }) & 0x07))), $k = TRUE; $k; $j++) {
+			for ($j = (13 + 3 * (2 << (ord($this->frameSources[$i] { 10 }) & 0x07))), $k = true; $k; $j++) {
 			 
 				switch ($this->frameSources[$i] { $j }) {
 				    

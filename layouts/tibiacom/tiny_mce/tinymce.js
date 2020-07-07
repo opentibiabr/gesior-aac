@@ -22341,7 +22341,7 @@ define(
     // Added for compression purposes
     var each = Tools.each, extend = Tools.extend;
     var map = Tools.map, inArray = Tools.inArray, explode = Tools.explode;
-    var TRUE = true, FALSE = false;
+    var TRUE = true, false = false;
 
     return function (editor) {
       var dom, selection, formatter,
@@ -22565,7 +22565,7 @@ define(
 
       var execNativeCommand = function (command, ui, value) {
         if (ui === undefined) {
-          ui = FALSE;
+          ui = false;
         }
 
         if (value === undefined) {
@@ -22754,7 +22754,7 @@ define(
           dom.getParent(selection.getNode(), function (node) {
             if (node.nodeType == 1 && counter++ == value) {
               selection.select(node);
-              return FALSE;
+              return false;
             }
           }, editor.getBody());
         },

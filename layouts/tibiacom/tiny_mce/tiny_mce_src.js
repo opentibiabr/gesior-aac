@@ -6573,7 +6573,7 @@ tinymce.dom.TreeWalker = function(start_node, root_node) {
 			CLONE = 1,
 			DELETE = 2,
 			TRUE = true,
-			FALSE = false,
+			false = false,
 			START_OFFSET = 'startOffset',
 			START_CONTAINER = 'startContainer',
 			END_CONTAINER = 'endContainer',
@@ -6625,7 +6625,7 @@ tinymce.dom.TreeWalker = function(start_node, root_node) {
 		};
 
 		function setEnd(n, o) {
-			_setEndPoint(FALSE, n, o);
+			_setEndPoint(false, n, o);
 		};
 
 		function setStartBefore(n) {
@@ -7034,7 +7034,7 @@ tinymce.dom.TreeWalker = function(start_node, root_node) {
 				// is partially selected.
 				if (how != CLONE) {
 					t.setEndBefore(endAncestor);
-					t.collapse(FALSE);
+					t.collapse(false);
 				}
 
 				return frag;
@@ -7056,7 +7056,7 @@ tinymce.dom.TreeWalker = function(start_node, root_node) {
 			// is partially selected.
 			if (how != CLONE) {
 				t.setEndBefore(endAncestor);
-				t.collapse(FALSE);
+				t.collapse(false);
 			}
 
 			return frag;
@@ -7142,15 +7142,15 @@ tinymce.dom.TreeWalker = function(start_node, root_node) {
 			var next = _getSelectedNode(t[END_CONTAINER], t[END_OFFSET] - 1), parent, clonedParent, prevSibling, clonedChild, clonedGrandParent, isFullySelected = next != t[END_CONTAINER];
 
 			if (next == root)
-				return _traverseNode(next, isFullySelected, FALSE, how);
+				return _traverseNode(next, isFullySelected, false, how);
 
 			parent = next.parentNode;
-			clonedParent = _traverseNode(parent, FALSE, FALSE, how);
+			clonedParent = _traverseNode(parent, false, false, how);
 
 			while (parent) {
 				while (next) {
 					prevSibling = next.previousSibling;
-					clonedChild = _traverseNode(next, isFullySelected, FALSE, how);
+					clonedChild = _traverseNode(next, isFullySelected, false, how);
 
 					if (how != DELETE)
 						clonedParent.insertBefore(clonedChild, clonedParent.firstChild);
@@ -7165,7 +7165,7 @@ tinymce.dom.TreeWalker = function(start_node, root_node) {
 				next = parent.previousSibling;
 				parent = parent.parentNode;
 
-				clonedGrandParent = _traverseNode(parent, FALSE, FALSE, how);
+				clonedGrandParent = _traverseNode(parent, false, false, how);
 
 				if (how != DELETE)
 					clonedGrandParent.appendChild(clonedParent);
@@ -7181,7 +7181,7 @@ tinymce.dom.TreeWalker = function(start_node, root_node) {
 				return _traverseNode(next, isFullySelected, TRUE, how);
 
 			parent = next.parentNode;
-			clonedParent = _traverseNode(parent, FALSE, TRUE, how);
+			clonedParent = _traverseNode(parent, false, TRUE, how);
 
 			while (parent) {
 				while (next) {
@@ -7201,7 +7201,7 @@ tinymce.dom.TreeWalker = function(start_node, root_node) {
 				next = parent.nextSibling;
 				parent = parent.parentNode;
 
-				clonedGrandParent = _traverseNode(parent, FALSE, TRUE, how);
+				clonedGrandParent = _traverseNode(parent, false, TRUE, how);
 
 				if (how != DELETE)
 					clonedGrandParent.appendChild(clonedParent);
@@ -7235,7 +7235,7 @@ tinymce.dom.TreeWalker = function(start_node, root_node) {
 				if (how == DELETE)
 					return;
 
-				newNode = dom.clone(n, FALSE);
+				newNode = dom.clone(n, false);
 				newNode.nodeValue = newNodeValue;
 
 				return newNode;
@@ -7244,7 +7244,7 @@ tinymce.dom.TreeWalker = function(start_node, root_node) {
 			if (how == DELETE)
 				return;
 
-			return dom.clone(n, FALSE);
+			return dom.clone(n, false);
 		};
 
 		function _traverseFullySelected(n, how) {
@@ -7271,7 +7271,7 @@ tinymce.dom.TreeWalker = function(start_node, root_node) {
 
 (function() {
 	function Selection(selection) {
-		var self = this, dom = selection.dom, TRUE = true, FALSE = false;
+		var self = this, dom = selection.dom, TRUE = true, false = false;
 
 		function getPosition(rng, start) {
 			var checkRng, startIndex = 0, endIndex, inside,
@@ -7661,7 +7661,7 @@ tinymce.dom.TreeWalker = function(start_node, root_node) {
 						container.innerHTML = '<span>\uFEFF</span>';
 						marker = container.firstChild;
 						tmpRng.moveToElementText(marker);
-						tmpRng.collapse(FALSE); // Collapse false works better than true for some odd reason
+						tmpRng.collapse(false); // Collapse false works better than true for some odd reason
 					}
 
 					ieRng.setEndPoint(start ? 'StartToStart' : 'EndToEnd', tmpRng);
@@ -14997,7 +14997,7 @@ tinymce.create('tinymce.ui.Toolbar:tinymce.ui.Container', {
 })(tinymce);
 (function(tinymce) {
 	// Added for compression purposes
-	var each = tinymce.each, undef, TRUE = true, FALSE = false;
+	var each = tinymce.each, undef, TRUE = true, false = false;
 
 	tinymce.EditorCommands = function(editor) {
 		var dom = editor.dom,
@@ -15016,7 +15016,7 @@ tinymce.create('tinymce.ui.Toolbar:tinymce.ui.Container', {
 				return TRUE;
 			}
 
-			return FALSE;
+			return false;
 		};
 
 		function queryCommandState(command) {
@@ -15036,7 +15036,7 @@ tinymce.create('tinymce.ui.Toolbar:tinymce.ui.Container', {
 			if (func = commands.value[command])
 				return func(command);
 
-			return FALSE;
+			return false;
 		};
 
 		function addCommands(command_list, type) {
@@ -15061,7 +15061,7 @@ tinymce.create('tinymce.ui.Toolbar:tinymce.ui.Container', {
 
 		function execNativeCommand(command, ui, value) {
 			if (ui === undef)
-				ui = FALSE;
+				ui = false;
 
 			if (value === undef)
 				value = null;
@@ -15124,7 +15124,7 @@ tinymce.create('tinymce.ui.Toolbar:tinymce.ui.Container', {
 					selection.select(selection.getNode());
 
 				execNativeCommand(command);
-				selection.collapse(FALSE);
+				selection.collapse(false);
 			},
 
 			// Override justify commands to use the text formatter engine
@@ -15227,7 +15227,7 @@ tinymce.create('tinymce.ui.Toolbar:tinymce.ui.Container', {
 				dom.getParent(selection.getNode(), function(node) {
 					if (node.nodeType == 1 && counter++ == value) {
 						selection.select(node);
-						return FALSE;
+						return false;
 					}
 				}, editor.getBody());
 			},
@@ -16398,7 +16398,7 @@ tinymce.ForceBlocks = function(editor) {
 			nodeIndex = dom.nodeIndex,
 			INVISIBLE_CHAR = '\uFEFF',
 			MCE_ATTR_RE = /^(src|href|style)$/,
-			FALSE = false,
+			false = false,
 			TRUE = true,
 			formatChangeData,
 			undef,
@@ -16663,7 +16663,7 @@ tinymce.ForceBlocks = function(editor) {
 					each(tinymce.grep(node.childNodes), process);
 					return 0;
 				} else {
-					currentWrapElm = dom.clone(wrapElm, FALSE);
+					currentWrapElm = dom.clone(wrapElm, false);
 
 					// create a list of the nodes on the same side of the list as the selection
 					each(tinymce.grep(node.childNodes), function(n, index) {
@@ -16770,7 +16770,7 @@ tinymce.ForceBlocks = function(editor) {
 							// Start wrapping
 							if (!currentWrapElm) {
 								// Wrap the node
-								currentWrapElm = dom.clone(wrapElm, FALSE);
+								currentWrapElm = dom.clone(wrapElm, false);
 								node.parentNode.insertBefore(currentWrapElm, node);
 								newWrappers.push(currentWrapElm);
 							}
@@ -16805,7 +16805,7 @@ tinymce.ForceBlocks = function(editor) {
 							var i, currentWrapElm, children;
 
 							if (node.nodeName === 'A') {
-								currentWrapElm = dom.clone(wrapElm, FALSE);
+								currentWrapElm = dom.clone(wrapElm, false);
 								newWrappers.push(currentWrapElm);
 
 								children = tinymce.grep(node.childNodes);
@@ -16844,13 +16844,13 @@ tinymce.ForceBlocks = function(editor) {
 						each(node.childNodes, function(node) {
 							if (node.nodeType == 1 && !isBookmarkNode(node) && !isCaretNode(node)) {
 								child = node;
-								return FALSE; // break loop
+								return false; // break loop
 							}
 						});
 
 						// If child was found and of the same type as the current node
 						if (child && matchName(child, format)) {
-							clone = dom.clone(child, FALSE);
+							clone = dom.clone(child, false);
 							setElementFormat(clone);
 
 							dom.replace(clone, node, TRUE);
@@ -17035,7 +17035,7 @@ tinymce.ForceBlocks = function(editor) {
 					formatRootParent = format_root.parentNode;
 
 					for (parent = container.parentNode; parent && parent != formatRootParent; parent = parent.parentNode) {
-						clone = dom.clone(parent, FALSE);
+						clone = dom.clone(parent, false);
 
 						for (i = 0; i < formatList.length; i++) {
 							if (removeFormat(formatList[i], vars, clone, clone)) {
@@ -17268,7 +17268,7 @@ tinymce.ForceBlocks = function(editor) {
 					return TRUE;
 			}
 
-			return FALSE;
+			return false;
 		};
 
 		function matchAll(names, vars) {
@@ -17313,7 +17313,7 @@ tinymce.ForceBlocks = function(editor) {
 				}
 			}
 
-			return FALSE;
+			return false;
 		};
 
 		function formatChanged(formats, callback, similar) {
@@ -17740,7 +17740,7 @@ tinymce.ForceBlocks = function(editor) {
 			}
 
 			// Expand start/end container to matching selector
-			if (format[0].selector && format[0].expand !== FALSE && !format[0].inline) {
+			if (format[0].selector && format[0].expand !== false && !format[0].inline) {
 				// Find new startContainer/endContainer if there is better one
 				startContainer = findSelectorEndPoint(startContainer, 'previousSibling');
 				endContainer = findSelectorEndPoint(endContainer, 'nextSibling');
@@ -17788,7 +17788,7 @@ tinymce.ForceBlocks = function(editor) {
 
 			// Check if node matches format
 			if (!matchName(node, format))
-				return FALSE;
+				return false;
 
 			// Should we compare with format attribs and styles
 			if (format.remove != 'all') {
@@ -17870,7 +17870,7 @@ tinymce.ForceBlocks = function(editor) {
 				attrs = dom.getAttribs(node);
 				for (i = 0; i < attrs.length; i++) {
 					if (attrs[i].nodeName.indexOf('_') !== 0)
-						return FALSE;
+						return false;
 				}
 			}
 
@@ -17894,10 +17894,10 @@ tinymce.ForceBlocks = function(editor) {
 				if (!forcedRootBlock) {
 					// Append BR elements if needed before we remove the block
 					if (isBlock(node) && !isBlock(parentNode)) {
-						if (!find(node, FALSE) && !find(node.firstChild, TRUE, 1))
+						if (!find(node, false) && !find(node.firstChild, TRUE, 1))
 							node.insertBefore(dom.create('br'), node.firstChild);
 
-						if (!find(node, TRUE) && !find(node.lastChild, FALSE, 1))
+						if (!find(node, TRUE) && !find(node.lastChild, false, 1))
 							node.appendChild(dom.create('br'));
 					}
 				} else {
@@ -17946,7 +17946,7 @@ tinymce.ForceBlocks = function(editor) {
 			function compareElements(node1, node2) {
 				// Not the same name
 				if (node1.nodeName != node2.nodeName)
-					return FALSE;
+					return false;
 
 				function getAttribs(node) {
 					var attribs = {};
@@ -17972,11 +17972,11 @@ tinymce.ForceBlocks = function(editor) {
 
 							// Obj2 doesn't have obj1 item
 							if (value === undef)
-								return FALSE;
+								return false;
 
 							// Obj2 item has a different value
 							if (obj1[name] != value)
-								return FALSE;
+								return false;
 
 							// Delete similar value
 							delete obj2[name];
@@ -17987,7 +17987,7 @@ tinymce.ForceBlocks = function(editor) {
 					for (name in obj2) {
 						// Obj2 has item obj1 doesn't have
 						if (obj2.hasOwnProperty(name))
-							return FALSE;
+							return false;
 					}
 
 					return TRUE;
@@ -17995,11 +17995,11 @@ tinymce.ForceBlocks = function(editor) {
 
 				// Attribs are not the same
 				if (!compareObjects(getAttribs(node1), getAttribs(node2)))
-					return FALSE;
+					return false;
 
 				// Styles are not the same
 				if (!compareObjects(dom.parseStyle(dom.getAttrib(node1, 'style')), dom.parseStyle(dom.getAttrib(node2, 'style'))))
-					return FALSE;
+					return false;
 
 				return TRUE;
 			};

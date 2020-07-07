@@ -1,0 +1,58 @@
+.live_popup {
+        background-image: url("live_bg2.png");
+        height: 86px;
+        position: fixed;
+        bottom: 10px;
+        z-index: 99999;
+    }
+
+    #live_popup_ch{
+        margin-left: 45px;
+        width: 1900px;
+    }
+
+    #live_popup_ch a{
+        margin-left: 15px;
+        margin-top: 10px;
+        width: 115px;
+        float: left;
+        position: relative;
+    }
+
+    #live_popup_ch img{
+        /*height: 70px;*/
+        opacity: 0.7;
+    }
+    #live_popup_ch a:hover img{
+        /*height: 70px;*/
+        opacity: 1;
+    }
+    #live_popup_ch a .img {
+        border: solid rgba(255, 255, 255, 0.8) 2px;
+        background: #000;
+    }
+
+    #live_popup_ch a:hover .img {
+        border: solid rgba(255, 255, 255, 1.0) 2px;
+    }
+    #live_popup_ch .logo{
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        left: -10px;
+        bottom: -5px;
+        opacity: 1;
+    }
+    #live_btn{
+        position: absolute;
+        height: 80px;
+        width: 30px;
+        left: 10px;
+        top: 0px;
+        cursor: pointer;
+    }
+    #live_btn i{
+        margin-left: 18px;
+        margin-top: 8px;
+        font-size: 12px;
+    }

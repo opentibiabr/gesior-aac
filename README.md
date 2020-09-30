@@ -1,7 +1,4 @@
-## Gesior-Ferobra BY RICARDO SOUZA 
-
-Confira o projeto em [Ferobra](https://ferobraglobal.com) 
-> **Lembrando que esse repositório não está com a ultima versão do Ferobra.**
+## Gesior-Premium BY RICARDO SOUZA 
 
 #### PT-BR
 * Bem vindo ao tutorial de instalação desse lindo website feito com amor e carinho pra vcs meus queridos tibianos.
@@ -96,7 +93,6 @@ cd /var/www/html && composer install
 ## credits
 @gesior <br>
 @Felipe Monteiro <br>
-@marcoma <br>
 And more developers
 
 ## License

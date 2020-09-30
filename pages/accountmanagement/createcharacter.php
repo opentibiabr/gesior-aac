@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Created by PhpStorm.
  * User: Ricardo
@@ -174,7 +173,7 @@ if ($_POST['savecharacter'] != 1) {
 		if ($newchar_sex != 1 && $newchar_sex != "0")
 			$newchar_errors[] = 'Sex must be equal <b>0 (female)</b> or <b>1 (male)</b>.';
 		if (count($config['site']['newchar_vocations']) > 1) {
-			$newchar_vocation_check = false;
+			$newchar_vocation_check = FALSE;
 			foreach ($config['site']['newchar_vocations'] as $char_vocation_key => $sample_char)
 				if ($newchar_vocation == $char_vocation_key)
 					$newchar_vocation_check = TRUE;
@@ -193,7 +192,7 @@ if ($_POST['savecharacter'] != 1) {
 			$newchar_errors[] .= 'You have too many characters on your account <b>(' . $number_of_players_on_account . '/' . $config['site']['max_players_per_account'] . ')</b>!';
 	}
 	if (empty($newchar_errors)) {
-		$char_to_copy_name = "Rook Sample";
+		$char_to_copy_name = $config['site']['newchar_vocations'][$newchar_vocation];
 		$char_to_copy = new Player();
 		$char_to_copy->find($char_to_copy_name);
 		if (!$char_to_copy->isLoaded())
@@ -218,6 +217,7 @@ if ($_POST['savecharacter'] != 1) {
 		$char_to_copy->setPosX(0);
 		$char_to_copy->setPosY(0);
 		$char_to_copy->setPosZ(0);
+		$char_to_copy->setTown($newchar_town);
 		$char_to_copy->setBalance(0);
 		$char_to_copy->setCreateIP(Visitor::getIP());
 		$char_to_copy->setCreateDate(time());

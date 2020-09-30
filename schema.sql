@@ -1,24 +1,5 @@
--- phpMyAdmin SQL Dump
--- version 5.0.2
--- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Tempo de geração: 07-Jul-2020 às 01:55
--- Versão do servidor: 10.4.13-MariaDB
--- versão do PHP: 7.2.31
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Banco de dados: `otservbr`
+-- Database: `otservbr`
 --
 
 -- --------------------------------------------------------
@@ -66,14 +47,30 @@ CREATE TABLE `accounts` (
   `player_sell_bank` int(11) DEFAULT 0,
   `secret_status` tinyint(1) NOT NULL DEFAULT 0,
   `tournamentBalance` int(11) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extracting data from the table `accounts`
 --
 
 INSERT INTO `accounts` (`id`, `name`, `password`, `secret`, `type`, `premdays`, `coins`, `lastday`, `proxy_id`, `email`, `creation`, `vote`, `key`, `email_new`, `email_new_time`, `rlname`, `location`, `page_access`, `email_code`, `next_email`, `premium_points`, `create_date`, `create_ip`, `last_post`, `flag`, `vip_time`, `guild_points`, `guild_points_stats`, `passed`, `block`, `refresh`, `birth_date`, `gender`, `loyalty_points`, `authToken`, `player_sell_bank`, `secret_status`, `tournamentBalance`) VALUES
-(1, '1', '21298df8a3277357ee55b01df9530b535cf08ec1', NULL, 5, 0, 0, 0, 0, 'god@god', 0, 0, '0', '', 0, '', '', 0, '', 0, 0, 0, 0, 0, '', 1594492196, 0, 0, 0, 0, 0, '', '', 0, '', 0, 0, 0);
+(1, 'god', '21298df8a3277357ee55b01df9530b535cf08ec1', '', 5, 0, 0, 0, 0, '@god', 1592969263, 0, 'Y0ON-ERO1-O0EH-EXY9', '', 0, 'Teste', 'Teste', 0, '', 0, 0, 0, 2130706433, 0, 'unknown', 0, 0, 0, 0, 0, 0, '15/5/1985', 'male', 0, '', 0, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure `coins_transactions`
+--
+
+CREATE TABLE `coins_transactions` (
+  `id`          int(11)       UNSIGNED NOT NULL,
+  `account_id`  int(11)       UNSIGNED NOT NULL,
+  `type`        tinyint(1)    UNSIGNED NOT NULL,
+  `amount`      int(12)       UNSIGNED NOT NULL,
+  `description` varchar(3500) NOT NULL,
+  `timestamp`   timestamp     DEFAULT CURRENT_TIMESTAMP,
+  INDEX `account_id` (`account_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -85,7 +82,7 @@ CREATE TABLE `accounts_storage` (
   `account_id` int(11) NOT NULL DEFAULT 0,
   `key` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `value` int(11) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -99,7 +96,7 @@ CREATE TABLE `account_bans` (
   `banned_at` bigint(20) NOT NULL,
   `expires_at` bigint(20) NOT NULL,
   `banned_by` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -114,7 +111,7 @@ CREATE TABLE `account_ban_history` (
   `banned_at` bigint(20) NOT NULL,
   `expired_at` bigint(20) NOT NULL,
   `banned_by` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -147,7 +144,7 @@ CREATE TABLE `account_viplist` (
   `description` varchar(128) NOT NULL DEFAULT '',
   `icon` tinyint(2) UNSIGNED NOT NULL DEFAULT 0,
   `notify` tinyint(1) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -161,7 +158,7 @@ CREATE TABLE `announcements` (
   `text` varchar(255) NOT NULL,
   `date` varchar(20) NOT NULL,
   `author` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -175,7 +172,7 @@ CREATE TABLE `blessings_history` (
   `blessing` tinyint(4) NOT NULL,
   `loss` tinyint(1) NOT NULL,
   `timestamp` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -184,12 +181,12 @@ CREATE TABLE `blessings_history` (
 --
 
 CREATE TABLE `daily_reward_history` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `streak` smallint(2) NOT NULL DEFAULT 0,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `daystreak` smallint(2) NOT NULL DEFAULT 0,
   `player_id` int(11) NOT NULL,
-  `time` bigint(20) NOT NULL,
-  `event` varchar(255) DEFAULT NULL,
-  `instant` tinyint(3) UNSIGNED NOT NULL DEFAULT 0
+  `timestamp` int(11) NOT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -200,7 +197,7 @@ CREATE TABLE `daily_reward_history` (
 
 CREATE TABLE `free_pass` (
   `player_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -211,14 +208,7 @@ CREATE TABLE `free_pass` (
 CREATE TABLE `global_storage` (
   `key` varchar(32) NOT NULL,
   `value` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Extracting data from the table `global_storage`
---
-
-INSERT INTO `global_storage` (`key`, `value`) VALUES
-('69799', '1594164234');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -241,7 +231,7 @@ CREATE TABLE `guilds` (
   `logo_gfx_name` varchar(255) NOT NULL DEFAULT '',
   `level` int(11) DEFAULT 1,
   `points` int(11) DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -257,7 +247,7 @@ CREATE TABLE `guildwar_kills` (
   `targetguild` int(11) NOT NULL DEFAULT 0,
   `warid` int(11) NOT NULL DEFAULT 0,
   `time` bigint(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -272,7 +262,7 @@ CREATE TABLE `guild_actions_h` (
   `value` int(11) NOT NULL,
   `date` bigint(20) DEFAULT NULL,
   `type` int(6) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -284,7 +274,7 @@ CREATE TABLE `guild_invites` (
   `player_id` int(11) NOT NULL DEFAULT 0,
   `guild_id` int(11) NOT NULL DEFAULT 0,
   `date` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -297,7 +287,7 @@ CREATE TABLE `guild_membership` (
   `guild_id` int(11) NOT NULL,
   `rank_id` int(11) NOT NULL,
   `nick` varchar(15) NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -310,7 +300,7 @@ CREATE TABLE `guild_ranks` (
   `guild_id` int(11) NOT NULL COMMENT 'guild',
   `name` varchar(255) NOT NULL COMMENT 'rank name',
   `level` int(11) NOT NULL COMMENT 'rank level - leader, vice, member, maybe something else'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -325,7 +315,7 @@ CREATE TABLE `guild_transfer_h` (
   `to_guild_id` int(6) NOT NULL,
   `value` int(11) NOT NULL,
   `date` bigint(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -343,7 +333,7 @@ CREATE TABLE `guild_wars` (
   `started` bigint(15) NOT NULL DEFAULT 0,
   `ended` bigint(15) NOT NULL DEFAULT 0,
   `frags_limit` int(10) DEFAULT 20
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -366,7 +356,7 @@ CREATE TABLE `houses` (
   `size` int(11) NOT NULL DEFAULT 0,
   `guildid` int(11) DEFAULT NULL,
   `beds` int(11) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -378,7 +368,7 @@ CREATE TABLE `house_lists` (
   `house_id` int(11) NOT NULL,
   `listid` int(11) NOT NULL,
   `list` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -392,7 +382,7 @@ CREATE TABLE `ip_bans` (
   `banned_at` bigint(20) NOT NULL,
   `expires_at` bigint(20) NOT NULL,
   `banned_by` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -407,7 +397,7 @@ CREATE TABLE `live_casts` (
   `description` varchar(255) DEFAULT NULL,
   `spectators` smallint(5) DEFAULT 0,
   `version` int(10) DEFAULT 1220
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -425,7 +415,7 @@ CREATE TABLE `market_history` (
   `expires_at` bigint(20) UNSIGNED NOT NULL,
   `inserted` bigint(20) UNSIGNED NOT NULL,
   `state` tinyint(1) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -442,7 +432,7 @@ CREATE TABLE `market_offers` (
   `created` bigint(20) UNSIGNED NOT NULL,
   `anonymous` tinyint(1) NOT NULL DEFAULT 0,
   `price` int(10) UNSIGNED NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -455,7 +445,7 @@ CREATE TABLE `newsticker` (
   `date` int(11) NOT NULL,
   `text` mediumtext NOT NULL,
   `icon` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -470,7 +460,7 @@ CREATE TABLE `pagseguro` (
   `type` int(11) NOT NULL,
   `status` int(11) NOT NULL,
   `lastEventDate` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -486,7 +476,7 @@ CREATE TABLE `pagseguro_transactions` (
   `item_count` int(11) NOT NULL,
   `data` datetime NOT NULL,
   `payment_amount` float DEFAULT 0
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -617,6 +607,7 @@ CREATE TABLE `players` (
   `loyalty_ranking` tinyint(1) NOT NULL DEFAULT 0,
   `bonus_rerolls` bigint(21) NOT NULL DEFAULT 0,
   `critical` int(20) DEFAULT 0,
+  `bonus_reroll` int(11) NOT NULL DEFAULT 0,
   `sbw_points` int(11) NOT NULL DEFAULT 0,
   `instantrewardtokens` int(11) UNSIGNED NOT NULL DEFAULT 0,
   `charmpoints` int(11) DEFAULT 0,
@@ -637,20 +628,20 @@ CREATE TABLE `players` (
   `bestiaryTracker` longblob DEFAULT NULL,
   `autoloot` blob DEFAULT NULL,
   `lastday` bigint(22) DEFAULT 0,
-  `bonus_reroll` int(11) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `cast` tinyint(1) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extracting data from the table `players`
 --
 
-INSERT INTO `players` (`id`, `name`, `group_id`, `account_id`, `level`, `vocation`, `health`, `healthmax`, `experience`, `exptoday`, `lookbody`, `lookfeet`, `lookhead`, `looklegs`, `looktype`, `lookaddons`, `maglevel`, `mana`, `manamax`, `manaspent`, `soul`, `town_id`, `posx`, `posy`, `posz`, `conditions`, `cap`, `sex`, `lastlogin`, `lastip`, `save`, `skull`, `skulltime`, `lastlogout`, `blessings`, `blessings1`, `blessings2`, `blessings3`, `blessings4`, `blessings5`, `blessings6`, `blessings7`, `blessings8`, `onlinetime`, `deletion`, `balance`, `bonusrerollcount`, `quick_loot_fallback`, `offlinetraining_time`, `offlinetraining_skill`, `stamina`, `skill_fist`, `skill_fist_tries`, `skill_club`, `skill_club_tries`, `skill_sword`, `skill_sword_tries`, `skill_axe`, `skill_axe_tries`, `skill_dist`, `skill_dist_tries`, `skill_shielding`, `skill_shielding_tries`, `skill_fishing`, `skill_fishing_tries`, `deleted`, `description`, `comment`, `create_ip`, `create_date`, `hide_char`, `skill_critical_hit_chance`, `skill_critical_hit_chance_tries`, `skill_critical_hit_damage`, `skill_critical_hit_damage_tries`, `skill_life_leech_chance`, `skill_life_leech_chance_tries`, `skill_life_leech_amount`, `skill_life_leech_amount_tries`, `skill_mana_leech_chance`, `skill_mana_leech_chance_tries`, `skill_mana_leech_amount`, `skill_mana_leech_amount_tries`, `skill_criticalhit_chance`, `skill_criticalhit_damage`, `skill_lifeleech_chance`, `skill_lifeleech_amount`, `skill_manaleech_chance`, `skill_manaleech_amount`, `prey_stamina_1`, `prey_stamina_2`, `prey_stamina_3`, `prey_column`, `xpboost_stamina`, `xpboost_value`, `marriage_status`, `hide_skills`, `hide_set`, `former`, `signature`, `marriage_spouse`, `loyalty_ranking`, `bonus_rerolls`, `critical`, `sbw_points`, `instantrewardtokens`, `charmpoints`, `direction`, `lookmount`, `version`, `lootaction`, `spells`, `storages`, `items`, `depotitems`, `inboxitems`, `rewards`, `varcap`, `charmExpansion`, `bestiarykills`, `charms`, `bestiaryTracker`, `autoloot`, `lastday`, `bonus_reroll`) VALUES
-(1, 'Rook Sample', 1, 1, 1, 0, 150, 150, 0, NULL, 106, 76, 78, 58, 136, 0, 0, 5, 5, 0, 0, 6, 32097, 32205, 7, '', 400, 0, 1594061826, 16777343, 1, 0, 0, 1594062801, 0, 0, 1, 1, 1, 1, 1, 0, 0, 2936, 0, 0, 0, 0, 43200, -1, 2520, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, NULL, 1, 0, 0, 0, NULL, NULL, '-', '', -1, 0, 0, 0, 0, 0, 0, 0, 0, 1230, 0, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0x0000000000000000, 0x0000000000000000, 0x0000000000000000, 0x0000000000000000, 0, 0),
-(2, 'Sorcerer Sample', 1, 1, 8, 1, 185, 185, 4200, NULL, 44, 98, 15, 76, 128, 0, 0, 90, 90, 0, 100, 1, 0, 0, 0, '', 470, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 43200, -1, 2520, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, NULL, 1, NULL, NULL, 0, NULL, NULL, '-', '', -1, 0, 0, 0, 0, 0, 0, 0, 0, 1000, 0, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0),
-(3, 'Druid Sample', 1, 1, 8, 2, 185, 185, 4200, NULL, 44, 98, 15, 76, 128, 0, 0, 90, 90, 0, 100, 1, 0, 0, 0, '', 470, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 43200, -1, 2520, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, NULL, 1, NULL, NULL, 0, NULL, NULL, '-', '', -1, 0, 0, 0, 0, 0, 0, 0, 0, 1000, 0, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0),
-(4, 'Paladin Sample', 1, 1, 8, 3, 185, 185, 4200, NULL, 44, 98, 15, 76, 128, 0, 0, 90, 90, 0, 100, 1, 0, 0, 0, '', 470, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 43200, -1, 2520, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, NULL, 1, NULL, NULL, 0, NULL, NULL, '-', '', -1, 0, 0, 0, 0, 0, 0, 0, 0, 1000, 0, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0),
-(5, 'Knight Sample', 1, 1, 8, 4, 185, 185, 4200, NULL, 44, 98, 15, 76, 128, 0, 0, 90, 90, 0, 100, 1, 0, 0, 0, '', 470, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 43200, -1, 2520, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, NULL, 1, NULL, NULL, 0, NULL, NULL, '-', '', -1, 0, 0, 0, 0, 0, 0, 0, 0, 1000, 0, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0),
-(6, 'God', 5, 1, 1, 0, 185, 185, 4200, NULL, 44, 98, 15, 76, 128, 0, 0, 90, 90, 0, 100, 1, 0, 0, 0, '', 470, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 43200, -1, 2520, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, NULL, 1, NULL, NULL, 0, NULL, NULL, '-', '', -1, 0, 0, 0, 0, 0, 0, 0, 0, 1000, 0, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0);
+INSERT INTO `players` (`id`, `name`, `group_id`, `account_id`, `level`, `vocation`, `health`, `healthmax`, `experience`, `exptoday`, `lookbody`, `lookfeet`, `lookhead`, `looklegs`, `looktype`, `lookaddons`, `maglevel`, `mana`, `manamax`, `manaspent`, `soul`, `town_id`, `posx`, `posy`, `posz`, `conditions`, `cap`, `sex`, `lastlogin`, `lastip`, `save`, `skull`, `skulltime`, `lastlogout`, `blessings`, `blessings1`, `blessings2`, `blessings3`, `blessings4`, `blessings5`, `blessings6`, `blessings7`, `blessings8`, `onlinetime`, `deletion`, `balance`, `bonusrerollcount`, `quick_loot_fallback`, `offlinetraining_time`, `offlinetraining_skill`, `stamina`, `skill_fist`, `skill_fist_tries`, `skill_club`, `skill_club_tries`, `skill_sword`, `skill_sword_tries`, `skill_axe`, `skill_axe_tries`, `skill_dist`, `skill_dist_tries`, `skill_shielding`, `skill_shielding_tries`, `skill_fishing`, `skill_fishing_tries`, `deleted`, `description`, `comment`, `create_ip`, `create_date`, `hide_char`, `skill_critical_hit_chance`, `skill_critical_hit_chance_tries`, `skill_critical_hit_damage`, `skill_critical_hit_damage_tries`, `skill_life_leech_chance`, `skill_life_leech_chance_tries`, `skill_life_leech_amount`, `skill_life_leech_amount_tries`, `skill_mana_leech_chance`, `skill_mana_leech_chance_tries`, `skill_mana_leech_amount`, `skill_mana_leech_amount_tries`, `skill_criticalhit_chance`, `skill_criticalhit_damage`, `skill_lifeleech_chance`, `skill_lifeleech_amount`, `skill_manaleech_chance`, `skill_manaleech_amount`, `prey_stamina_1`, `prey_stamina_2`, `prey_stamina_3`, `prey_column`, `xpboost_stamina`, `xpboost_value`, `marriage_status`, `hide_skills`, `hide_set`, `former`, `signature`, `marriage_spouse`, `loyalty_ranking`, `bonus_rerolls`, `critical`, `bonus_reroll`, `sbw_points`, `instantrewardtokens`, `charmpoints`, `direction`, `lookmount`, `version`, `lootaction`, `spells`, `storages`, `items`, `depotitems`, `inboxitems`, `rewards`, `varcap`, `charmExpansion`, `bestiarykills`, `charms`, `bestiaryTracker`, `autoloot`, `lastday`, `cast`) VALUES
+(1, 'Rook Sample', 1, 1, 2, 0, 155, 155, 100, NULL, 113, 115, 95, 39, 129, 0, 0, 60, 60, 0, 100, 1, 32069, 31901, 6, '', 410, 0, 1592972902, 16777343, 1, 0, 0, 1592972908, 0, 1, 1, 1, 1, 1, 1, 1, 1, 15, 0, 0, 0, 0, 43200, -1, 2520, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, NULL, NULL, '-', '', -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000, 0, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0),
+(2, 'Sorcerer Sample', 1, 1, 8, 1, 185, 185, 4200, NULL, 113, 115, 95, 39, 129, 0, 0, 90, 90, 0, 100, 8, 32369, 32241, 7, '', 470, 1, 1592972892, 16777343, 1, 0, 0, 1592972893, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 43200, -1, 2520, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, NULL, NULL, '-', '', -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000, 0, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0),
+(3, 'Druid Sample', 1, 1, 8, 2, 185, 185, 4200, NULL, 113, 115, 95, 39, 129, 0, 0, 90, 90, 0, 100, 8, 32369, 32241, 7, '', 470, 1, 1592974308, 16777343, 1, 0, 0, 1592974441, 0, 1, 1, 1, 1, 1, 1, 1, 1, 236, 0, 0, 0, 0, 43200, -1, 2520, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, NULL, NULL, '-', '', -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000, 0, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0),
+(4, 'Paladin Sample', 1, 1, 8, 3, 185, 185, 4200, NULL, 113, 115, 95, 39, 129, 0, 0, 90, 90, 0, 100, 8, 32369, 32241, 7, '', 470, 1, 1592932012, 16777343, 1, 0, 0, 1592932013, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 43200, -1, 2520, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, NULL, NULL, '-', '', -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000, 0, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0),
+(5, 'Knight Sample', 1, 1, 8, 4, 185, 185, 4200, NULL, 113, 115, 95, 39, 129, 0, 0, 90, 90, 0, 100, 8, 32369, 32241, 7, '', 470, 1, 1592972881, 16777343, 1, 0, 0, 1592972882, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 43200, -1, 2520, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, NULL, NULL, '-', '', -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000, 0, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0),
+(6, 'GOD', 6, 1, 1, 0, 150, 150, 0, NULL, 113, 115, 95, 39, 129, 0, 0, 60, 60, 0, 0, 1, 0, 0, 0, '', 410, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 43200, -1, 2520, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, NULL, 1, NULL, NULL, 0, NULL, NULL, '-', '', -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000, 0, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -659,11 +650,8 @@ INSERT INTO `players` (`id`, `name`, `group_id`, `account_id`, `level`, `vocatio
 --
 
 CREATE TABLE `players_online` (
-  `player_id` int(11) NOT NULL,
-  `cast_on` tinyint(1) NOT NULL DEFAULT 0,
-  `cast_password` varchar(40) DEFAULT NULL,
-  `cast_spectators` int(5) NOT NULL DEFAULT 0
-) ENGINE=MEMORY DEFAULT CHARSET=latin1;
+  `player_id` int(11) NOT NULL
+) ENGINE=MEMORY DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -693,7 +681,7 @@ CREATE TABLE `player_deaths` (
   `mostdamage_is_player` tinyint(1) NOT NULL DEFAULT 0,
   `unjustified` tinyint(1) NOT NULL DEFAULT 0,
   `mostdamage_unjustified` tinyint(1) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -708,7 +696,7 @@ CREATE TABLE `player_depotitems` (
   `itemtype` int(11) NOT NULL DEFAULT 0,
   `count` int(11) NOT NULL DEFAULT 0,
   `attributes` blob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -721,7 +709,29 @@ CREATE TABLE `player_former_names` (
   `player_id` int(11) NOT NULL,
   `former_name` varchar(35) NOT NULL,
   `date` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure `player_hirelings`
+--
+
+CREATE TABLE `player_hirelings` (
+  `id` INT NOT NULL PRIMARY KEY auto_increment,
+  `player_id` INT NOT NULL,
+  `name` varchar(255),
+  `active` tinyint unsigned NOT NULL DEFAULT '0',
+  `sex` tinyint unsigned NOT NULL DEFAULT '0',
+  `posx` int(11) NOT NULL DEFAULT '0',
+  `posy` int(11) NOT NULL DEFAULT '0',
+  `posz` int(11) NOT NULL DEFAULT '0',
+  `lookbody` int(11) NOT NULL DEFAULT '0',
+  `lookfeet` int(11) NOT NULL DEFAULT '0',
+  `lookhead` int(11) NOT NULL DEFAULT '0',
+  `looklegs` int(11) NOT NULL DEFAULT '0',
+  `looktype` int(11) NOT NULL DEFAULT '136'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -732,11 +742,11 @@ CREATE TABLE `player_former_names` (
 CREATE TABLE `player_inboxitems` (
   `player_id` int(11) NOT NULL,
   `sid` int(11) NOT NULL,
-  `pid` int(11) NOT NULL DEFAULT 0,
-  `itemtype` int(11) NOT NULL DEFAULT 0,
-  `count` int(11) NOT NULL DEFAULT 0,
+  `pid` int(11) NOT NULL DEFAULT '0',
+  `itemtype` int(11) NOT NULL DEFAULT '0',
+  `count` int(11) NOT NULL DEFAULT '0',
   `attributes` blob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -745,13 +755,13 @@ CREATE TABLE `player_inboxitems` (
 --
 
 CREATE TABLE `player_items` (
-  `player_id` int(11) NOT NULL DEFAULT 0,
-  `pid` int(11) NOT NULL DEFAULT 0,
-  `sid` int(11) NOT NULL DEFAULT 0,
-  `itemtype` int(11) NOT NULL DEFAULT 0,
-  `count` int(11) NOT NULL DEFAULT 0,
+  `player_id` int(11) NOT NULL DEFAULT '0',
+  `pid` int(11) NOT NULL DEFAULT '0',
+  `sid` int(11) NOT NULL DEFAULT '0',
+  `itemtype` int(11) NOT NULL DEFAULT '0',
+  `count` int(11) NOT NULL DEFAULT '0',
   `attributes` blob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -761,10 +771,10 @@ CREATE TABLE `player_items` (
 
 CREATE TABLE `player_kills` (
   `player_id` int(11) NOT NULL,
-  `time` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
+  `time` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
   `target` int(11) NOT NULL,
-  `unavenged` tinyint(1) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `unavenged` tinyint(1) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -775,7 +785,7 @@ CREATE TABLE `player_kills` (
 CREATE TABLE `player_misc` (
   `player_id` int(11) NOT NULL,
   `info` blob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -788,7 +798,7 @@ CREATE TABLE `player_namelocks` (
   `reason` varchar(255) NOT NULL,
   `namelocked_at` bigint(20) NOT NULL,
   `namelocked_by` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -801,7 +811,7 @@ CREATE TABLE `player_prey` (
   `name` varchar(50) NOT NULL,
   `mindex` smallint(6) NOT NULL,
   `mcolumn` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -812,7 +822,7 @@ CREATE TABLE `player_prey` (
 CREATE TABLE `player_preydata` (
   `player_id` int(11) NOT NULL,
   `data` blob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -831,7 +841,7 @@ CREATE TABLE `player_preytimes` (
   `bonus_type3` int(11) NOT NULL,
   `bonus_value3` int(11) NOT NULL,
   `bonus_name3` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -842,11 +852,11 @@ CREATE TABLE `player_preytimes` (
 CREATE TABLE `player_rewards` (
   `player_id` int(11) NOT NULL,
   `sid` int(11) NOT NULL,
-  `pid` int(11) NOT NULL DEFAULT 0,
-  `itemtype` int(11) NOT NULL DEFAULT 0,
-  `count` int(11) NOT NULL DEFAULT 0,
+  `pid` int(11) NOT NULL DEFAULT '0',
+  `itemtype` int(11) NOT NULL DEFAULT '0',
+  `count` int(11) NOT NULL DEFAULT '0',
   `attributes` blob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -857,7 +867,7 @@ CREATE TABLE `player_rewards` (
 CREATE TABLE `player_spells` (
   `player_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -866,10 +876,10 @@ CREATE TABLE `player_spells` (
 --
 
 CREATE TABLE `player_storage` (
-  `player_id` int(11) NOT NULL DEFAULT 0,
-  `key` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `value` int(11) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `player_id` int(11) NOT NULL DEFAULT '0',
+  `key` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `value` int(11) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -880,17 +890,30 @@ CREATE TABLE `player_storage` (
 CREATE TABLE `prey_slots` (
   `player_id` int(11) NOT NULL,
   `num` smallint(2) NOT NULL,
-  `state` smallint(2) NOT NULL DEFAULT 1,
-  `unlocked` tinyint(1) NOT NULL DEFAULT 0,
+  `state` smallint(2) NOT NULL DEFAULT '1',
+  `unlocked` tinyint(1) NOT NULL DEFAULT '0',
   `current` varchar(40) NOT NULL DEFAULT '',
   `monster_list` varchar(360) NOT NULL,
-  `free_reroll_in` int(11) NOT NULL DEFAULT 0,
-  `time_left` smallint(5) NOT NULL DEFAULT 0,
-  `next_use` int(11) NOT NULL DEFAULT 0,
+  `free_reroll_in` int(11) NOT NULL DEFAULT '0',
+  `time_left` smallint(5) NOT NULL DEFAULT '0',
+  `next_use` int(11) NOT NULL DEFAULT '0',
   `bonus_type` smallint(3) NOT NULL,
-  `bonus_value` smallint(3) NOT NULL DEFAULT 0,
-  `bonus_grade` smallint(3) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `bonus_value` smallint(3) NOT NULL DEFAULT '0',
+  `bonus_grade` smallint(3) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure `quickloot_containers`
+--
+
+CREATE TABLE `quickloot_containers` (
+  `player_id` int(11) NOT NULL,
+  `category_id` int(10) UNSIGNED NOT NULL,
+  `cid` int(10) UNSIGNED NOT NULL,
+  `sid` int(10) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -905,7 +928,7 @@ CREATE TABLE `sellchar` (
   `price` int(11) NOT NULL,
   `status` varchar(40) NOT NULL,
   `oldid` varchar(40) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -919,7 +942,7 @@ CREATE TABLE `sell_players` (
   `create` bigint(20) NOT NULL,
   `createip` bigint(20) NOT NULL,
   `coin` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -936,7 +959,7 @@ CREATE TABLE `sell_players_history` (
   `buytime` bigint(20) NOT NULL,
   `buyip` bigint(20) NOT NULL,
   `coin` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -947,18 +970,15 @@ CREATE TABLE `sell_players_history` (
 CREATE TABLE `server_config` (
   `config` varchar(50) NOT NULL,
   `value` varchar(256) NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extracting data from the table `server_config`
 --
 
 INSERT INTO `server_config` (`config`, `value`) VALUES
-('boost_monster', '0'),
-('boost_monster_name', ''),
-('boost_monster_url', ''),
-('db_version', '35'),
-('motd_hash', ''),
+('db_version', '3'),
+('motd_hash', 'cba37deaba48292e07d57001c880622d0d050c26'),
 ('motd_num', '1'),
 ('players_record', '0');
 
@@ -974,7 +994,7 @@ CREATE TABLE `snowballwar` (
   `score` int(11) NOT NULL,
   `data` varchar(255) NOT NULL,
   `hora` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -983,31 +1003,16 @@ CREATE TABLE `snowballwar` (
 --
 
 CREATE TABLE `store_history` (
-  `accountid` int(11) NOT NULL,
-  `mode` tinyint(1) NOT NULL DEFAULT 0,
-  `amount` int(11) NOT NULL,
-  `coinMode` tinyint(2) NOT NULL DEFAULT 0,
-  `description` varchar(255) DEFAULT NULL,
-  `cust` int(11) NOT NULL,
-  `time` bigint(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure `store_history_old`
---
-
-CREATE TABLE `store_history_old` (
-  `account_id` int(11) NOT NULL,
-  `mode` smallint(2) NOT NULL DEFAULT 0,
+  `id` int(11) UNSIGNED NOT NULL,
+  `account_id` int(11) UNSIGNED NOT NULL,
+  `mode` smallint(2) NOT NULL DEFAULT '0',
   `description` varchar(3500) NOT NULL,
   `coin_amount` int(12) NOT NULL,
   `time` bigint(20) UNSIGNED NOT NULL,
-  `timestamp` int(11) NOT NULL DEFAULT 0,
-  `id` int(11) NOT NULL,
-  `coins` int(11) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `timestamp` int(11) NOT NULL DEFAULT '0',
+  `coins` int(11) NOT NULL DEFAULT '0',
+  INDEX `account_id` (`account_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1027,7 +1032,7 @@ CREATE TABLE `tickets` (
   `ticket_status` varchar(255) DEFAULT NULL,
   `ticket_category` varchar(255) DEFAULT NULL,
   `ticket_description` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1041,7 +1046,7 @@ CREATE TABLE `tickets_reply` (
   `reply_author` varchar(255) DEFAULT NULL,
   `reply_message` varchar(255) DEFAULT NULL,
   `reply_date` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1078,7 +1083,7 @@ CREATE TABLE `z_forum` (
   `post_ip` varchar(15) NOT NULL DEFAULT '0.0.0.0',
   `icon_id` int(11) NOT NULL,
   `news_icon` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1090,7 +1095,7 @@ CREATE TABLE `z_network_box` (
   `id` int(11) NOT NULL,
   `network_name` varchar(10) NOT NULL,
   `network_link` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1104,7 +1109,7 @@ CREATE TABLE `z_news_tickers` (
   `image_id` int(3) NOT NULL DEFAULT 0,
   `text` text NOT NULL,
   `hide_ticker` tinyint(1) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1125,7 +1130,7 @@ CREATE TABLE `z_ots_comunication` (
   `param6` varchar(255) NOT NULL,
   `param7` varchar(255) NOT NULL,
   `delete_it` int(2) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1146,7 +1151,7 @@ CREATE TABLE `z_ots_guildcomunication` (
   `param6` varchar(255) NOT NULL,
   `param7` varchar(255) NOT NULL,
   `delete_it` int(2) NOT NULL DEFAULT 1
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1161,7 +1166,7 @@ CREATE TABLE `z_polls` (
   `start` int(11) NOT NULL,
   `answers` int(11) NOT NULL,
   `votes_all` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1174,7 +1179,7 @@ CREATE TABLE `z_polls_answers` (
   `answer_id` int(11) NOT NULL,
   `answer` varchar(255) NOT NULL,
   `votes` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1185,7 +1190,7 @@ CREATE TABLE `z_polls_answers` (
 CREATE TABLE `z_replay` (
   `title` varchar(255) DEFAULT NULL,
   `version` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1199,7 +1204,7 @@ CREATE TABLE `z_shop_category` (
   `desc` varchar(255) NOT NULL,
   `button` varchar(50) NOT NULL,
   `hide` int(11) NOT NULL DEFAULT 0
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1216,7 +1221,7 @@ CREATE TABLE `z_shop_donates` (
   `price` varchar(20) NOT NULL,
   `coins` int(11) NOT NULL,
   `status` varchar(20) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1230,7 +1235,7 @@ CREATE TABLE `z_shop_donate_confirm` (
   `account_name` varchar(50) NOT NULL,
   `donate_id` int(11) NOT NULL,
   `msg` text NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1249,7 +1254,7 @@ CREATE TABLE `z_shop_history_item` (
   `trans_state` varchar(255) NOT NULL,
   `trans_start` int(11) NOT NULL DEFAULT 0,
   `trans_real` int(11) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1272,7 +1277,7 @@ CREATE TABLE `z_shop_offer` (
   `offer_date` int(11) NOT NULL,
   `default_image` varchar(50) NOT NULL,
   `hide` int(11) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1292,10 +1297,10 @@ CREATE TABLE `z_shop_payment` (
   `status` varchar(50) NOT NULL DEFAULT 'waiting',
   `date` int(11) NOT NULL,
   `gift` int(11) NOT NULL DEFAULT 0
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumped table indexess
+-- Indexes for dumped tables
 --
 
 --
@@ -1305,8 +1310,14 @@ ALTER TABLE `accounts`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `name` (`name`),
   ADD UNIQUE KEY `name_2` (`name`),
-  ADD UNIQUE KEY `name_3` (`name`),
-  ADD UNIQUE KEY `name_4` (`name`);
+  ADD UNIQUE KEY `name_3` (`name`);
+  
+--
+-- Table indexes `coins_transactions`
+--
+ALTER TABLE `coins_transactions`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `coins_transactions_pk` (`account_id`);
 
 --
 -- Table indexes `accounts_storage`
@@ -1331,8 +1342,7 @@ ALTER TABLE `account_ban_history`
   ADD KEY `account_id_2` (`account_id`),
   ADD KEY `account_id_3` (`account_id`),
   ADD KEY `account_id_4` (`account_id`),
-  ADD KEY `account_id_5` (`account_id`),
-  ADD KEY `account_id_6` (`account_id`);
+  ADD KEY `account_id_5` (`account_id`);
 
 --
 -- Table indexes `account_character_sale`
@@ -1360,7 +1370,6 @@ ALTER TABLE `blessings_history`
 -- Table indexes `daily_reward_history`
 --
 ALTER TABLE `daily_reward_history`
-  ADD PRIMARY KEY (`id`),
   ADD KEY `player_id` (`player_id`);
 
 --
@@ -1532,6 +1541,12 @@ ALTER TABLE `player_former_names`
   ADD KEY `player_id` (`player_id`);
 
 --
+-- Table indexes `player_hirelings`
+--
+ALTER TABLE `player_hirelings`
+  ADD KEY `player_id` (`player_id`);
+
+--
 -- Table indexes `player_inboxitems`
 --
 ALTER TABLE `player_inboxitems`
@@ -1589,6 +1604,12 @@ ALTER TABLE `prey_slots`
   ADD KEY `player_id` (`player_id`);
 
 --
+-- Table indexes `quickloot_containers`
+--
+ALTER TABLE `quickloot_containers`
+  ADD KEY `fk_quickloot_containers_player_id` (`player_id`);
+
+--
 -- Table indexes `sellchar`
 --
 ALTER TABLE `sellchar`
@@ -1618,18 +1639,13 @@ ALTER TABLE `server_config`
 ALTER TABLE `snowballwar`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id` (`id`);
-
+  
 --
 -- Table indexes `store_history`
 --
 ALTER TABLE `store_history`
-  ADD KEY `store_history_ibfk_1` (`accountid`);
-
---
--- Table indexes `store_history_old`
---
-ALTER TABLE `store_history_old`
-  ADD KEY `account_id` (`account_id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `store_history_pk` (`account_id`);
 
 --
 -- Table indexes `tickets`
@@ -1701,44 +1717,50 @@ ALTER TABLE `z_shop_payment`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT of dumped tables
+-- AUTO_INCREMENT of tables dumped
 --
 
 --
 -- AUTO_INCREMENT of table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8421;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  
+--
+-- AUTO_INCREMENT of table `coins_transactions`
+--
+ALTER TABLE `coins_transactions`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT of table `account_ban_history`
 --
 ALTER TABLE `account_ban_history`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT of table `account_character_sale`
 --
 ALTER TABLE `account_character_sale`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=563;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT of table `daily_reward_history`
 --
 ALTER TABLE `daily_reward_history`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75041;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT of table `guilds`
 --
 ALTER TABLE `guilds`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT of table `guildwar_kills`
 --
 ALTER TABLE `guildwar_kills`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=667;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT of table `guild_actions_h`
@@ -1750,7 +1772,7 @@ ALTER TABLE `guild_actions_h`
 -- AUTO_INCREMENT of table `guild_ranks`
 --
 ALTER TABLE `guild_ranks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=269;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT of table `guild_transfer_h`
@@ -1762,37 +1784,37 @@ ALTER TABLE `guild_transfer_h`
 -- AUTO_INCREMENT of table `guild_wars`
 --
 ALTER TABLE `guild_wars`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT of table `houses`
 --
 ALTER TABLE `houses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2501;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT of table `market_history`
 --
 ALTER TABLE `market_history`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=201750;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT of table `market_offers`
 --
 ALTER TABLE `market_offers`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63544;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT of table `newsticker`
 --
 ALTER TABLE `newsticker`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT of table `players`
 --
 ALTER TABLE `players`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11910;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT of table `player_former_names`
@@ -1811,24 +1833,30 @@ ALTER TABLE `sellchar`
 --
 ALTER TABLE `snowballwar`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  
+--
+-- AUTO_INCREMENT of table `store_history`
+--
+ALTER TABLE `store_history`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT of table `tickets`
 --
 ALTER TABLE `tickets`
-  MODIFY `ticket_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=443;
+  MODIFY `ticket_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT of table `tickets_reply`
 --
 ALTER TABLE `tickets_reply`
-  MODIFY `reply_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=408;
+  MODIFY `reply_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT of table `z_forum`
 --
 ALTER TABLE `z_forum`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT of table `z_ots_comunication`
@@ -1846,19 +1874,19 @@ ALTER TABLE `z_ots_guildcomunication`
 -- AUTO_INCREMENT of table `z_shop_category`
 --
 ALTER TABLE `z_shop_category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT of table `z_shop_donates`
 --
 ALTER TABLE `z_shop_donates`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=878;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT of table `z_shop_donate_confirm`
 --
 ALTER TABLE `z_shop_donate_confirm`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=239;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT of table `z_shop_offer`
@@ -1897,8 +1925,7 @@ ALTER TABLE `account_ban_history`
   ADD CONSTRAINT `account_ban_history_ibfk_3` FOREIGN KEY (`account_id`) REFERENCES `accounts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `account_ban_history_ibfk_4` FOREIGN KEY (`account_id`) REFERENCES `accounts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `account_ban_history_ibfk_5` FOREIGN KEY (`account_id`) REFERENCES `accounts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `account_ban_history_ibfk_6` FOREIGN KEY (`account_id`) REFERENCES `accounts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `account_ban_history_ibfk_7` FOREIGN KEY (`account_id`) REFERENCES `accounts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `account_ban_history_ibfk_6` FOREIGN KEY (`account_id`) REFERENCES `accounts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Limiters for the table `account_character_sale`
@@ -1996,12 +2023,6 @@ ALTER TABLE `players`
   ADD CONSTRAINT `players_ibfk_1` FOREIGN KEY (`account_id`) REFERENCES `accounts` (`id`) ON DELETE CASCADE;
 
 --
--- Limiters for the table `player_binary_items`
---
-ALTER TABLE `player_binary_items`
-  ADD CONSTRAINT `player_binary_items_ibfk_1` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`) ON DELETE CASCADE;
-
---
 -- Limiters for the table `player_deaths`
 --
 ALTER TABLE `player_deaths`
@@ -2012,6 +2033,12 @@ ALTER TABLE `player_deaths`
 --
 ALTER TABLE `player_depotitems`
   ADD CONSTRAINT `player_depotitems_ibfk_1` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`) ON DELETE CASCADE;
+
+--
+-- Limiters for the table `player_hirelings`
+--
+ALTER TABLE `player_hirelings`
+  ADD CONSTRAINT `player_hirelings_ibfk_1` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`) ON DELETE CASCADE;
 
 --
 -- Limiters for the table `player_inboxitems`
@@ -2070,6 +2097,12 @@ ALTER TABLE `prey_slots`
   ADD CONSTRAINT `prey_slots_ibfk_1` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`) ON DELETE CASCADE;
 
 --
+-- Limiters for the table `quickloot_containers`
+--
+ALTER TABLE `quickloot_containers`
+  ADD CONSTRAINT `fk_quickloot_containers_player_id` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`);
+
+--
 -- Limiters for the table `sellchar`
 --
 ALTER TABLE `sellchar`
@@ -2086,18 +2119,6 @@ ALTER TABLE `sell_players`
 --
 ALTER TABLE `sell_players_history`
   ADD CONSTRAINT `sell_players_history_ibfk_1` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`) ON DELETE CASCADE;
-
---
--- Limiters for the table `store_history`
---
-ALTER TABLE `store_history`
-  ADD CONSTRAINT `store_history_ibfk_1` FOREIGN KEY (`accountid`) REFERENCES `accounts` (`id`) ON DELETE CASCADE;
-
---
--- Limiters for the table `store_history_old`
---
-ALTER TABLE `store_history_old`
-  ADD CONSTRAINT `store_history_old_ibfk_1` FOREIGN KEY (`account_id`) REFERENCES `accounts` (`id`) ON DELETE CASCADE;
 
 --
 -- Limiters for the table `tickets`
@@ -2117,7 +2138,3 @@ ALTER TABLE `tickets_reply`
 ALTER TABLE `tile_store`
   ADD CONSTRAINT `tile_store_ibfk_1` FOREIGN KEY (`house_id`) REFERENCES `houses` (`id`) ON DELETE CASCADE;
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

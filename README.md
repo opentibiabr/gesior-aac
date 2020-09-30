@@ -1,4 +1,4 @@
-## Gesior-Premium BY RICARDO SOUZA 
+## Gesior Aac
 
 #### PT-BR
 * Bem vindo ao tutorial de instalação desse lindo website feito com amor e carinho pra vcs meus queridos tibianos.
@@ -82,7 +82,7 @@ php -r "unlink('composer-setup.php');"
 mv composer.phar /usr/local/bin/composer
 ```
 
-Depois disso no terminal entre na pasta do site e rode o commando
+After that in the terminal enter the site folder and run the command
 ```bash
 cd /var/www/html && composer install
 ```

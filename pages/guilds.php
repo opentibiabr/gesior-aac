@@ -201,8 +201,8 @@ if ($action == "view") {
 		//check is it vice or/and leader account (leader has vice + leader rights)
 		$guild_leader_char = $guild->getOwner();
 		$rank_list = $guild->getGuildRanksList();
-		$guild_leader = FALSE;
-		$guild_vice = FALSE;
+		$guild_leader = false;
+		$guild_vice = false;
 		if ($logged) {
 			$account_players = $account_logged->getPlayers();
 			foreach ($account_players as $player) {
@@ -213,12 +213,12 @@ if ($action == "view") {
 						if ($rank_in_guild->getId() == $player_rank->getId()) {
 							$players_from_account_in_guild[] = $player->getName();
 							if ($player_rank->getLevel() > 1) {
-								$guild_vice = TRUE;
+								$guild_vice = true;
 								$level_in_guild = $player_rank->getLevel();
 							}
 							if ($guild->getOwner()->getId() == $player->getId()) {
-								$guild_vice = TRUE;
-								$guild_leader = TRUE;
+								$guild_vice = true;
+								$guild_leader = true;
 							}
 						}
 			}
@@ -936,10 +936,10 @@ if ($action == "create") {
 				$guild_errors[] = 'Guild <b>' . htmlspecialchars($guild_name) . '</b> already exist. Select other name.';
 		}
 		if (empty($guild_errors)) {
-			$bad_char = TRUE;
+			$bad_char = true;
 			foreach ($array_of_player_nig as $nick_from_list)
 				if ($nick_from_list == $player->getName())
-					$bad_char = FALSE;
+					$bad_char = false;
 			if ($bad_char)
 				$guild_errors[] = 'Character <b>' . htmlspecialchars($leader) . '</b> isn\'t on your account or is already in guild.';
 		}
@@ -1023,13 +1023,13 @@ if ($action == "create") {
 			$new_guild->setOwner($player);
 			$new_guild->setDescription('New guild. Leader must edit this text :)');
 			$new_guild->setGuildLogo('image/gif', Website::getFileContents('./images/guildlogos/default_logo.gif'));
-			if (Visitor::getIP() != FALSE) {
+			if (Visitor::getIP() != false) {
 				$new_guild->setCreateIP(Visitor::getIP());
 			} else {
 				$new_guild->setCreateIP(0);
 			}
 			$new_guild->save();
-			$ranks = $new_guild->getGuildRanksList(TRUE);
+			$ranks = $new_guild->getGuildRanksList(true);
 			foreach ($ranks as $rank)
 				if ($rank->getLevel() == 3) {
 					$player->setRank($rank);
@@ -1196,8 +1196,8 @@ if ($action == "invite") {
 	}
 	if (empty($guild_errors)) {
 		$rank_list = $guild->getGuildRanksList();
-		$guild_leader = FALSE;
-		$guild_vice = FALSE;
+		$guild_leader = false;
+		$guild_vice = false;
 		$account_players = $account_logged->getPlayers();
 		foreach ($account_players as $player) {
 			$player_rank = $player->getRank();
@@ -1206,12 +1206,12 @@ if ($action == "invite") {
 					if ($rank_in_guild->getId() == $player_rank->getId()) {
 						$players_from_account_in_guild[] = $player->getName();
 						if ($player_rank->getLevel() > 1) {
-							$guild_vice = TRUE;
+							$guild_vice = true;
 							$level_in_guild = $player_rank->getLevel();
 						}
 						if ($guild->getOwner()->getId() == $player->getId()) {
-							$guild_vice = TRUE;
-							$guild_leader = TRUE;
+							$guild_vice = true;
+							$guild_leader = true;
 						}
 					}
 		}
@@ -1746,12 +1746,12 @@ if ($action == "join") {
 	}
 	if ($_REQUEST['joinguild'] == 'yes') {
 		if (empty($guild_errors)) {
-			$is_invited = FALSE;
+			$is_invited = false;
 			$invited_list = $guild->listInvites();
 			if (count($invited_list) > 0) {
 				foreach ($invited_list as $invited) {
 					if ($invited->getName() == $player->getName()) {
-						$is_invited = TRUE;
+						$is_invited = true;
 					}
 				}
 			}
@@ -1761,14 +1761,14 @@ if ($action == "join") {
 		}
 	} else {
 		if (empty($guild_errors)) {
-			$acc_invited = FALSE;
+			$acc_invited = false;
 			$account_players = $account_logged->getPlayers();
 			$invited_list = $guild->listInvites();
 			if (count($invited_list) > 0) {
 				foreach ($invited_list as $invited) {
 					foreach ($account_players as $player_from_acc) {
 						if ($invited->getName() == $player_from_acc->getName()) {
-							$acc_invited = TRUE;
+							$acc_invited = true;
 							$list_of_invited_players[] = $player_from_acc->getName();
 						}
 					}
@@ -1966,11 +1966,11 @@ if ($action == "ranks") {
 	if (empty($guild_errors)) {
 		$guild_leader_char = $guild->getOwner();
 		$rank_list = $guild->getGuildRanksList();
-		$guild_leader = FALSE;
+		$guild_leader = false;
 		$account_players = $account_logged->getPlayers();
 		foreach ($account_players as $player)
 			if ($guild_leader_char->getId() == $player->getId()) {
-				$guild_leader = TRUE;
+				$guild_leader = true;
 				$level_in_guild = 3;
 			}
 		if (!$guild_leader)
@@ -2343,8 +2343,8 @@ if ($action == "members") {
 
 	if (empty($guild_errors)) {
 		$rank_list = $guild->getGuildRanksList();
-		$guild_leader = FALSE;
-		$guild_vice = FALSE;
+		$guild_leader = false;
+		$guild_vice = false;
 		$account_players = $account_logged->getPlayers();
 		foreach ($account_players as $player) {
 			$player_rank = $player->getRank();
@@ -2353,12 +2353,12 @@ if ($action == "members") {
 					if ($rank_in_guild->getId() == $player_rank->getId()) {
 						$players_from_account_in_guild[] = $player->getName();
 						if ($player_rank->getLevel() > 1) {
-							$guild_vice = TRUE;
+							$guild_vice = true;
 							$level_in_guild = $player_rank->getLevel();
 						}
 						if ($guild->getOwner()->getId() == $player->getId()) {
-							$guild_vice = TRUE;
-							$guild_leader = TRUE;
+							$guild_vice = true;
+							$guild_leader = true;
 						}
 					}
 		}
@@ -2788,12 +2788,12 @@ if ($action == "disband") {
 	if (empty($guild_errors)) {
 		$guild_leader_char = $guild->getOwner();
 		$rank_list = $guild->getGuildRanksList();
-		$guild_leader = FALSE;
+		$guild_leader = false;
 		$account_players = $account_logged->getPlayers();
 		foreach ($account_players as $player)
 			if ($guild->getOwner()->getId() == $player->getId()) {
-				$guild_vice = TRUE;
-				$guild_leader = TRUE;
+				$guild_vice = true;
+				$guild_leader = true;
 				$level_in_guild = 3;
 			}
 		if (!$guild_leader)
@@ -3002,12 +3002,12 @@ if ($action == "description") {
 	if (empty($guild_errors)) {
 		$guild_leader_char = $guild->getOwner();
 		$rank_list = $guild->getGuildRanksList();
-		$guild_leader = FALSE;
+		$guild_leader = false;
 		$account_players = $account_logged->getPlayers();
 		foreach ($account_players as $player)
 			if ($guild->getOwner()->getId() == $player->getId()) {
-				$guild_vice = TRUE;
-				$guild_leader = TRUE;
+				$guild_vice = true;
+				$guild_leader = true;
 				$level_in_guild = 3;
 			}
 		if (!$guild_leader)
@@ -3434,12 +3434,12 @@ if ($action == "resignleadership") {
 	if (empty($guild_errors)) {
 		if ($logged) {
 			$guild_leader_char = $guild->getOwner();
-			$guild_leader = FALSE;
+			$guild_leader = false;
 			$account_players = $account_logged->getPlayers();
 			foreach ($account_players as $player)
 				if ($guild_leader_char->getId() == $player->getId()) {
-					$guild_vice = TRUE;
-					$guild_leader = TRUE;
+					$guild_vice = true;
+					$guild_leader = true;
 					$level_in_guild = 3;
 				}
 			if ($guild_leader) {
@@ -3455,7 +3455,7 @@ if ($action == "resignleadership") {
 						$guild->setOwner($to_player);
 						$guild->save();
 					}
-					$saved = TRUE;
+					$saved = true;
 
 					$main_content .= '
 						<div class="TableContainer" >
@@ -3702,8 +3702,8 @@ if ($action == "guildwars") {
 		//check is it vice or/and leader account (leader has vice + leader rights)
 		$guild_leader_char = $guild->getOwner();
 		$rank_list = $guild->getGuildRanksList();
-		$guild_leader = FALSE;
-		$guild_vice = FALSE;
+		$guild_leader = false;
+		$guild_vice = false;
 		if ($logged) {
 			$account_players = $account_logged->getPlayers();
 			foreach ($account_players as $player) {
@@ -3714,12 +3714,12 @@ if ($action == "guildwars") {
 						if ($rank_in_guild->getId() == $player_rank->getId()) {
 							$players_from_account_in_guild[] = $player->getName();
 							if ($player_rank->getLevel() > 1) {
-								$guild_vice = TRUE;
+								$guild_vice = true;
 								$level_in_guild = $player_rank->getLevel();
 							}
 							if ($guild->getOwner()->getId() == $player->getId()) {
-								$guild_vice = TRUE;
-								$guild_leader = TRUE;
+								$guild_vice = true;
+								$guild_leader = true;
 							}
 						}
 			}
@@ -4033,11 +4033,11 @@ if ($action == 'declarewar') {
 			$guild_errors[] = 'Guild <b>' . $guild_name . '</b> doesn\'t exist.';
 		if (empty($guild_errors)) {
 			$guild_leader_char = $guild->getOwner();
-			$guild_leader = FALSE;
+			$guild_leader = false;
 			$account_players = $account_logged->getPlayers();
 			foreach ($account_players as $player) {
 				if ($guild_leader_char->getId() == $player->getId()) {
-					$guild_leader = TRUE;
+					$guild_leader = true;
 				}
 			}
 			if ($guild_leader) {
@@ -4111,11 +4111,11 @@ if ($action == 'guildwar_invite') {
 			$guild_errors[] = 'Guild <b>' . $guild_id . '</b> or <b>' . $enemy_id . '</b> doesn\'t exist.';
 		if (empty($guild_errors)) {
 			$guild_leader_char = $guild->getOwner();
-			$guild_leader = FALSE;
+			$guild_leader = false;
 			$account_players = $account_logged->getPlayers();
 			foreach ($account_players as $player) {
 				if ($guild_leader_char->getId() == $player->getId()) {
-					$guild_leader = TRUE;
+					$guild_leader = true;
 				}
 			}
 			if ($guild_leader) {
@@ -4180,11 +4180,11 @@ if ($action == 'guildwar_cancel') {
 			$guild_errors[] = 'Guild <b>' . $guild_name . '</b> doesn\'t exist.';
 		if (empty($guild_errors)) {
 			$guild_leader_char = $guild->getOwner();
-			$guild_leader = FALSE;
+			$guild_leader = false;
 			$account_players = $account_logged->getPlayers();
 			foreach ($account_players as $player) {
 				if ($guild_leader_char->getId() == $player->getId()) {
-					$guild_leader = TRUE;
+					$guild_leader = true;
 				}
 			}
 			if ($guild_leader) {
@@ -4229,11 +4229,11 @@ if ($action == 'guildwar_reject') {
 			$guild_errors[] = 'Guild <b>' . $guild_name . '</b> doesn\'t exist.';
 		if (empty($guild_errors)) {
 			$guild_leader_char = $guild->getOwner();
-			$guild_leader = FALSE;
+			$guild_leader = false;
 			$account_players = $account_logged->getPlayers();
 			foreach ($account_players as $player) {
 				if ($guild_leader_char->getId() == $player->getId()) {
-					$guild_leader = TRUE;
+					$guild_leader = true;
 				}
 			}
 			if ($guild_leader) {
@@ -4278,11 +4278,11 @@ if ($action == 'guildwar_accept') {
 			$guild_errors[] = 'Guild <b>' . $guild_name . '</b> doesn\'t exist.';
 		if (empty($guild_errors)) {
 			$guild_leader_char = $guild->getOwner();
-			$guild_leader = FALSE;
+			$guild_leader = false;
 			$account_players = $account_logged->getPlayers();
 			foreach ($account_players as $player) {
 				if ($guild_leader_char->getId() == $player->getId()) {
-					$guild_leader = TRUE;
+					$guild_leader = true;
 				}
 			}
 			if ($guild_leader) {
@@ -4357,7 +4357,7 @@ if ($action == "activitylog") {
 		$account_players = $account_logged->getPlayers();
 		foreach ($account_players as $player) {
 			if ($guild_leader_char->getId() == $player->getId()) {
-				$guild_leader = TRUE;
+				$guild_leader = true;
 			}
 		}
 	}

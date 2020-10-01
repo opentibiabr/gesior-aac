@@ -13,40 +13,40 @@ CREATE TABLE `accounts` (
   `name` varchar(32) NOT NULL,
   `password` char(40) NOT NULL,
   `secret` char(16) DEFAULT NULL,
-  `type` int(11) NOT NULL DEFAULT 1,
-  `premdays` int(11) NOT NULL DEFAULT 0,
-  `coins` int(12) NOT NULL DEFAULT 0,
-  `lastday` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `proxy_id` int(11) NOT NULL DEFAULT 0,
+  `type` int(11) NOT NULL DEFAULT '1',
+  `premdays` int(11) NOT NULL DEFAULT '0',
+  `coins` int(12) NOT NULL DEFAULT '0',
+  `lastday` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `proxy_id` int(11) NOT NULL DEFAULT '0',
   `email` varchar(255) NOT NULL DEFAULT '',
-  `creation` bigint(20) NOT NULL DEFAULT 0,
-  `vote` int(11) NOT NULL DEFAULT 0,
+  `creation` bigint(20) NOT NULL DEFAULT '0',
+  `vote` int(11) NOT NULL DEFAULT '0',
   `key` varchar(20) NOT NULL DEFAULT '0',
   `email_new` varchar(255) NOT NULL DEFAULT '',
-  `email_new_time` int(11) NOT NULL DEFAULT 0,
+  `email_new_time` int(11) NOT NULL DEFAULT '0',
   `rlname` varchar(255) NOT NULL DEFAULT '',
   `location` varchar(255) NOT NULL DEFAULT '',
-  `page_access` int(11) NOT NULL DEFAULT 0,
+  `page_access` int(11) NOT NULL DEFAULT '0',
   `email_code` varchar(255) NOT NULL DEFAULT '',
-  `next_email` int(11) NOT NULL DEFAULT 0,
-  `premium_points` int(11) NOT NULL DEFAULT 0,
-  `create_date` bigint(20) NOT NULL DEFAULT 0,
-  `create_ip` bigint(20) NOT NULL DEFAULT 0,
-  `last_post` int(11) NOT NULL DEFAULT 0,
+  `next_email` int(11) NOT NULL DEFAULT '0',
+  `premium_points` int(11) NOT NULL DEFAULT '0',
+  `create_date` bigint(20) NOT NULL DEFAULT '0',
+  `create_ip` bigint(20) NOT NULL DEFAULT '0',
+  `last_post` int(11) NOT NULL DEFAULT '0',
   `flag` varchar(80) NOT NULL DEFAULT '',
-  `vip_time` int(11) NOT NULL DEFAULT 0,
-  `guild_points` int(11) NOT NULL DEFAULT 0,
-  `guild_points_stats` int(11) NOT NULL DEFAULT 0,
-  `passed` int(11) NOT NULL DEFAULT 0,
-  `block` int(11) NOT NULL DEFAULT 0,
-  `refresh` int(11) NOT NULL DEFAULT 0,
+  `vip_time` int(11) NOT NULL DEFAULT '0',
+  `guild_points` int(11) NOT NULL DEFAULT '0',
+  `guild_points_stats` int(11) NOT NULL DEFAULT '0',
+  `passed` int(11) NOT NULL DEFAULT '0',
+  `block` int(11) NOT NULL DEFAULT '0',
+  `refresh` int(11) NOT NULL DEFAULT '0',
   `birth_date` varchar(50) NOT NULL DEFAULT '',
   `gender` varchar(20) NOT NULL DEFAULT '',
-  `loyalty_points` bigint(20) NOT NULL DEFAULT 0,
+  `loyalty_points` bigint(20) NOT NULL DEFAULT '0',
   `authToken` varchar(100) NOT NULL DEFAULT '',
-  `player_sell_bank` int(11) DEFAULT 0,
-  `secret_status` tinyint(1) NOT NULL DEFAULT 0,
-  `tournamentBalance` int(11) NOT NULL DEFAULT 0
+  `player_sell_bank` int(11) DEFAULT '0',
+  `secret_status` tinyint(1) NOT NULL DEFAULT '0',
+  `tournamentBalance` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -79,9 +79,9 @@ CREATE TABLE `coins_transactions` (
 --
 
 CREATE TABLE `accounts_storage` (
-  `account_id` int(11) NOT NULL DEFAULT 0,
-  `key` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `value` int(11) NOT NULL DEFAULT 0
+  `account_id` int(11) NOT NULL DEFAULT '0',
+  `key` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `value` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -123,7 +123,7 @@ CREATE TABLE `account_character_sale` (
   `id` int(11) NOT NULL,
   `id_account` int(11) NOT NULL,
   `id_player` int(11) NOT NULL,
-  `status` tinyint(1) NOT NULL DEFAULT 0,
+  `status` tinyint(1) NOT NULL DEFAULT '0',
   `price_type` tinyint(4) NOT NULL,
   `price_coins` int(11) DEFAULT NULL,
   `price_gold` int(11) DEFAULT NULL,
@@ -142,8 +142,8 @@ CREATE TABLE `account_viplist` (
   `account_id` int(11) NOT NULL COMMENT 'id of account whose viplist entry it is',
   `player_id` int(11) NOT NULL COMMENT 'id of target player of viplist entry',
   `description` varchar(128) NOT NULL DEFAULT '',
-  `icon` tinyint(2) UNSIGNED NOT NULL DEFAULT 0,
-  `notify` tinyint(1) NOT NULL DEFAULT 0
+  `icon` tinyint(2) UNSIGNED NOT NULL DEFAULT '0',
+  `notify` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -182,7 +182,7 @@ CREATE TABLE `blessings_history` (
 
 CREATE TABLE `daily_reward_history` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `daystreak` smallint(2) NOT NULL DEFAULT 0,
+  `daystreak` smallint(2) NOT NULL DEFAULT '0',
   `player_id` int(11) NOT NULL,
   `timestamp` int(11) NOT NULL,
   `description` varchar(255) DEFAULT NULL,
@@ -225,12 +225,12 @@ CREATE TABLE `guilds` (
   `residence` int(11) NOT NULL,
   `description` text NOT NULL,
   `guild_logo` mediumblob DEFAULT NULL,
-  `create_ip` bigint(20) NOT NULL DEFAULT 0,
-  `balance` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `last_execute_points` bigint(20) NOT NULL DEFAULT 0,
+  `create_ip` bigint(20) NOT NULL DEFAULT '0',
+  `balance` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `last_execute_points` bigint(20) NOT NULL DEFAULT '0',
   `logo_gfx_name` varchar(255) NOT NULL DEFAULT '',
-  `level` int(11) DEFAULT 1,
-  `points` int(11) DEFAULT 0
+  `level` int(11) DEFAULT '1',
+  `points` int(11) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -243,9 +243,9 @@ CREATE TABLE `guildwar_kills` (
   `id` int(11) NOT NULL,
   `killer` varchar(50) NOT NULL,
   `target` varchar(50) NOT NULL,
-  `killerguild` int(11) NOT NULL DEFAULT 0,
-  `targetguild` int(11) NOT NULL DEFAULT 0,
-  `warid` int(11) NOT NULL DEFAULT 0,
+  `killerguild` int(11) NOT NULL DEFAULT '0',
+  `targetguild` int(11) NOT NULL DEFAULT '0',
+  `warid` int(11) NOT NULL DEFAULT '0',
   `time` bigint(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -271,8 +271,8 @@ CREATE TABLE `guild_actions_h` (
 --
 
 CREATE TABLE `guild_invites` (
-  `player_id` int(11) NOT NULL DEFAULT 0,
-  `guild_id` int(11) NOT NULL DEFAULT 0,
+  `player_id` int(11) NOT NULL DEFAULT '0',
+  `guild_id` int(11) NOT NULL DEFAULT '0',
   `date` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -302,6 +302,18 @@ CREATE TABLE `guild_ranks` (
   `level` int(11) NOT NULL COMMENT 'rank level - leader, vice, member, maybe something else'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Trigger
+--
+DELIMITER //
+CREATE TRIGGER `oncreate_guilds` AFTER INSERT ON `guilds` FOR EACH ROW BEGIN
+    INSERT INTO `guild_ranks` (`name`, `level`, `guild_id`) VALUES ('The Leader', 3, NEW.`id`);
+    INSERT INTO `guild_ranks` (`name`, `level`, `guild_id`) VALUES ('Vice-Leader', 2, NEW.`id`);
+    INSERT INTO `guild_ranks` (`name`, `level`, `guild_id`) VALUES ('Member', 1, NEW.`id`);
+END
+//
+DELIMITER ;
+
 -- --------------------------------------------------------
 
 --
@@ -325,14 +337,14 @@ CREATE TABLE `guild_transfer_h` (
 
 CREATE TABLE `guild_wars` (
   `id` int(11) NOT NULL,
-  `guild1` int(11) NOT NULL DEFAULT 0,
-  `guild2` int(11) NOT NULL DEFAULT 0,
+  `guild1` int(11) NOT NULL DEFAULT '0',
+  `guild2` int(11) NOT NULL DEFAULT '0',
   `name1` varchar(255) NOT NULL,
   `name2` varchar(255) NOT NULL,
-  `status` tinyint(2) NOT NULL DEFAULT 0,
-  `started` bigint(15) NOT NULL DEFAULT 0,
-  `ended` bigint(15) NOT NULL DEFAULT 0,
-  `frags_limit` int(10) DEFAULT 20
+  `status` tinyint(2) NOT NULL DEFAULT '0',
+  `started` bigint(15) NOT NULL DEFAULT '0',
+  `ended` bigint(15) NOT NULL DEFAULT '0',
+  `frags_limit` int(10) DEFAULT '20'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -344,18 +356,18 @@ CREATE TABLE `guild_wars` (
 CREATE TABLE `houses` (
   `id` int(11) NOT NULL,
   `owner` int(11) NOT NULL,
-  `paid` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `warnings` int(11) NOT NULL DEFAULT 0,
+  `paid` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `warnings` int(11) NOT NULL DEFAULT '0',
   `name` varchar(255) NOT NULL,
-  `rent` int(11) NOT NULL DEFAULT 0,
-  `town_id` int(11) NOT NULL DEFAULT 0,
-  `bid` int(11) NOT NULL DEFAULT 0,
-  `bid_end` int(11) NOT NULL DEFAULT 0,
-  `last_bid` int(11) NOT NULL DEFAULT 0,
-  `highest_bidder` int(11) NOT NULL DEFAULT 0,
-  `size` int(11) NOT NULL DEFAULT 0,
+  `rent` int(11) NOT NULL DEFAULT '0',
+  `town_id` int(11) NOT NULL DEFAULT '0',
+  `bid` int(11) NOT NULL DEFAULT '0',
+  `bid_end` int(11) NOT NULL DEFAULT '0',
+  `last_bid` int(11) NOT NULL DEFAULT '0',
+  `highest_bidder` int(11) NOT NULL DEFAULT '0',
+  `size` int(11) NOT NULL DEFAULT '0',
   `guildid` int(11) DEFAULT NULL,
-  `beds` int(11) NOT NULL DEFAULT 0
+  `beds` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -393,10 +405,10 @@ CREATE TABLE `ip_bans` (
 CREATE TABLE `live_casts` (
   `player_id` int(11) NOT NULL,
   `cast_name` varchar(255) NOT NULL,
-  `password` tinyint(1) NOT NULL DEFAULT 0,
+  `password` tinyint(1) NOT NULL DEFAULT '0',
   `description` varchar(255) DEFAULT NULL,
-  `spectators` smallint(5) DEFAULT 0,
-  `version` int(10) DEFAULT 1220
+  `spectators` smallint(5) DEFAULT '0',
+  `version` int(10) DEFAULT '1220'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -408,10 +420,10 @@ CREATE TABLE `live_casts` (
 CREATE TABLE `market_history` (
   `id` int(10) UNSIGNED NOT NULL,
   `player_id` int(11) NOT NULL,
-  `sale` tinyint(1) NOT NULL DEFAULT 0,
+  `sale` tinyint(1) NOT NULL DEFAULT '0',
   `itemtype` int(10) UNSIGNED NOT NULL,
   `amount` smallint(5) UNSIGNED NOT NULL,
-  `price` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `price` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `expires_at` bigint(20) UNSIGNED NOT NULL,
   `inserted` bigint(20) UNSIGNED NOT NULL,
   `state` tinyint(1) UNSIGNED NOT NULL
@@ -426,12 +438,12 @@ CREATE TABLE `market_history` (
 CREATE TABLE `market_offers` (
   `id` int(10) UNSIGNED NOT NULL,
   `player_id` int(11) NOT NULL,
-  `sale` tinyint(1) NOT NULL DEFAULT 0,
+  `sale` tinyint(1) NOT NULL DEFAULT '0',
   `itemtype` int(10) UNSIGNED NOT NULL,
   `amount` smallint(5) UNSIGNED NOT NULL,
   `created` bigint(20) UNSIGNED NOT NULL,
-  `anonymous` tinyint(1) NOT NULL DEFAULT 0,
-  `price` int(10) UNSIGNED NOT NULL DEFAULT 0
+  `anonymous` tinyint(1) NOT NULL DEFAULT '0',
+  `price` int(10) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -475,7 +487,7 @@ CREATE TABLE `pagseguro_transactions` (
   `status` varchar(50) NOT NULL,
   `item_count` int(11) NOT NULL,
   `data` datetime NOT NULL,
-  `payment_amount` float DEFAULT 0
+  `payment_amount` float DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -505,130 +517,130 @@ CREATE TABLE `paypal_transactions` (
 CREATE TABLE `players` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `group_id` int(11) NOT NULL DEFAULT 1,
-  `account_id` int(11) NOT NULL DEFAULT 0,
-  `level` int(11) NOT NULL DEFAULT 1,
-  `vocation` int(11) NOT NULL DEFAULT 0,
-  `health` int(11) NOT NULL DEFAULT 150,
-  `healthmax` int(11) NOT NULL DEFAULT 150,
-  `experience` bigint(20) NOT NULL DEFAULT 0,
+  `group_id` int(11) NOT NULL DEFAULT '1',
+  `account_id` int(11) NOT NULL DEFAULT '0',
+  `level` int(11) NOT NULL DEFAULT '1',
+  `vocation` int(11) NOT NULL DEFAULT '0',
+  `health` int(11) NOT NULL DEFAULT '150',
+  `healthmax` int(11) NOT NULL DEFAULT '150',
+  `experience` bigint(20) NOT NULL DEFAULT '0',
   `exptoday` int(11) DEFAULT NULL,
-  `lookbody` int(11) NOT NULL DEFAULT 0,
-  `lookfeet` int(11) NOT NULL DEFAULT 0,
-  `lookhead` int(11) NOT NULL DEFAULT 0,
-  `looklegs` int(11) NOT NULL DEFAULT 0,
-  `looktype` int(11) NOT NULL DEFAULT 136,
-  `lookaddons` int(11) NOT NULL DEFAULT 0,
-  `maglevel` int(11) NOT NULL DEFAULT 0,
-  `mana` int(11) NOT NULL DEFAULT 0,
-  `manamax` int(11) NOT NULL DEFAULT 0,
-  `manaspent` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `soul` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `town_id` int(11) NOT NULL DEFAULT 0,
-  `posx` int(11) NOT NULL DEFAULT 0,
-  `posy` int(11) NOT NULL DEFAULT 0,
-  `posz` int(11) NOT NULL DEFAULT 0,
+  `lookbody` int(11) NOT NULL DEFAULT '0',
+  `lookfeet` int(11) NOT NULL DEFAULT '0',
+  `lookhead` int(11) NOT NULL DEFAULT '0',
+  `looklegs` int(11) NOT NULL DEFAULT '0',
+  `looktype` int(11) NOT NULL DEFAULT '136',
+  `lookaddons` int(11) NOT NULL DEFAULT '0',
+  `maglevel` int(11) NOT NULL DEFAULT '0',
+  `mana` int(11) NOT NULL DEFAULT '0',
+  `manamax` int(11) NOT NULL DEFAULT '0',
+  `manaspent` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `soul` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `town_id` int(11) NOT NULL DEFAULT '0',
+  `posx` int(11) NOT NULL DEFAULT '0',
+  `posy` int(11) NOT NULL DEFAULT '0',
+  `posz` int(11) NOT NULL DEFAULT '0',
   `conditions` blob NOT NULL,
-  `cap` int(11) NOT NULL DEFAULT 0,
-  `sex` int(11) NOT NULL DEFAULT 0,
-  `lastlogin` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `lastip` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `save` tinyint(1) NOT NULL DEFAULT 1,
-  `skull` tinyint(1) NOT NULL DEFAULT 0,
-  `skulltime` bigint(20) NOT NULL DEFAULT 0,
-  `lastlogout` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `blessings` tinyint(2) NOT NULL DEFAULT 0,
-  `blessings1` tinyint(4) NOT NULL DEFAULT 0,
-  `blessings2` tinyint(4) NOT NULL DEFAULT 0,
-  `blessings3` tinyint(4) NOT NULL DEFAULT 0,
-  `blessings4` tinyint(4) NOT NULL DEFAULT 0,
-  `blessings5` tinyint(4) NOT NULL DEFAULT 0,
-  `blessings6` tinyint(4) NOT NULL DEFAULT 0,
-  `blessings7` tinyint(4) NOT NULL DEFAULT 0,
-  `blessings8` tinyint(4) NOT NULL DEFAULT 0,
-  `onlinetime` bigint(20) NOT NULL DEFAULT 0,
-  `deletion` bigint(15) NOT NULL DEFAULT 0,
-  `balance` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `bonusrerollcount` bigint(20) DEFAULT 0,
-  `quick_loot_fallback` tinyint(1) DEFAULT 0,
-  `offlinetraining_time` smallint(5) UNSIGNED NOT NULL DEFAULT 43200,
-  `offlinetraining_skill` int(11) NOT NULL DEFAULT -1,
-  `stamina` smallint(5) UNSIGNED NOT NULL DEFAULT 2520,
-  `skill_fist` int(10) UNSIGNED NOT NULL DEFAULT 10,
-  `skill_fist_tries` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `skill_club` int(10) UNSIGNED NOT NULL DEFAULT 10,
-  `skill_club_tries` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `skill_sword` int(10) UNSIGNED NOT NULL DEFAULT 10,
-  `skill_sword_tries` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `skill_axe` int(10) UNSIGNED NOT NULL DEFAULT 10,
-  `skill_axe_tries` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `skill_dist` int(10) UNSIGNED NOT NULL DEFAULT 10,
-  `skill_dist_tries` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `skill_shielding` int(10) UNSIGNED NOT NULL DEFAULT 10,
-  `skill_shielding_tries` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `skill_fishing` int(10) UNSIGNED NOT NULL DEFAULT 10,
-  `skill_fishing_tries` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `deleted` tinyint(1) NOT NULL DEFAULT 0,
+  `cap` int(11) NOT NULL DEFAULT '0',
+  `sex` int(11) NOT NULL DEFAULT '0',
+  `lastlogin` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `lastip` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `save` tinyint(1) NOT NULL DEFAULT '1',
+  `skull` tinyint(1) NOT NULL DEFAULT '0',
+  `skulltime` bigint(20) NOT NULL DEFAULT '0',
+  `lastlogout` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `blessings` tinyint(2) NOT NULL DEFAULT '0',
+  `blessings1` tinyint(4) NOT NULL DEFAULT '0',
+  `blessings2` tinyint(4) NOT NULL DEFAULT '0',
+  `blessings3` tinyint(4) NOT NULL DEFAULT '0',
+  `blessings4` tinyint(4) NOT NULL DEFAULT '0',
+  `blessings5` tinyint(4) NOT NULL DEFAULT '0',
+  `blessings6` tinyint(4) NOT NULL DEFAULT '0',
+  `blessings7` tinyint(4) NOT NULL DEFAULT '0',
+  `blessings8` tinyint(4) NOT NULL DEFAULT '0',
+  `onlinetime` bigint(20) NOT NULL DEFAULT '0',
+  `deletion` bigint(15) NOT NULL DEFAULT '0',
+  `balance` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `bonusrerollcount` bigint(20) DEFAULT '0',
+  `quick_loot_fallback` tinyint(1) DEFAULT '0',
+  `offlinetraining_time` smallint(5) UNSIGNED NOT NULL DEFAULT '43200',
+  `offlinetraining_skill` int(11) NOT NULL DEFAULT '-1',
+  `stamina` smallint(5) UNSIGNED NOT NULL DEFAULT '2520',
+  `skill_fist` int(10) UNSIGNED NOT NULL DEFAULT '10',
+  `skill_fist_tries` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `skill_club` int(10) UNSIGNED NOT NULL DEFAULT '10',
+  `skill_club_tries` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `skill_sword` int(10) UNSIGNED NOT NULL DEFAULT '10',
+  `skill_sword_tries` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `skill_axe` int(10) UNSIGNED NOT NULL DEFAULT '10',
+  `skill_axe_tries` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `skill_dist` int(10) UNSIGNED NOT NULL DEFAULT '10',
+  `skill_dist_tries` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `skill_shielding` int(10) UNSIGNED NOT NULL DEFAULT '10',
+  `skill_shielding_tries` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `skill_fishing` int(10) UNSIGNED NOT NULL DEFAULT '10',
+  `skill_fishing_tries` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `deleted` tinyint(1) NOT NULL DEFAULT '0',
   `description` varchar(255) NOT NULL DEFAULT '',
   `comment` text NOT NULL,
-  `create_ip` bigint(20) NOT NULL DEFAULT 0,
-  `create_date` bigint(20) NOT NULL DEFAULT 0,
-  `hide_char` int(11) NOT NULL DEFAULT 0,
-  `skill_critical_hit_chance` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `skill_critical_hit_chance_tries` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `skill_critical_hit_damage` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `skill_critical_hit_damage_tries` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `skill_life_leech_chance` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `skill_life_leech_chance_tries` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `skill_life_leech_amount` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `skill_life_leech_amount_tries` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `skill_mana_leech_chance` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `skill_mana_leech_chance_tries` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `skill_mana_leech_amount` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `skill_mana_leech_amount_tries` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `skill_criticalhit_chance` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `skill_criticalhit_damage` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `skill_lifeleech_chance` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `skill_lifeleech_amount` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `skill_manaleech_chance` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `skill_manaleech_amount` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
+  `create_ip` bigint(20) NOT NULL DEFAULT '0',
+  `create_date` bigint(20) NOT NULL DEFAULT '0',
+  `hide_char` int(11) NOT NULL DEFAULT '0',
+  `skill_critical_hit_chance` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `skill_critical_hit_chance_tries` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `skill_critical_hit_damage` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `skill_critical_hit_damage_tries` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `skill_life_leech_chance` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `skill_life_leech_chance_tries` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `skill_life_leech_amount` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `skill_life_leech_amount_tries` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `skill_mana_leech_chance` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `skill_mana_leech_chance_tries` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `skill_mana_leech_amount` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `skill_mana_leech_amount_tries` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `skill_criticalhit_chance` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `skill_criticalhit_damage` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `skill_lifeleech_chance` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `skill_lifeleech_amount` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `skill_manaleech_chance` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `skill_manaleech_amount` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
   `prey_stamina_1` int(11) DEFAULT NULL,
   `prey_stamina_2` int(11) DEFAULT NULL,
   `prey_stamina_3` int(11) DEFAULT NULL,
-  `prey_column` smallint(6) NOT NULL DEFAULT 1,
+  `prey_column` smallint(6) NOT NULL DEFAULT '1',
   `xpboost_stamina` int(11) DEFAULT NULL,
   `xpboost_value` int(10) DEFAULT NULL,
-  `marriage_status` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
+  `marriage_status` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
   `hide_skills` int(11) DEFAULT NULL,
   `hide_set` int(11) DEFAULT NULL,
   `former` varchar(255) NOT NULL DEFAULT '-',
   `signature` varchar(255) NOT NULL DEFAULT '',
-  `marriage_spouse` int(11) NOT NULL DEFAULT -1,
-  `loyalty_ranking` tinyint(1) NOT NULL DEFAULT 0,
-  `bonus_rerolls` bigint(21) NOT NULL DEFAULT 0,
-  `critical` int(20) DEFAULT 0,
-  `bonus_reroll` int(11) NOT NULL DEFAULT 0,
-  `sbw_points` int(11) NOT NULL DEFAULT 0,
-  `instantrewardtokens` int(11) UNSIGNED NOT NULL DEFAULT 0,
-  `charmpoints` int(11) DEFAULT 0,
-  `direction` tinyint(1) DEFAULT 0,
-  `lookmount` int(11) DEFAULT 0,
-  `version` int(11) DEFAULT 1000,
-  `lootaction` tinyint(2) DEFAULT 0,
+  `marriage_spouse` int(11) NOT NULL DEFAULT '-1',
+  `loyalty_ranking` tinyint(1) NOT NULL DEFAULT '0',
+  `bonus_rerolls` bigint(21) NOT NULL DEFAULT '0',
+  `critical` int(20) DEFAULT '0',
+  `bonus_reroll` int(11) NOT NULL DEFAULT '0',
+  `sbw_points` int(11) NOT NULL DEFAULT '0',
+  `instantrewardtokens` int(11) UNSIGNED NOT NULL DEFAULT '0',
+  `charmpoints` int(11) DEFAULT '0',
+  `direction` tinyint(1) DEFAULT '0',
+  `lookmount` int(11) DEFAULT '0',
+  `version` int(11) DEFAULT '1000',
+  `lootaction` tinyint(2) DEFAULT '0',
   `spells` blob DEFAULT NULL,
   `storages` mediumblob DEFAULT NULL,
   `items` longblob DEFAULT NULL,
   `depotitems` longblob DEFAULT NULL,
   `inboxitems` longblob DEFAULT NULL,
   `rewards` longblob DEFAULT NULL,
-  `varcap` int(11) NOT NULL DEFAULT 0,
-  `charmExpansion` tinyint(2) DEFAULT 0,
+  `varcap` int(11) NOT NULL DEFAULT '0',
+  `charmExpansion` tinyint(2) DEFAULT '0',
   `bestiarykills` longblob DEFAULT NULL,
   `charms` longblob DEFAULT NULL,
   `bestiaryTracker` longblob DEFAULT NULL,
   `autoloot` blob DEFAULT NULL,
-  `lastday` bigint(22) DEFAULT 0,
-  `cast` tinyint(1) NOT NULL DEFAULT 0
+  `lastday` bigint(22) DEFAULT '0',
+  `cast` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -636,11 +648,11 @@ CREATE TABLE `players` (
 --
 
 INSERT INTO `players` (`id`, `name`, `group_id`, `account_id`, `level`, `vocation`, `health`, `healthmax`, `experience`, `exptoday`, `lookbody`, `lookfeet`, `lookhead`, `looklegs`, `looktype`, `lookaddons`, `maglevel`, `mana`, `manamax`, `manaspent`, `soul`, `town_id`, `posx`, `posy`, `posz`, `conditions`, `cap`, `sex`, `lastlogin`, `lastip`, `save`, `skull`, `skulltime`, `lastlogout`, `blessings`, `blessings1`, `blessings2`, `blessings3`, `blessings4`, `blessings5`, `blessings6`, `blessings7`, `blessings8`, `onlinetime`, `deletion`, `balance`, `bonusrerollcount`, `quick_loot_fallback`, `offlinetraining_time`, `offlinetraining_skill`, `stamina`, `skill_fist`, `skill_fist_tries`, `skill_club`, `skill_club_tries`, `skill_sword`, `skill_sword_tries`, `skill_axe`, `skill_axe_tries`, `skill_dist`, `skill_dist_tries`, `skill_shielding`, `skill_shielding_tries`, `skill_fishing`, `skill_fishing_tries`, `deleted`, `description`, `comment`, `create_ip`, `create_date`, `hide_char`, `skill_critical_hit_chance`, `skill_critical_hit_chance_tries`, `skill_critical_hit_damage`, `skill_critical_hit_damage_tries`, `skill_life_leech_chance`, `skill_life_leech_chance_tries`, `skill_life_leech_amount`, `skill_life_leech_amount_tries`, `skill_mana_leech_chance`, `skill_mana_leech_chance_tries`, `skill_mana_leech_amount`, `skill_mana_leech_amount_tries`, `skill_criticalhit_chance`, `skill_criticalhit_damage`, `skill_lifeleech_chance`, `skill_lifeleech_amount`, `skill_manaleech_chance`, `skill_manaleech_amount`, `prey_stamina_1`, `prey_stamina_2`, `prey_stamina_3`, `prey_column`, `xpboost_stamina`, `xpboost_value`, `marriage_status`, `hide_skills`, `hide_set`, `former`, `signature`, `marriage_spouse`, `loyalty_ranking`, `bonus_rerolls`, `critical`, `bonus_reroll`, `sbw_points`, `instantrewardtokens`, `charmpoints`, `direction`, `lookmount`, `version`, `lootaction`, `spells`, `storages`, `items`, `depotitems`, `inboxitems`, `rewards`, `varcap`, `charmExpansion`, `bestiarykills`, `charms`, `bestiaryTracker`, `autoloot`, `lastday`, `cast`) VALUES
-(1, 'Rook Sample', 1, 1, 2, 0, 155, 155, 100, NULL, 113, 115, 95, 39, 129, 0, 0, 60, 60, 0, 100, 1, 32069, 31901, 6, '', 410, 0, 1592972902, 16777343, 1, 0, 0, 1592972908, 0, 1, 1, 1, 1, 1, 1, 1, 1, 15, 0, 0, 0, 0, 43200, -1, 2520, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, NULL, NULL, '-', '', -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000, 0, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0),
-(2, 'Sorcerer Sample', 1, 1, 8, 1, 185, 185, 4200, NULL, 113, 115, 95, 39, 129, 0, 0, 90, 90, 0, 100, 8, 32369, 32241, 7, '', 470, 1, 1592972892, 16777343, 1, 0, 0, 1592972893, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 43200, -1, 2520, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, NULL, NULL, '-', '', -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000, 0, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0),
-(3, 'Druid Sample', 1, 1, 8, 2, 185, 185, 4200, NULL, 113, 115, 95, 39, 129, 0, 0, 90, 90, 0, 100, 8, 32369, 32241, 7, '', 470, 1, 1592974308, 16777343, 1, 0, 0, 1592974441, 0, 1, 1, 1, 1, 1, 1, 1, 1, 236, 0, 0, 0, 0, 43200, -1, 2520, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, NULL, NULL, '-', '', -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000, 0, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0),
-(4, 'Paladin Sample', 1, 1, 8, 3, 185, 185, 4200, NULL, 113, 115, 95, 39, 129, 0, 0, 90, 90, 0, 100, 8, 32369, 32241, 7, '', 470, 1, 1592932012, 16777343, 1, 0, 0, 1592932013, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 43200, -1, 2520, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, NULL, NULL, '-', '', -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000, 0, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0),
-(5, 'Knight Sample', 1, 1, 8, 4, 185, 185, 4200, NULL, 113, 115, 95, 39, 129, 0, 0, 90, 90, 0, 100, 8, 32369, 32241, 7, '', 470, 1, 1592972881, 16777343, 1, 0, 0, 1592972882, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 43200, -1, 2520, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, NULL, NULL, '-', '', -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000, 0, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0),
+(1, 'Rook Sample', 1, 1, 2, 0, 155, 155, 100, NULL, 113, 115, 95, 39, 129, 0, 0, 60, 60, 0, 100, 1, 32069, 31901, 6, '', 410, 0, 1592972902, 0, 1, 0, 0, 1592972908, 0, 1, 1, 1, 1, 1, 1, 1, 1, 15, 0, 0, 0, 0, 43200, -1, 2520, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, NULL, NULL, '-', '', -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000, 0, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0),
+(2, 'Sorcerer Sample', 1, 1, 8, 1, 185, 185, 4200, NULL, 113, 115, 95, 39, 129, 0, 0, 90, 90, 0, 100, 8, 32369, 32241, 7, '', 470, 1, 1592972892, 0, 1, 0, 0, 1592972893, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 43200, -1, 2520, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, NULL, NULL, '-', '', -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000, 0, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0),
+(3, 'Druid Sample', 1, 1, 8, 2, 185, 185, 4200, NULL, 113, 115, 95, 39, 129, 0, 0, 90, 90, 0, 100, 8, 32369, 32241, 7, '', 470, 1, 1592974308, 0, 1, 0, 0, 1592974441, 0, 1, 1, 1, 1, 1, 1, 1, 1, 236, 0, 0, 0, 0, 43200, -1, 2520, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, NULL, NULL, '-', '', -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000, 0, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0),
+(4, 'Paladin Sample', 1, 1, 8, 3, 185, 185, 4200, NULL, 113, 115, 95, 39, 129, 0, 0, 90, 90, 0, 100, 8, 32369, 32241, 7, '', 470, 1, 1592932012, 0, 1, 0, 0, 1592932013, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 43200, -1, 2520, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, NULL, NULL, '-', '', -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000, 0, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0),
+(5, 'Knight Sample', 1, 1, 8, 4, 185, 185, 4200, NULL, 113, 115, 95, 39, 129, 0, 0, 90, 90, 0, 100, 8, 32369, 32241, 7, '', 470, 1, 1592972881, 0, 1, 0, 0, 1592972882, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 43200, -1, 2520, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, NULL, NULL, '-', '', -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000, 0, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0),
 (6, 'GOD', 6, 1, 1, 0, 150, 150, 0, NULL, 113, 115, 95, 39, 129, 0, 0, 60, 60, 0, 0, 1, 0, 0, 0, '', 410, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 43200, -1, 2520, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, NULL, 1, NULL, NULL, 0, NULL, NULL, '-', '', -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000, 0, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0);
 
 -- --------------------------------------------------------
@@ -673,14 +685,14 @@ CREATE TABLE `player_binary_items` (
 
 CREATE TABLE `player_deaths` (
   `player_id` int(11) NOT NULL,
-  `time` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `level` int(11) NOT NULL DEFAULT 1,
+  `time` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `level` int(11) NOT NULL DEFAULT '1',
   `killed_by` varchar(255) NOT NULL,
-  `is_player` tinyint(1) NOT NULL DEFAULT 1,
+  `is_player` tinyint(1) NOT NULL DEFAULT '1',
   `mostdamage_by` varchar(100) NOT NULL,
-  `mostdamage_is_player` tinyint(1) NOT NULL DEFAULT 0,
-  `unjustified` tinyint(1) NOT NULL DEFAULT 0,
-  `mostdamage_unjustified` tinyint(1) NOT NULL DEFAULT 0
+  `mostdamage_is_player` tinyint(1) NOT NULL DEFAULT '0',
+  `unjustified` tinyint(1) NOT NULL DEFAULT '0',
+  `mostdamage_unjustified` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -692,9 +704,9 @@ CREATE TABLE `player_deaths` (
 CREATE TABLE `player_depotitems` (
   `player_id` int(11) NOT NULL,
   `sid` int(11) NOT NULL COMMENT 'any given range eg 0-100 will be reserved for depot lockers and all > 100 will be then normal items inside depots',
-  `pid` int(11) NOT NULL DEFAULT 0,
-  `itemtype` int(11) NOT NULL DEFAULT 0,
-  `count` int(11) NOT NULL DEFAULT 0,
+  `pid` int(11) NOT NULL DEFAULT '0',
+  `itemtype` int(11) NOT NULL DEFAULT '0',
+  `count` int(11) NOT NULL DEFAULT '0',
   `attributes` blob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -1067,19 +1079,19 @@ CREATE TABLE `tile_store` (
 
 CREATE TABLE `z_forum` (
   `id` int(11) NOT NULL,
-  `first_post` int(11) NOT NULL DEFAULT 0,
-  `last_post` int(11) NOT NULL DEFAULT 0,
-  `section` int(3) NOT NULL DEFAULT 0,
-  `replies` int(20) NOT NULL DEFAULT 0,
-  `views` int(20) NOT NULL DEFAULT 0,
-  `author_aid` int(20) NOT NULL DEFAULT 0,
-  `author_guid` int(20) NOT NULL DEFAULT 0,
+  `first_post` int(11) NOT NULL DEFAULT '0',
+  `last_post` int(11) NOT NULL DEFAULT '0',
+  `section` int(3) NOT NULL DEFAULT '0',
+  `replies` int(20) NOT NULL DEFAULT '0',
+  `views` int(20) NOT NULL DEFAULT '0',
+  `author_aid` int(20) NOT NULL DEFAULT '0',
+  `author_guid` int(20) NOT NULL DEFAULT '0',
   `post_text` text NOT NULL,
   `post_topic` varchar(255) NOT NULL,
-  `post_smile` tinyint(1) NOT NULL DEFAULT 0,
-  `post_date` int(20) NOT NULL DEFAULT 0,
-  `last_edit_aid` int(20) NOT NULL DEFAULT 0,
-  `edit_date` int(20) NOT NULL DEFAULT 0,
+  `post_smile` tinyint(1) NOT NULL DEFAULT '0',
+  `post_date` int(20) NOT NULL DEFAULT '0',
+  `last_edit_aid` int(20) NOT NULL DEFAULT '0',
+  `edit_date` int(20) NOT NULL DEFAULT '0',
   `post_ip` varchar(15) NOT NULL DEFAULT '0.0.0.0',
   `icon_id` int(11) NOT NULL,
   `news_icon` varchar(50) NOT NULL
@@ -1104,9 +1116,9 @@ CREATE TABLE `z_network_box` (
 --
 
 CREATE TABLE `z_news_tickers` (
-  `date` int(11) NOT NULL DEFAULT 1,
+  `date` int(11) NOT NULL DEFAULT '1',
   `author` int(11) NOT NULL,
-  `image_id` int(3) NOT NULL DEFAULT 0,
+  `image_id` int(3) NOT NULL DEFAULT '0',
   `text` text NOT NULL,
   `hide_ticker` tinyint(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -1129,7 +1141,7 @@ CREATE TABLE `z_ots_comunication` (
   `param5` varchar(255) NOT NULL,
   `param6` varchar(255) NOT NULL,
   `param7` varchar(255) NOT NULL,
-  `delete_it` int(2) NOT NULL DEFAULT 1
+  `delete_it` int(2) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1150,7 +1162,7 @@ CREATE TABLE `z_ots_guildcomunication` (
   `param5` varchar(255) NOT NULL,
   `param6` varchar(255) NOT NULL,
   `param7` varchar(255) NOT NULL,
-  `delete_it` int(2) NOT NULL DEFAULT 1
+  `delete_it` int(2) NOT NULL DEFAULT '1'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1203,7 +1215,7 @@ CREATE TABLE `z_shop_category` (
   `name` varchar(50) NOT NULL,
   `desc` varchar(255) NOT NULL,
   `button` varchar(50) NOT NULL,
-  `hide` int(11) NOT NULL DEFAULT 0
+  `hide` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1246,14 +1258,14 @@ CREATE TABLE `z_shop_donate_confirm` (
 CREATE TABLE `z_shop_history_item` (
   `id` int(11) NOT NULL,
   `to_name` varchar(255) NOT NULL DEFAULT '0',
-  `to_account` int(11) NOT NULL DEFAULT 0,
+  `to_account` int(11) NOT NULL DEFAULT '0',
   `from_nick` varchar(255) NOT NULL,
-  `from_account` int(11) NOT NULL DEFAULT 0,
-  `price` int(11) NOT NULL DEFAULT 0,
+  `from_account` int(11) NOT NULL DEFAULT '0',
+  `price` int(11) NOT NULL DEFAULT '0',
   `offer_id` varchar(255) NOT NULL DEFAULT '',
   `trans_state` varchar(255) NOT NULL,
-  `trans_start` int(11) NOT NULL DEFAULT 0,
-  `trans_real` int(11) NOT NULL DEFAULT 0
+  `trans_start` int(11) NOT NULL DEFAULT '0',
+  `trans_real` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1265,18 +1277,18 @@ CREATE TABLE `z_shop_history_item` (
 CREATE TABLE `z_shop_offer` (
   `id` int(11) NOT NULL,
   `category` int(11) NOT NULL,
-  `coins` int(11) NOT NULL DEFAULT 0,
+  `coins` int(11) NOT NULL DEFAULT '0',
   `price` varchar(50) NOT NULL,
-  `itemid` int(11) NOT NULL DEFAULT 0,
+  `itemid` int(11) NOT NULL DEFAULT '0',
   `mount_id` varchar(100) NOT NULL,
   `addon_name` varchar(100) NOT NULL,
-  `count` int(11) NOT NULL DEFAULT 0,
+  `count` int(11) NOT NULL DEFAULT '0',
   `offer_type` varchar(255) DEFAULT NULL,
   `offer_description` text NOT NULL,
   `offer_name` varchar(255) NOT NULL,
   `offer_date` int(11) NOT NULL,
   `default_image` varchar(50) NOT NULL,
-  `hide` int(11) NOT NULL DEFAULT 0
+  `hide` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1296,7 +1308,7 @@ CREATE TABLE `z_shop_payment` (
   `coins` int(11) UNSIGNED NOT NULL,
   `status` varchar(50) NOT NULL DEFAULT 'waiting',
   `date` int(11) NOT NULL,
-  `gift` int(11) NOT NULL DEFAULT 0
+  `gift` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --

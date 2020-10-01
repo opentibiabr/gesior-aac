@@ -1,8 +1,3 @@
-<script id="_wauli9">
-	var _wau = _wau || [];
-	_wau.push(["tab", "9vypw9hde3", "li9", "left-upper"]);
-</script>
-<script async src="//waust.at/t.js"></script>
 <?php header("Content-type: text/html; charset=utf-8"); ?>
 <?php
 if (!defined('INITIALIZED'))

@@ -4693,7 +4693,7 @@ table.fixed td {
     top: -31px;
     left: -52px
 }
-.rankinglevel #sevenlevel_nomount {
+.rankinglevel #fifthlevel_nomount {
     z-index: 101;
     background: transparent url(../images/themeboxes/t_blue.png) no-repeat;
     background-size: 111%;
@@ -4748,7 +4748,7 @@ table.fixed td {
     top: -49px;
     left: -65px
 }
-.rankinglevel #sevenlevel_mount {
+.rankinglevel #fifthlevel_mount {
     z-index: 101;
     background: transparent url(../images/themeboxes/t_blue.png) no-repeat;
     background-size: 100%;

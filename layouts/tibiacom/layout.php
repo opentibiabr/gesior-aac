@@ -1,6 +1,5 @@
 <?php
-if(!defined('INITIALIZED'))
-    exit;
+if (!defined('INITIALIZED')) exit;
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -8,46 +7,100 @@ if(!defined('INITIALIZED'))
     <meta charset="utf-8">    
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta http-equiv="content-language" content="pt-br">
-    <?php $p = new Player();?>
-    <?php if($_REQUEST['subtopic'] == "accountmanagement" && $_REQUEST['action'] == "buychar"){ $p->loadById($_REQUEST['id']); $ch = (isset($_REQUEST['id']) ? $p->getName() : null);}?>
-    <?php if($_REQUEST['subtopic'] == "characters"){$ch = (isset($_REQUEST['name']) ? $_REQUEST['name'] : null);}?>
-    <?php if($_REQUEST['subtopic'] == "guilds"){$ch = (isset($_REQUEST['GuildName']) ? $_REQUEST['GuildName'] : null);}?>
-    <?php if($_REQUEST['subtopic'] == "worlds"){$ch = (isset($_REQUEST['world']) ? $_REQUEST['world'] : null);}?>
-    <?php if($_REQUEST['subtopic'] == "highscores"){$ch = (isset($_REQUEST['list']) ? $highscores_list[$_REQUEST['list']]." - ".$vocations_list[$_REQUEST['profession']].($_REQUEST['profession']>0?($_REQUEST['profession']<10?"s":null):null) : "Experience Points - ALL");}?>
-    <?php if($_REQUEST['subtopic'] == "houses"){$ch = (isset($_REQUEST['town']) ? $towns_list[$_REQUEST['town']] : (isset($_REQUEST['show']) ? $_REQUEST['show'] : null));}?>
-    <title><?=$config['server']['serverName'].(isset($_REQUEST['subtopic'])? " - ".ucfirst($_REQUEST['subtopic']) :'').(isset($_REQUEST['action'])?" - ".ucfirst(strip_tags(htmlspecialchars(trim($_REQUEST['action'])))):"").(isset($ch)?" - ".ucfirst(strip_tags(htmlspecialchars(trim($ch)))):"")?> - Free Multiplayer Online Role Playing Game</title>
+    <?php $p = new Player(); ?>
+    <?php if ($_REQUEST['subtopic'] == "accountmanagement" && $_REQUEST['action'] == "buychar")
+{
+    $p->loadById($_REQUEST['id']);
+    $ch = (isset($_REQUEST['id']) ? $p->getName() : null);
+} ?>
+    <?php if ($_REQUEST['subtopic'] == "characters")
+{
+    $ch = (isset($_REQUEST['name']) ? $_REQUEST['name'] : null);
+} ?>
+    <?php if ($_REQUEST['subtopic'] == "guilds")
+{
+    $ch = (isset($_REQUEST['GuildName']) ? $_REQUEST['GuildName'] : null);
+} ?>
+    <?php if ($_REQUEST['subtopic'] == "worlds")
+{
+    $ch = (isset($_REQUEST['world']) ? $_REQUEST['world'] : null);
+} ?>
+    <?php if ($_REQUEST['subtopic'] == "highscores")
+{
+    $ch = (isset($_REQUEST['list']) ? $highscores_list[$_REQUEST['list']] . " - " . $vocations_list[$_REQUEST['profession']] . ($_REQUEST['profession'] > 0 ? ($_REQUEST['profession'] < 10 ? "s" : null) : null) : "Experience Points - ALL");
+} ?>
+    <?php if ($_REQUEST['subtopic'] == "houses")
+{
+    $ch = (isset($_REQUEST['town']) ? $towns_list[$_REQUEST['town']] : (isset($_REQUEST['show']) ? $_REQUEST['show'] : null));
+} ?>
+    <title><?=$config['server']['serverName'] . (isset($_REQUEST['subtopic']) ? " - " . ucfirst($_REQUEST['subtopic']) : '') . (isset($_REQUEST['action']) ? " - " . ucfirst(strip_tags(htmlspecialchars(trim($_REQUEST['action'])))) : "") . (isset($ch) ? " - " . ucfirst(strip_tags(htmlspecialchars(trim($ch)))) : "") ?> - Free Multiplayer Online Role Playing Game</title>
     <meta name="author" content="Ricardo Souza - Codenome">
     <meta name="keywords" content="free online game, free multiplayer game, free online rpg, free mmorpg, mmorpg, mmog,
     online role playing game, online multiplayer game, internet game, online rpg, rpg">
     <!-- META TAGS OPENGRAPH-->
-    <meta property="og:title" content="<?=$config['server']['serverName'].(isset($_REQUEST['subtopic'])? " - ".ucfirst($_REQUEST['subtopic']) :'').(isset($_REQUEST['action'])?" - ".ucfirst($_REQUEST['action'] = strip_tags(htmlspecialchars(trim($_REQUEST['action'])))):"").(isset($ch)?" - ".ucfirst(strip_tags(htmlspecialchars(trim($ch)))):"")?>"/>
-    <meta property="og:url" content="<?=strtolower($config['base_url'].strip_tags(htmlspecialchars(trim($_SERVER['REQUEST_URI']))));?>"/>
-    <meta property="og:type" content="<?php if($_REQUEST['subtopic'] == "characters" && isset($_REQUEST['name'])){echo 'profile';}else{echo 'website';}?>"/>
+    <meta property="og:title" content="<?=$config['server']['serverName'] . (isset($_REQUEST['subtopic']) ? " - " . ucfirst($_REQUEST['subtopic']) : '') . (isset($_REQUEST['action']) ? " - " . ucfirst($_REQUEST['action'] = strip_tags(htmlspecialchars(trim($_REQUEST['action'])))) : "") . (isset($ch) ? " - " . ucfirst(strip_tags(htmlspecialchars(trim($ch)))) : "") ?>"/>
+    <meta property="og:url" content="<?=strtolower($config['base_url'] . strip_tags(htmlspecialchars(trim($_SERVER['REQUEST_URI'])))); ?>"/>
+    <meta property="og:type" content="<?php if ($_REQUEST['subtopic'] == "characters" && isset($_REQUEST['name']))
+{
+    echo 'profile';
+}
+else
+{
+    echo 'website';
+} ?>"/>
     <meta property="og:description" content="A server made from fan to fan."/>
-    <meta property="og:image" content="<?php if($_REQUEST['subtopic'] == "characters" && isset($_REQUEST['name'])){echo strtolower($config['base_url']."player_portrait.php?name=".strip_tags(htmlspecialchars(trim(urlencode($_REQUEST['name'])))));}else{echo strtolower($config['base_url']."layouts/tibiacom/images/global/header/background-artwork.jpg");}?>"/>
-    <meta property="og:image:alt" content="<?php if($_REQUEST['subtopic'] == "characters" && isset($_REQUEST['name'])){echo "Player -> ".ucfirst(strip_tags(htmlspecialchars(trim($_REQUEST['name']))));}else{echo "background tibiano";}?>"/>
-    <meta property="og:image:width" content="<?php if($_REQUEST['subtopic'] == "characters" && isset($_REQUEST['name'])){echo '498';}else{echo '1600';}?>"/>
-    <meta property="og:image:height" content="<?php if($_REQUEST['subtopic'] == "characters" && isset($_REQUEST['name'])){echo '500';}else{echo '800';}?>"/>
+    <meta property="og:image" content="<?php if ($_REQUEST['subtopic'] == "characters" && isset($_REQUEST['name']))
+{
+    echo strtolower($config['base_url'] . "player_portrait.php?name=" . strip_tags(htmlspecialchars(trim(urlencode($_REQUEST['name'])))));
+}
+else
+{
+    echo strtolower($config['base_url'] . "layouts/tibiacom/images/global/header/background-artwork.jpg");
+} ?>"/>
+    <meta property="og:image:alt" content="<?php if ($_REQUEST['subtopic'] == "characters" && isset($_REQUEST['name']))
+{
+    echo "Player -> " . ucfirst(strip_tags(htmlspecialchars(trim($_REQUEST['name']))));
+}
+else
+{
+    echo "background tibiano";
+} ?>"/>
+    <meta property="og:image:width" content="<?php if ($_REQUEST['subtopic'] == "characters" && isset($_REQUEST['name']))
+{
+    echo '498';
+}
+else
+{
+    echo '1600';
+} ?>"/>
+    <meta property="og:image:height" content="<?php if ($_REQUEST['subtopic'] == "characters" && isset($_REQUEST['name']))
+{
+    echo '500';
+}
+else
+{
+    echo '800';
+} ?>"/>
     <meta property="og:locale" content="pt_BR"/>
     <!-- ##FIM META TAGS OPENGRAPH-->
     
     <!-- META TAGS FACEBOOK-->
-    <meta property="fb:app_id" content="<?=$config['social']['fbappid']?>"/>
+    <meta property="fb:app_id" content="<?=$config['social']['fbappid'] ?>"/>
     <!-- ##FIM META TAGS FACEBOOK-->
 
     <!-- META TAGS TWITTER-->
     <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:site" content="<?=$config['social']['twitter']?>"/>
-    <meta name="twitter:creator" content="<?=$config['social']['twittercreator']?>"/>
+    <meta name="twitter:site" content="<?=$config['social']['twitter'] ?>"/>
+    <meta name="twitter:creator" content="<?=$config['social']['twittercreator'] ?>"/>
     <!-- ##FIM META TAGS TWITTER-->
 
     <!--META TAGS BROWSER COLOR-->
     <!--CHROME-->
-    <meta name="theme-color" content="<?=$config['site']['darkborder']?>">
+    <meta name="theme-color" content="<?=$config['site']['darkborder'] ?>">
     <!--SAFFARI-->
-    <meta name="apple-mobile-web-app-status-bar-style" content="<?=$config['site']['darkborder']?>">
+    <meta name="apple-mobile-web-app-status-bar-style" content="<?=$config['site']['darkborder'] ?>">
     <!--Windows-->
-    <meta name="msapplication-navbutton-color" content="<?=$config['site']['darkborder']?>">
+    <meta name="msapplication-navbutton-color" content="<?=$config['site']['darkborder'] ?>">
     <!--##FIM META TAGS BROWSER COLOR-->
 
     <!--  regular browsers -->
@@ -70,31 +123,38 @@ if(!defined('INITIALIZED'))
     <link rel="apple-touch-icon-precomposed" href="<?php echo $layout_name; ?>/images/global/general/apple-touch-icon-precomposed.png">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="<?php echo $layout_name; ?>/css/ferobra.min.css<?php echo $css_version;?>" rel="stylesheet" type="text/css">
-    <link href="<?php echo $layout_name; ?>/css/iziModal.min.css<?php echo $css_version;?>" rel="stylesheet" type="text/css">
-    <link href="<?php echo $layout_name; ?>/css/Toast.min.css<?php echo $css_version;?>" rel="stylesheet" type="text/css">	
+    <link href="<?php echo $layout_name; ?>/css/ferobra.min.css<?php echo $css_version; ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo $layout_name; ?>/css/iziModal.min.css<?php echo $css_version; ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo $layout_name; ?>/css/Toast.min.css<?php echo $css_version; ?>" rel="stylesheet" type="text/css">	
     <?php
-    if($_REQUEST['subtopic'] == "latestnews" || $_REQUEST['subtopic'] == "newsarchive")
+if ($_REQUEST['subtopic'] == "latestnews" || $_REQUEST['subtopic'] == "newsarchive")
 //        echo '<link href="'.$layout_name.'/css/news.min.css'.$css_version.'" rel="stylesheet" type="text/css">';
-    ?>
-    <?php $subtopic = $_REQUEST['subtopic'];?>
+
+?>
+    <?php $subtopic = $_REQUEST['subtopic']; ?>
     <script
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
-    <!--<script src="--><?php //echo $layout_name; ?><!--/js/jquery-ui.core.js--><?php //echo $css_version;?><!--" ></script>-->
-    <!--<script src="--><?php //echo $layout_name; ?><!--/js/jquery-ui.widgets.js--><?php //echo $css_version;?><!--" ></script>-->
-    <script src="<?php echo $layout_name; ?>/js/jquery-ui.min.js<?php echo $css_version;?>" ></script>
-    <script src="<?php echo $layout_name; ?>/js/jquery.mask.js<?php echo $css_version;?>"></script>
-    <script src="<?php echo $layout_name; ?>/js/ajaxcip.js<?php echo $css_version;?>"></script>
-    <?php if($subtopic == 'adminpanel'){?>
-    <script src="<?php echo $layout_name; ?>/js/ajaxmonteiro.js<?php echo $css_version;?>"></script>
-    <?php } ?>
-    <script src="<?php echo $layout_name; ?>/js/iziModal.min.js<?php echo $css_version;?>"></script>
-    <script src="<?php echo $layout_name; ?>/js/iziToast.min.js<?php echo $css_version;?>"></script>
-    <script src="<?php echo $layout_name; ?>/js/ouibounce.min.js<?php echo $css_version;?>"></script>
+    <!--<script src="--><?php //echo $layout_name;
+ ?><!--/js/jquery-ui.core.js--><?php //echo $css_version;
+ ?><!--" ></script>-->
+    <!--<script src="--><?php //echo $layout_name;
+ ?><!--/js/jquery-ui.widgets.js--><?php //echo $css_version;
+ ?><!--" ></script>-->
+    <script src="<?php echo $layout_name; ?>/js/jquery-ui.min.js<?php echo $css_version; ?>" ></script>
+    <script src="<?php echo $layout_name; ?>/js/jquery.mask.js<?php echo $css_version; ?>"></script>
+    <script src="<?php echo $layout_name; ?>/js/ajaxcip.js<?php echo $css_version; ?>"></script>
+    <?php if ($subtopic == 'adminpanel')
+{ ?>
+    <script src="<?php echo $layout_name; ?>/js/ajaxmonteiro.js<?php echo $css_version; ?>"></script>
     <?php
-        echo '<script src="https://www.google.com/recaptcha/api.js"></script>
+} ?>
+    <script src="<?php echo $layout_name; ?>/js/iziModal.min.js<?php echo $css_version; ?>"></script>
+    <script src="<?php echo $layout_name; ?>/js/iziToast.min.js<?php echo $css_version; ?>"></script>
+    <script src="<?php echo $layout_name; ?>/js/ouibounce.min.js<?php echo $css_version; ?>"></script>
+    <?php
+echo '<script src="https://www.google.com/recaptcha/api.js"></script>
             <script>
                 function onloadCallback() {
                     $(function () {
@@ -104,8 +164,8 @@ if(!defined('INITIALIZED'))
             </script>
         ';
 
-    if($_REQUEST['subtopic'] == "createaccount") echo '<script src="'.$layout_name.'/js/create_character.js'.$css_version.'"></script>';
-    ?>
+if ($_REQUEST['subtopic'] == "createaccount") echo '<script src="' . $layout_name . '/js/create_character.js' . $css_version . '"></script>';
+?>
     <script>
         iziToast.settings({
             icon:'material-icons',
@@ -123,16 +183,32 @@ if(!defined('INITIALIZED'))
     </script>
     <script>
         var loginStatus=0;
-        loginStatus='<?php if($logged){ ?>true<?php } else { ?>false<?php } ?>';
-        <?php if ($_REQUEST['subtopic'] == 'accountmanagement' && $_REQUEST['action'] == 'donate'){?>
+        loginStatus='<?php if ($logged)
+{ ?>true<?php
+}
+else
+{ ?>false<?php
+} ?>';
+        <?php if ($_REQUEST['subtopic'] == 'accountmanagement' && $_REQUEST['action'] == 'donate')
+{ ?>
         var activeSubmenuItem='donate';
-        <?php }elseif($_REQUEST['subtopic'] == "accountmanagement" && $_REQUEST['action'] == 'buychar'){?>
+        <?php
+}
+elseif ($_REQUEST['subtopic'] == "accountmanagement" && $_REQUEST['action'] == 'buychar')
+{ ?>
         var activeSubmenuItem='buychar';
-        <?php }elseif($_REQUEST['subtopic'] == "accountmanagement" && $_REQUEST['action'] == 'sellchar'){?>
+        <?php
+}
+elseif ($_REQUEST['subtopic'] == "accountmanagement" && $_REQUEST['action'] == 'sellchar')
+{ ?>
         var activeSubmenuItem='sellchar';
-        <?php }else{?>
+        <?php
+}
+else
+{ ?>
         var activeSubmenuItem='<?php echo $subtopic; ?>';
-        <?php }?>
+        <?php
+} ?>
         var JS_DIR_IMAGES=0;
         JS_DIR_IMAGES='<?php echo $layout_name; ?>/images/';
         var JS_DIR_ACCOUNT=0;
@@ -147,10 +223,11 @@ if(!defined('INITIALIZED'))
             g_FlashClientInPopUp = false;
         }
     </script>-->
-    <script src="<?php echo $layout_name; ?>/js/generic.js<?php echo $css_version;?>"></script>
-    <script src="<?php echo $layout_name; ?>/js/initialize.js<?php echo $css_version;?>"></script>
-    <!--<script src="<?php echo $layout_name; ?>/js/swfobject.js<?php echo $css_version;?>" ></script>-->
-    <?php if($_REQUEST['subtopic'] == "accountmanagement") { ?>
+    <script src="<?php echo $layout_name; ?>/js/generic.js<?php echo $css_version; ?>"></script>
+    <script src="<?php echo $layout_name; ?>/js/initialize.js<?php echo $css_version; ?>"></script>
+    <!--<script src="<?php echo $layout_name; ?>/js/swfobject.js<?php echo $css_version; ?>" ></script>-->
+    <?php if ($_REQUEST['subtopic'] == "accountmanagement")
+{ ?>
         <script type="text/javascript">
             function openGameWindow(a_URL)
             {
@@ -167,16 +244,30 @@ if(!defined('INITIALIZED'))
                 }
             }
         </script>
-    <?php } ?>
-<!--    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js--><?php //echo $css_version;?><!--"></script>-->
+    <?php
+} ?>
+<!--    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js--><?php //echo $css_version;
+ ?><!--"></script>-->
     <!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
     <link rel="stylesheet" href="<?php echo $layout_name; ?>/twitch/wiixzer2.css"> 
 </head>
 <?php
-  $bg = array('01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg', '06.jpg', '07.jpg', '08.jpg', '09.jpg', '10.jpg', '11.jpg'); // array of filenames
+$bg = array(
+    '01.jpg',
+    '02.jpg',
+    '03.jpg',
+    '04.jpg',
+    '05.jpg',
+    '06.jpg',
+    '07.jpg',
+    '08.jpg',
+    '09.jpg',
+    '10.jpg',
+    '11.jpg'
+); // array of filenames
+$i = rand(0, count($bg) - 1); // generate random number size of the array
+$selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
 
-  $i = rand(0, count($bg)-1); // generate random number size of the array
-  $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
 ?>
 <style type="text/css">
 body{
@@ -192,8 +283,10 @@ background-attachment: fixed;
       onload="SetFormFocus();"
       data-twttr-rendered="true">
 <div class="se-pre-con"></div>
-<?php if(Website::getWebsiteConfig()->getValue('ouibounce_isActive')){?>
-    <?php if($_REQUEST['subtopic'] != "accountmanagement" && $_REQUEST['action'] != "donate"){?>
+<?php if (Website::getWebsiteConfig()->getValue('ouibounce_isActive'))
+{ ?>
+    <?php if ($_REQUEST['subtopic'] != "accountmanagement" && $_REQUEST['action'] != "donate")
+    { ?>
     <script>
         var modal = document.getElementById('ouibounce-modal');
         var bounce = ouibounce($("#ouibounce-modal")[0],
@@ -225,7 +318,7 @@ background-attachment: fixed;
         <div class="underlay"></div>
         <div class="modal">
             <div class="modal-title">
-                <h3><?php echo $config['server']['serverName']?> em desenvolvimento!</h3>
+                <h3><?php echo $config['server']['serverName'] ?> em desenvolvimento!</h3>
             </div>
     
             <div class="modal-body">
@@ -247,8 +340,10 @@ background-attachment: fixed;
         </div>
     </div>
 	-->
-    <?php }?>
-<?php }?>
+    <?php
+    } ?>
+<?php
+} ?>
     <div id="DeactivationContainer" onclick="DisableDeactivationContainer();"></div>
     <!-- <style>
     .wpptable{position:absolute;margin-left:60%;text-align:left;background:#01010185;border:2px solid #8595bb;padding:9px 8px 6px 47px;border-radius:0 0 10px 10px;color:#fff;margin-top:-2px;font:400 9pt Verdana,Arial,Times New Roman,sans-serif;box-shadow:2px 2px 18px 1px #67e9ff;z-index:10000;transition:all 600ms ease-out}.wpptable:hover{box-shadow:2px 2px 18px 1px #03ff0d;border:2px solid #03ff0d;background:#343f58;transition:all 600ms ease-out;z-index:10000;cursor:pointer}.wpptable img{position:absolute;margin-left:-47px;margin-top:-8px;width:43px}.wpptable small{transition:all 600ms ease-out;display:none}.wpptable:hover small{transition:all 600ms ease-out;display:block}
@@ -285,8 +380,8 @@ background-attachment: fixed;
                             <a href="./?subtopic=latestnews">
                                 <img id="TibiaLogoArtworkTop"
                                      src="<?php echo $layout_name; ?>/images/tibia-logo-artwork-top.png" 
-                                     alt="<?php echo $config['server']['serverName']?>"
-                                     name="<?php echo $config['server']['serverName']?>"
+                                     alt="<?php echo $config['server']['serverName'] ?>"
+                                     name="<?php echo $config['server']['serverName'] ?>"
                                 >
                             </a>
                         </div>
@@ -340,10 +435,18 @@ background-attachment: fixed;
                                                     <div class="light_rd" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                 </span>
                                                     <?php
-                                                    $bg = array('icon-news01.gif', 'icon-news02.gif', 'icon-news03.gif', 'icon-news04.gif', 'icon-news05.gif', 'icon-news06.gif'); // array of filenames
-                                                    $i = rand(0, count($bg)-1); // generate random number size of the array
-                                                    $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
-                                                    ?>
+$bg = array(
+    'icon-news01.gif',
+    'icon-news02.gif',
+    'icon-news03.gif',
+    'icon-news04.gif',
+    'icon-news05.gif',
+    'icon-news06.gif'
+); // array of filenames
+$i = rand(0, count($bg) - 1); // generate random number size of the array
+$selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+
+?>
                                                 <div id="news_Icon" class="Icon" style="background: url(<?php echo $layout_name; ?>/images/global/menu/<?php echo $selectedBg; ?>) no-repeat;"></div>
                                                 <div id="news_Label" class="Label" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/label-news.gif);"></div>
                                                 <div id="news_Extend"  style="background-image: url(<?php echo $layout_name; ?>/images/global/general/minus.gif);"></div>
@@ -389,10 +492,20 @@ background-attachment: fixed;
                                                     <div class="light_rd" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                 </span>
                                                     <?php
-                                                    $bg = array('icon-community01.gif', 'icon-community02.gif', 'icon-community03.gif', 'icon-community04.gif', 'icon-community05.gif', 'icon-community06.gif', 'icon-community07.gif', 'icon-community08.gif'); // array of filenames
-                                                    $i = rand(0, count($bg)-1); // generate random number size of the array
-                                                    $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
-                                                    ?>
+$bg = array(
+    'icon-community01.gif',
+    'icon-community02.gif',
+    'icon-community03.gif',
+    'icon-community04.gif',
+    'icon-community05.gif',
+    'icon-community06.gif',
+    'icon-community07.gif',
+    'icon-community08.gif'
+); // array of filenames
+$i = rand(0, count($bg) - 1); // generate random number size of the array
+$selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+
+?>
                                                 <div id="community_Icon" class="Icon" style="background: url(<?php echo $layout_name; ?>/images/global/menu/<?php echo $selectedBg; ?>) no-repeat;"></div>
                                                 <div id="community_Label" class="Label" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/label-community.gif);"></div>
                                                 <div id="community_Extend"  style="background-image: url(<?php echo $layout_name; ?>/images/global/general/plus.gif);"></div>
@@ -424,7 +537,8 @@ background-attachment: fixed;
                                             <div class="RightChain" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);"></div>
                                         </div>
                                     </a>
-                                    <?php if($logged){?>
+                                    <?php if ($logged)
+{ ?>
                                         <a href="?subtopic=accountmanagement&action=sellchar">
                                             <div id="submenu_sellchar" data-menu="community" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
                                                 <div class="LeftChain" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);"></div>
@@ -433,7 +547,8 @@ background-attachment: fixed;
                                                 <div class="RightChain" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);"></div>
                                             </div>
                                         </a>
-                                    <?php }?>
+                                    <?php
+} ?>
                                     <a href="?subtopic=worlds">
                                         <div id="submenu_worlds" data-menu="community" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
                                                 <div class="LeftChain" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);"></div>
@@ -511,10 +626,22 @@ background-attachment: fixed;
                                                     <div class="light_rd" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                 </span>
                                                     <?php
-                                                    $bg = array('icon-forum01.gif', 'icon-forum02.gif', 'icon-forum03.gif', 'icon-forum04.gif', 'icon-forum05.gif', 'icon-forum06.gif', 'icon-forum07.gif', 'icon-forum08.gif', 'icon-forum09.gif', 'icon-forum10.gif'); // array of filenames
-                                                    $i = rand(0, count($bg)-1); // generate random number size of the array
-                                                    $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
-                                                    ?>
+$bg = array(
+    'icon-forum01.gif',
+    'icon-forum02.gif',
+    'icon-forum03.gif',
+    'icon-forum04.gif',
+    'icon-forum05.gif',
+    'icon-forum06.gif',
+    'icon-forum07.gif',
+    'icon-forum08.gif',
+    'icon-forum09.gif',
+    'icon-forum10.gif'
+); // array of filenames
+$i = rand(0, count($bg) - 1); // generate random number size of the array
+$selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+
+?>
                                                 <div id="forum_Icon" class="Icon" style="background: url(<?php echo $layout_name; ?>/images/global/menu/<?php echo $selectedBg; ?>) no-repeat;"></div>
                                                 <div id="forum_Label" class="Label" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/label-forum.gif);"></div>
                                                 <div id="forum_Extend"  style="background-image: url(<?php echo $layout_name; ?>/images/global/general/plus.gif);"></div>
@@ -544,10 +671,17 @@ background-attachment: fixed;
                                                     <div class="light_rd" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                 </span>
                                                     <?php
-                                                    $bg = array('icon-account01.gif', 'icon-account02.gif', 'icon-account03.gif', 'icon-account04.gif', 'icon-account05.gif'); // array of filenames
-                                                    $i = rand(0, count($bg)-1); // generate random number size of the array
-                                                    $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
-                                                    ?>
+$bg = array(
+    'icon-account01.gif',
+    'icon-account02.gif',
+    'icon-account03.gif',
+    'icon-account04.gif',
+    'icon-account05.gif'
+); // array of filenames
+$i = rand(0, count($bg) - 1); // generate random number size of the array
+$selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+
+?>
                                                 <div id="account_Icon" class="Icon" style="background: url(<?php echo $layout_name; ?>/images/global/menu/<?php echo $selectedBg; ?>) no-repeat;"></div>
                                                 <div id="account_Label" class="Label" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/label-account.gif);"></div>
                                                 <div id="account_Extend"  style="background-image: url(<?php echo $layout_name; ?>/images/global/general/plus.gif);"></div>
@@ -563,7 +697,8 @@ background-attachment: fixed;
                                             <div class="RightChain" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);"></div>
                                         </div>
                                     </a>
-                                    <?php if($group_id_of_acc_logged >= $config['site']['access_admin_panel']) { ?>
+                                    <?php if ($group_id_of_acc_logged >= $config['site']['access_admin_panel'])
+{ ?>
                                         <a href="?subtopic=adminpanel">
                                             <div id="submenu_adminpanel" data-menu="account" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
                                                 <div class="LeftChain" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);"></div>
@@ -572,8 +707,10 @@ background-attachment: fixed;
                                                 <div class="RightChain" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);"></div>
                                             </div>
                                         </a>
-                                    <?php } ?>
-                                    <?php if(!$logged){ ?>
+                                    <?php
+} ?>
+                                    <?php if (!$logged)
+{ ?>
                                         <a href="?subtopic=createaccount">
                                             <div id="submenu_createaccount" data-menu="account" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
                                                 <div class="LeftChain" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);"></div>
@@ -582,7 +719,8 @@ background-attachment: fixed;
                                                 <div class="RightChain" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);"></div>
                                             </div>
                                         </a>
-                                    <?php } ?>
+                                    <?php
+} ?>
                                     <a href="?subtopic=downloadclient&step=downloadagreement">
                                         <div id="submenu_downloadclient" data-menu="account" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
                                             <div class="LeftChain" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);"></div>
@@ -613,10 +751,17 @@ background-attachment: fixed;
                                                     <div class="light_rd" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                 </span>
                                                     <?php
-                                                    $bg = array('icon-library01.gif', 'icon-library02.gif', 'icon-library03.gif', 'icon-library04.gif', 'icon-library05.gif'); // array of filenames
-                                                    $i = rand(0, count($bg)-1); // generate random number size of the array
-                                                    $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
-                                                    ?>
+$bg = array(
+    'icon-library01.gif',
+    'icon-library02.gif',
+    'icon-library03.gif',
+    'icon-library04.gif',
+    'icon-library05.gif'
+); // array of filenames
+$i = rand(0, count($bg) - 1); // generate random number size of the array
+$selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+
+?>
                                                 <div id="library_Icon" class="Icon" style="background: url(<?php echo $layout_name; ?>/images/global/menu/<?php echo $selectedBg; ?>) no-repeat;"></div>
                                                 <div id="library_Label" class="Label" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/label-library.gif);"></div>
                                                 <div id="library_Extend"  style="background-image: url(<?php echo $layout_name; ?>/images/global/general/plus.gif);"></div>
@@ -678,10 +823,26 @@ background-attachment: fixed;
                                                 <div class="light_rd" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                             </span>
                                                 <?php
-                                                $bg = array('icon-wars01.gif', 'icon-wars02.gif', 'icon-wars03.gif', 'icon-wars04.gif', 'icon-wars05.gif', 'icon-wars06.gif', 'icon-wars07.gif', 'icon-wars08.gif', 'icon-wars09.gif', 'icon-wars10.gif', 'icon-wars11.gif', 'icon-wars12.gif', 'icon-wars13.gif', 'icon-wars14.gif'); // array of filenames
-                                                $i = rand(0, count($bg)-1); // generate random number size of the array
-                                                $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
-                                                ?>
+$bg = array(
+    'icon-wars01.gif',
+    'icon-wars02.gif',
+    'icon-wars03.gif',
+    'icon-wars04.gif',
+    'icon-wars05.gif',
+    'icon-wars06.gif',
+    'icon-wars07.gif',
+    'icon-wars08.gif',
+    'icon-wars09.gif',
+    'icon-wars10.gif',
+    'icon-wars11.gif',
+    'icon-wars12.gif',
+    'icon-wars13.gif',
+    'icon-wars14.gif'
+); // array of filenames
+$i = rand(0, count($bg) - 1); // generate random number size of the array
+$selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+
+?>
                                             <div id="wars_Icon" class="Icon" style="background: url(<?php echo $layout_name; ?>/images/global/menu/<?php echo $selectedBg; ?>) no-repeat;"></div>
                                             <div id="wars_Label" class="Label" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/label-wars.gif);"></div>
                                             <div id="wars_Extend"  style="background-image: url(<?php echo $layout_name; ?>/images/global/general/plus.gif);"></div>
@@ -720,10 +881,25 @@ background-attachment: fixed;
                                                 <div class="light_rd" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                             </span>
                                                 <?php
-                                                $bg = array('icon-events01.gif', 'icon-events02.gif', 'icon-events03.gif', 'icon-events04.gif', 'icon-events05.gif', 'icon-events06.gif', 'icon-events07.gif', 'icon-events08.gif', 'icon-events09.gif', 'icon-events10.gif', 'icon-events11.gif', 'icon-events12.gif', 'icon-events13.gif'); // array of filenames
-                                                $i = rand(0, count($bg)-1); // generate random number size of the array
-                                                $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
-                                                ?>
+$bg = array(
+    'icon-events01.gif',
+    'icon-events02.gif',
+    'icon-events03.gif',
+    'icon-events04.gif',
+    'icon-events05.gif',
+    'icon-events06.gif',
+    'icon-events07.gif',
+    'icon-events08.gif',
+    'icon-events09.gif',
+    'icon-events10.gif',
+    'icon-events11.gif',
+    'icon-events12.gif',
+    'icon-events13.gif'
+); // array of filenames
+$i = rand(0, count($bg) - 1); // generate random number size of the array
+$selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+
+?>
                                             <div id="events_Icon" class="Icon" style="background: url(<?php echo $layout_name; ?>/images/global/menu/<?php echo $selectedBg; ?>) no-repeat;"></div>
                                             <div id="events_Label" class="Label" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/label-events.gif);"></div>
                                             <div id="events_Extend"  style="background-image: url(<?php echo $layout_name; ?>/images/global/general/plus.gif);"></div>
@@ -777,10 +953,23 @@ background-attachment: fixed;
                                                     <div class="light_rd" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                 </span>
                                                     <?php
-                                                    $bg = array('icon-support01.gif', 'icon-support02.gif', 'icon-support03.gif', 'icon-support04.gif', 'icon-support05.gif', 'icon-support06.gif', 'icon-support07.gif', 'icon-support08.gif', 'icon-support09.gif', 'icon-support10.gif', 'icon-support11.gif'); // array of filenames
-                                                    $i = rand(0, count($bg)-1); // generate random number size of the array
-                                                    $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
-                                                    ?>
+$bg = array(
+    'icon-support01.gif',
+    'icon-support02.gif',
+    'icon-support03.gif',
+    'icon-support04.gif',
+    'icon-support05.gif',
+    'icon-support06.gif',
+    'icon-support07.gif',
+    'icon-support08.gif',
+    'icon-support09.gif',
+    'icon-support10.gif',
+    'icon-support11.gif'
+); // array of filenames
+$i = rand(0, count($bg) - 1); // generate random number size of the array
+$selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+
+?>
                                                 <div id="support_Icon" class="Icon" style="background: url(<?php echo $layout_name; ?>/images/global/menu/<?php echo $selectedBg; ?>) no-repeat;"></div>
                                                 <div id="support_Label" class="Label" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/label-support.gif);"></div>
                                                 <div id="support_Extend"  style="background-image: url(<?php echo $layout_name; ?>/images/global/general/plus.gif);"></div>
@@ -804,7 +993,8 @@ background-attachment: fixed;
                                             <div class="RightChain" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);"></div>
                                         </div>
                                     </a>
-                                <?php if($_REQUEST["subtopic"] == "erro"){?>
+                                <?php if ($_REQUEST["subtopic"] == "erro")
+{ ?>
                                     <a href="?subtopic=erro">
                                         <div id="submenu_erro" data-menu="support" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
                                             <div class="LeftChain" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);"></div>
@@ -813,8 +1003,10 @@ background-attachment: fixed;
                                             <div class="RightChain" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);"></div>
                                         </div>
                                     </a>
-                                <?php } ?>
-                                <?php if (isset($_SESSION['account'])){?>
+                                <?php
+} ?>
+                                <?php if (isset($_SESSION['account']))
+{ ?>
                                     <a href="?subtopic=ticket">
                                         <div id="submenu_ticket" data-menu="support" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
                                             <div class="LeftChain" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);"></div>
@@ -823,7 +1015,8 @@ background-attachment: fixed;
                                             <div class="RightChain" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);"></div>
                                         </div>
                                     </a>
-                                <?php } ?>
+                                <?php
+} ?>
                                 </div>
                             </div>
                             <div id="shop" class="menuitem">
@@ -837,10 +1030,16 @@ background-attachment: fixed;
                                                     <div class="light_rd" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                 </span>
                                                     <?php
-                                                    $bg = array('icon-shops01.gif', 'icon-shops02.gif', 'icon-shops03.gif', 'icon-shops04.gif'); // array of filenames
-                                                    $i = rand(0, count($bg)-1); // generate random number size of the array
-                                                    $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
-                                                    ?>
+$bg = array(
+    'icon-shops01.gif',
+    'icon-shops02.gif',
+    'icon-shops03.gif',
+    'icon-shops04.gif'
+); // array of filenames
+$i = rand(0, count($bg) - 1); // generate random number size of the array
+$selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+
+?>
                                                 <div id="shop_Icon" class="Icon" style="background: url(<?php echo $layout_name; ?>/images/global/menu/<?php echo $selectedBg; ?>) no-repeat;"></div>
                                                 <div id="shop_Label" class="Label" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/label-shops.gif);"></div>
                                                 <div id="shop_Extend"  style="background-image: url(<?php echo $layout_name; ?>/images/global/general/plus.gif);"></div>
@@ -848,7 +1047,8 @@ background-attachment: fixed;
                                         </div>
                                     </span>
                                 <div id="shop_Submenu" class="Submenu">
-                                <?php if(Website::getWebsiteConfig()->getValue('shopEnabled')){?>
+                                <?php if (Website::getWebsiteConfig()->getValue('shopEnabled'))
+{ ?>
                                     <a href="?subtopic=shop">
                                         <div id="submenu_shop" data-menu="shop" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
                                             <div class="LeftChain" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);"></div>
@@ -857,7 +1057,8 @@ background-attachment: fixed;
                                             <div class="RightChain" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);"></div>
                                         </div>
                                     </a>
-                                <?php } ?>
+                                <?php
+} ?>
                                     <a href="?subtopic=accountmanagement&action=donate">
                                         <div id="submenu_donate" data-menu="shop" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
                                             <div class="LeftChain" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);"></div>
@@ -882,7 +1083,8 @@ background-attachment: fixed;
                                             <div class="RightChain" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);"></div>
                                         </div>
                                     </a>
-                                    <?php if($_REQUEST['subtopic'] == 'tankyou'){?>
+                                    <?php if ($_REQUEST['subtopic'] == 'tankyou')
+{ ?>
                                         <a>
                                             <div id="submenu_tankyou" data-menu="shop" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
                                                 <div class="LeftChain" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);"></div>
@@ -891,7 +1093,8 @@ background-attachment: fixed;
                                                 <div class="RightChain" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);"></div>
                                             </div>
                                         </a>
-                                    <?php } ?>
+                                    <?php
+} ?>
                                 </div>
                             </div>
                             <div id="MenuBottom" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/box-bottom.gif);"></div>
@@ -900,112 +1103,143 @@ background-attachment: fixed;
                     </div>
                     
                 <?php
-    $casts = $SQL->query("SELECT COUNT(*) AS 'cast' FROM `live_casts`")->fetch();
-    $cast = $casts["cast"];
-    $specs = $SQL->query("SELECT SUM(`spectators`) AS 'spec' FROM `live_casts`")->fetch();
-    $spec = $specs["spec"];
-    if(!$spec)
-        $spec = 0;
+$casts = $SQL->query("SELECT COUNT(*) AS 'cast' FROM `live_casts`")
+    ->fetch();
+$cast = $casts["cast"];
+$specs = $SQL->query("SELECT SUM(`spectators`) AS 'spec' FROM `live_casts`")
+    ->fetch();
+$spec = $specs["spec"];
+if (!$spec) $spec = 0;
 ?>    
 					<div id="ContentColumn">
                         <div id="Content" class="Content">
                             <div id="ContentHelper">
                                 <div id="preload">
                                     <?php
-        
-                                    if ( ! session_id() ) @ session_start();
-        
-                                    $last = null;
-                                    if (!isset($_SESSION)) {
-                                        $_SESSION = [];
-                                    }
-        
-                                    if (isset($_SESSION['server_status_last_check'])) {
-                                        $last = $_SESSION['server_status_last_check'];
-                                    }
-                                    if ($last == null || time() > $last + 30) {
-                                        $_SESSION['server_status_last_check'] = time();
-                                        $_SESSION['server_status'] = $config['status']['serverStatus_online'];
-                                    }
-                                    
-                                    $infobar = Website::getWebsiteConfig()->getValue('info_bar_active');
-        
-                                    if($_SESSION['server_status'] == 1){
-                                        $qtd_players_online = $SQL->query("SELECT count(*) as total from `players_online`")->fetch();
-                                        if($qtd_players_online["total"] == "1"){
-                                            $players_online = ($infobar ? $qtd_players_online["total"].' Player Online' : $qtd_players_online["total"].'<br/>Player Online');
-                                        }else{
-                                            $players_online = ($infobar ? $qtd_players_online["total"].' Players Online' : $qtd_players_online["total"].'<br/>Players Online');
-                                        }
-                                    }
-                                    else{
-                                        $players_online = ($infobar ? 'Server Offline' : 'Server<br/>Offline');
-                                    }
-                                    ?>
-                                    <?php if(Website::getWebsiteConfig()->getValue('info_bar_active')){?>
+if (!session_id()) @session_start();
+
+$last = null;
+if (!isset($_SESSION))
+{
+    $_SESSION = [];
+}
+
+if (isset($_SESSION['server_status_last_check']))
+{
+    $last = $_SESSION['server_status_last_check'];
+}
+if ($last == null || time() > $last + 30)
+{
+    $_SESSION['server_status_last_check'] = time();
+    $_SESSION['server_status'] = $config['status']['serverStatus_online'];
+}
+
+$infobar = Website::getWebsiteConfig()->getValue('info_bar_active');
+
+if ($_SESSION['server_status'] == 1)
+{
+    $qtd_players_online = $SQL->query("SELECT count(*) as total from `players_online`")
+        ->fetch();
+    if ($qtd_players_online["total"] == "1")
+    {
+        $players_online = ($infobar ? $qtd_players_online["total"] . ' Player Online' : $qtd_players_online["total"] . '<br/>Player Online');
+    }
+    else
+    {
+        $players_online = ($infobar ? $qtd_players_online["total"] . ' Players Online' : $qtd_players_online["total"] . '<br/>Players Online');
+    }
+}
+else
+{
+    $players_online = ($infobar ? 'Server Offline' : 'Server<br/>Offline');
+}
+?>
+                                    <?php if (Website::getWebsiteConfig()->getValue('info_bar_active'))
+{ ?>
                                     <div id="PlayersOnline" class="Box">
                                         <div class="Corner-tl" style="background-image:url(layouts/tibiacom/images/global/content/corner-tl.gif);"></div>
                                         <div class="Corner-tr" style="background-image:url(layouts/tibiacom/images/global/content/corner-tr.gif);"></div>
                                         <div class="Border_1" style="background-image:url(layouts/tibiacom/images/global/content/border-1.gif);"></div>
                                         <div class="BorderTitleText" style="background-image:url(layouts/tibiacom/images/global/content/newsheadline_background.gif); height: 28px;">
                                             <div class="InfoBar">
-                                                <?php if(Website::getWebsiteConfig()->getValue('info_bar_cast')){?>
+                                                <?php if (Website::getWebsiteConfig()
+        ->getValue('info_bar_cast'))
+    { ?>
                                                 
                                                 <a class="InfoBarBlock" href="?subtopic=cast">
 <img class="InfoBarBigLogo" src="<?php echo $layout_name; ?>/images/global/header/info/icon-cast.png">
 <span class="InfoBarNumbers"><img class="InfoBarSmallElement" src="<?php echo $layout_name; ?>/images/global/header/info/icon-streamers.png">
 <?php
-                    if($cast == 0)
-                        $cast1 ='<span class="InfoBarSmallElement">No cast\'s on.</span>';
-                    else
-                        $cast1 = '
-                    <span class="InfoBarSmallElement">'.$cast.' cast'. ($cast > 1 ? 's' : '') .'</span>
-<img class="InfoBarSmallElement" src="'.$layout_name.'/images/global/header/info/icon-viewers.png">
-<span class="InfoBarSmallElement">'.$spec.' spectators</span>';
-                ?>
+        if ($cast == 0) $cast1 = '<span class="InfoBarSmallElement">No cast\'s on.</span>';
+        else $cast1 = '
+                    <span class="InfoBarSmallElement">' . $cast . ' cast' . ($cast > 1 ? 's' : '') . '</span>
+<img class="InfoBarSmallElement" src="' . $layout_name . '/images/global/header/info/icon-viewers.png">
+<span class="InfoBarSmallElement">' . $spec . ' spectators</span>';
+?>
 <?php echo $cast1; ?>
 
 
 </span>
 </a>
         
-                                                <?php }?>
-                                                <?php if(Website::getWebsiteConfig()->getValue('info_bar_twitch')){?>
+                                                <?php
+    } ?>
+                                                <?php if (Website::getWebsiteConfig()->getValue('info_bar_twitch'))
+    { ?>
                                                 <a class="InfoBarBlock" href="https://www.twitch.tv/directory/game/Tibia" target="_blank">
                                                     <img class="InfoBarBigLogo" src="layouts/tibiacom/images/global/header/info/icon-twitch.png">
-                                                    <span class="InfoBarNumbers" <?php if($_REQUEST['subtopic'] == 'characters' && $_REQUEST['name']){ echo "style='top:0'"; }?>><img class="InfoBarSmallElement" src="layouts/tibiacom/images/global/header/info/icon-streamers.png">
-                                                        <span class="InfoBarSmallElement"><?= $twitch_a?></span><img class="InfoBarSmallElement" src="layouts/tibiacom/images/global/header/info/icon-viewers.png">
-                                                        <span class="InfoBarSmallElement"><?= $twitch_c?></span>
+                                                    <span class="InfoBarNumbers" <?php if ($_REQUEST['subtopic'] == 'characters' && $_REQUEST['name'])
+        {
+            echo "style='top:0'";
+        } ?>><img class="InfoBarSmallElement" src="layouts/tibiacom/images/global/header/info/icon-streamers.png">
+                                                        <span class="InfoBarSmallElement"><?=$twitch_a ?></span><img class="InfoBarSmallElement" src="layouts/tibiacom/images/global/header/info/icon-viewers.png">
+                                                        <span class="InfoBarSmallElement"><?=$twitch_c ?></span>
                                                     </span>
                                                 </a>
-                                                <?php }?>
-                                                <?php if(Website::getWebsiteConfig()->getValue('info_bar_youtube')){?>
+                                                <?php
+    } ?>
+                                                <?php if (Website::getWebsiteConfig()->getValue('info_bar_youtube'))
+    { ?>
                                                 <a class="InfoBarBlock" href="https://gaming.youtube.com/game/UCccW6i67_MlXxwqBMh0emYA" target="_blank">
                                                     <img class="InfoBarBigLogo" src="layouts/tibiacom/images/global/header/info/icon-youtube.png">
-                                                    <span class="InfoBarNumbers" <?php if($_REQUEST['subtopic'] == 'characters' && $_REQUEST['name']){ echo "style='top:0'"; }?>>
+                                                    <span class="InfoBarNumbers" <?php if ($_REQUEST['subtopic'] == 'characters' && $_REQUEST['name'])
+        {
+            echo "style='top:0'";
+        } ?>>
                                                         <img class="InfoBarSmallElement" src="layouts/tibiacom/images/global/header/info/icon-streamers.png">
                                                         <span class="InfoBarSmallElement">17</span>
                                                         <img class="InfoBarSmallElement" src="layouts/tibiacom/images/global/header/info/icon-viewers.png">
                                                         <span class="InfoBarSmallElement">661</span>
                                                     </span>
                                                 </a>
-                                                <?php }?>
-                                                <?php if(Website::getWebsiteConfig()->getValue('info_bar_forum')){?>
+                                                <?php
+    } ?>
+                                                <?php if (Website::getWebsiteConfig()->getValue('info_bar_forum'))
+    { ?>
                                                 <a href="?subtopic=downloadclient">
                                                     <img class="InfoBarBigLogo" src="layouts/tibiacom/images/global/header/info/icon-download.png">
-                                                    <span class="InfoBarNumbers" <?php if($_REQUEST['subtopic'] == 'characters' && $_REQUEST['name']){ echo "style='top:0'"; }?>>
+                                                    <span class="InfoBarNumbers" <?php if ($_REQUEST['subtopic'] == 'characters' && $_REQUEST['name'])
+        {
+            echo "style='top:0'";
+        } ?>>
                                                         <span class="InfoBarSmallElement">Downloads</span>
                                                     </span>
                                                 </a>
-                                                <?php }?>
-                                                <?php if(Website::getWebsiteConfig()->getValue('info_bar_online')){?>
-                                                <a style="float: right" href="<?php echo $config['base_url']?>?subtopic=worlds">
+                                                <?php
+    } ?>
+                                                <?php if (Website::getWebsiteConfig()->getValue('info_bar_online'))
+    { ?>
+                                                <a style="float: right" href="<?php echo $config['base_url'] ?>?subtopic=worlds">
                                                     <img class="InfoBarBigLogo" src="layouts/tibiacom/images/global/header/info/icon-players-online.png">
-                                                    <span class="InfoBarNumbers" <?php if($_REQUEST['subtopic'] == 'characters' && $_REQUEST['name']){ echo "style='top:0'"; }?>>
+                                                    <span class="InfoBarNumbers" <?php if ($_REQUEST['subtopic'] == 'characters' && $_REQUEST['name'])
+        {
+            echo "style='top:0'";
+        } ?>>
                                                         <span class="InfoBarSmallElement show_online_data"><?php echo $players_online; ?></span>
                                                     </span>
                                                 </a>
-                                                <?php }?>
+                                                <?php
+    } ?>
                                             </div>
                                         </div>
                                         <div class="Border_1" style="background-image:url(layouts/tibiacom/images/global/content/border-1.gif);"></div>
@@ -1016,7 +1250,8 @@ background-attachment: fixed;
                                             <div class="Corner-br" style="background-image:url(layouts/tibiacom/images/global/content/corner-br.gif);"></div>
                                         </div>
                                     </div>
-                                    <?php }?>
+                                    <?php
+} ?>
                                     <script type="text/javascript" src="<?php echo $layout_name; ?>/js/newsticker.js<?php echo $css_version ?>"></script>
                                     <?php echo $news_content; ?>
                                     <div id="NewsArchive" class="Box">
@@ -1025,25 +1260,19 @@ background-attachment: fixed;
                                         <div class="Border_1" style="background-image:url(<?php echo $layout_name; ?>/images/global/content/border-1.gif);"></div>
                                         <div class="BorderTitleText" style="background-image:url(<?php echo $layout_name; ?>/images/global/content/title-background-green.gif);"></div>
                                         <?php
-                                        $headline = ucfirst($_REQUEST['subtopic']);
-                                        if($_REQUEST['subtopic'] == "latestnews")
-                                            $headline = "News";
-                                        elseif($_REQUEST['subtopic'] == "accountmanagement"){
-                                            $headline = "Account Management";
-                                            if($_REQUEST['action'] == "buychar")
-                                                $headline = "Buy Char";
-                                            if($_REQUEST['action'] == "sellchar")
-                                                $headline = "Sell Char";
-                                        }
-                                        elseif($_REQUEST['subtopic'] == "createaccount")
-                                            $headline = "Create Account";
-                                        elseif($_REQUEST['subtopic'] == "whoisonline")
-                                            $headline = "Who is Online";
-                                        elseif($_REQUEST['subtopic'] == "adminpanel")
-                                            $headline = "Admin Panel";
-                                        elseif($_REQUEST['subtopic'] == "tankyou")
-                                            $headline = "Thank You";
-                                        ?>
+$headline = ucfirst($_REQUEST['subtopic']);
+if ($_REQUEST['subtopic'] == "latestnews") $headline = "News";
+elseif ($_REQUEST['subtopic'] == "accountmanagement")
+{
+    $headline = "Account Management";
+    if ($_REQUEST['action'] == "buychar") $headline = "Buy Char";
+    if ($_REQUEST['action'] == "sellchar") $headline = "Sell Char";
+}
+elseif ($_REQUEST['subtopic'] == "createaccount") $headline = "Create Account";
+elseif ($_REQUEST['subtopic'] == "whoisonline") $headline = "Who is Online";
+elseif ($_REQUEST['subtopic'] == "adminpanel") $headline = "Admin Panel";
+elseif ($_REQUEST['subtopic'] == "tankyou") $headline = "Thank You";
+?>
                                         <img id="ContentBoxHeadline" class="Title" src="headline.php?text=<?PHP echo ucwords(str_replace('_', ' ', strtolower($headline))); ?>" alt="Contentbox headline">
                                         <div class="Border_2">
                                             <div class="Border_3">
@@ -1059,18 +1288,20 @@ background-attachment: fixed;
                                 </div>
                                 <div id="ThemeboxesColumn">
                                     <?PHP
-                                        $monsterquery = $SQL->query("SELECT `boostname`, `looktype`, `lookfeet` , `looklegs` , `lookhead` , `lookbody` , `lookaddons` , `lookmount`   FROM `boosted_creature`")->fetch();
-                                        $monstername = $monsterquery["boostname"];
-                                        $monstertype = $monsterquery["looktype"];
-                                        $monsterfeet = $monsterquery["lookfeet"];
-                                        $monsterlegs = $monsterquery["looklegs"];
-                                        $monsterhead = $monsterquery["lookhead"];
-                                        $monsterbody = $monsterquery["lookbody"];
-                                        $monsteraddons = $monsterquery["lookaddons"];
-                                        $monstermount= $monsterquery["lookmount"];
-                                    ?>
+$monsterquery = $SQL->query("SELECT `boostname`, `looktype`, `lookfeet` , `looklegs` , `lookhead` , `lookbody` , `lookaddons` , `lookmount`   FROM `boosted_creature`")
+    ->fetch();
+$monstername = $monsterquery["boostname"];
+$monstertype = $monsterquery["looktype"];
+$monsterfeet = $monsterquery["lookfeet"];
+$monsterlegs = $monsterquery["looklegs"];
+$monsterhead = $monsterquery["lookhead"];
+$monsterbody = $monsterquery["lookbody"];
+$monsteraddons = $monsterquery["lookaddons"];
+$monstermount = $monsterquery["lookmount"];
+?>
                                     <div id="DeactivationContainerThemebox" onclick="DisableDeactivationContainer();"></div>
-                                    <?php if(Website::getWebsiteConfig()->getValue('info_bar_active')){?>
+                                    <?php if (Website::getWebsiteConfig()->getValue('info_bar_active'))
+{ ?>
                                     <div id="RightArtwork">
                                       <div  id="Monster" style=" 
                                       height: 32px; 
@@ -1089,7 +1320,10 @@ background-attachment: fixed;
                                         <img id="Pedestal" src="<?php echo $layout_name; ?>/images/global/header/pedestal2.png" alt="Monster Pedestal">
                                         <!--<div id="PlayersOnline" onclick="window.location = '?subtopic=worlds';"><?php echo $players_online; ?></div>-->
                                     </div>
-                                    <?php } else {?>
+                                    <?php
+}
+else
+{ ?>
                                         <div id="RightArtwork">
                                         <div  id="Monster" style=" 
                                            height: 128px; 
@@ -1108,18 +1342,27 @@ background-attachment: fixed;
                                             <img id="PedestalAndOnline" style="" src="<?php echo $layout_name; ?>/images/global/header/pedestal-and-online.gif" alt="Monster Pedestal and Online">
                                             <div id="PlayersOnline" onclick="window.location = '?subtopic=worlds';"><?php echo $players_online; ?></div>
                                         </div>
-                                    <?php }?>
+                                    <?php
+} ?>
                                           <div id="Themeboxes">
-                                        <?php $files = array('widgets/widget_PremiumBox.php', 'widgets/widget_PremiumBox2.php', 'widgets/widget_PremiumBox3.php', 'widgets/widget_PremiumBox4.php', 'widgets/widget_PremiumBox5.php', 'widgets/widget_PremiumBox6.php', 'widgets/widget_PremiumBox7.php');
-                                        // randomly include a file
-                                        include_once $files[array_rand($files)];?>
-                                        <?php include_once "widgets/widget_rank.php"?> 
-                                        <?php include_once "widgets/widget_Serverinfobox.php"?>
-                                        <?php include_once "widgets/widget_NetworksBox.php"?>
-                                        <?php include_once "widgets/widget_CurrentPollBox.php"?>
-                                        <?php include_once "widgets/widget_CastleWarBox.php"?>
-                                        <?php include_once "widgets/widget_supportButton.php"?>
-                                        <?php include_once "widgets/widget_buycharButton.php"?>
+                                        <?php $files = array(
+    'widgets/widget_PremiumBox.php',
+    'widgets/widget_PremiumBox2.php',
+    'widgets/widget_PremiumBox3.php',
+    'widgets/widget_PremiumBox4.php',
+    'widgets/widget_PremiumBox5.php',
+    'widgets/widget_PremiumBox6.php',
+    'widgets/widget_PremiumBox7.php'
+);
+// randomly include a file
+include_once $files[array_rand($files) ]; ?>
+                                        <?php include_once "widgets/widget_rank.php" ?> 
+                                        <?php include_once "widgets/widget_Serverinfobox.php" ?>
+                                        <?php include_once "widgets/widget_NetworksBox.php" ?>
+                                        <?php include_once "widgets/widget_CurrentPollBox.php" ?>
+                                        <?php include_once "widgets/widget_CastleWarBox.php" ?>
+                                        <?php include_once "widgets/widget_supportButton.php" ?>
+                                        <?php include_once "widgets/widget_buycharButton.php" ?>
                                         <style type="text/css" media="all">
                                         .pesquiserplayer {
                                         margin - top: 53 px;
@@ -1163,7 +1406,7 @@ background-attachment: fixed;
                     <div id="Footer">
                         <!--<script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>-->
                         Copyright by <a href="https://www.cipsoft.com" target="_new"><b>CipSoft GmbH</b></a>. All rights reserveds<br>
-                        <b>Edited by.: <a class="codenome-font"  href="<?php echo $config['base_url']?>?subtopic=team"><?php echo $config['server']['serverName']?> TEAM</a></b><br>
+                        <b>Edited by.: <a class="codenome-font"  href="<?php echo $config['base_url'] ?>?subtopic=team"><?php echo $config['server']['serverName'] ?> TEAM</a></b><br>
                         <a href=?subtopic=forum><b>Game Forum</b></a> | <a href=<?php echo $config['social']['facebook']; ?>><b>Facebook</b></a> | <a href=?subtopic=team><b>Support Game</b></a><br>
                     </div>
                 </div>
@@ -1235,7 +1478,8 @@ background-attachment: fixed;
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-    <?php if ($config['base_url'] !== Website::getWebsiteConfig()->getValue('testurl')){?>
+    <?php if ($config['base_url'] !== Website::getWebsiteConfig()->getValue('testurl'))
+{ ?>
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({
@@ -1252,20 +1496,24 @@ background-attachment: fixed;
     
             gtag('config', 'UA-110963342-1');
         </script>
-    <?php } ?>
-    <script src="<?php echo $layout_name; ?>/js/pace.min.js<?php echo $css_version;?>" data-pace-options='{ "elements": false, "startOnPageLoad": true, "ajax": false, "restartOnRequestAfter": false }'></script>
+    <?php
+} ?>
+    <script src="<?php echo $layout_name; ?>/js/pace.min.js<?php echo $css_version; ?>" data-pace-options='{ "elements": false, "startOnPageLoad": true, "ajax": false, "restartOnRequestAfter": false }'></script>
     <!-- float facebook like box start -->
-<?php if (Website::getWebsiteConfig()->getValue('widget_Serverinfoboxfloat')) { ?>
-    <script id="float_fb" src="<?=$layout_name?>/js/fb_float_plugin.js<?php echo $css_version;?>" data-href="<?=$config['social']['facebook']?>" async></script>
+<?php if (Website::getWebsiteConfig()->getValue('widget_Serverinfoboxfloat'))
+{ ?>
+    <script id="float_fb" src="<?=$layout_name
+?>/js/fb_float_plugin.js<?php echo $css_version; ?>" data-href="<?=$config['social']['facebook'] ?>" async></script>
     <!-- float facebook like box end -->
     <!-- float discord start -->
-    <script id="float_dc" src="<?php echo $layout_name; ?>/js/dc_float_plugin.js<?php echo $css_version;?>" data-href="<?=$config['social']['discord']?>" async></script>
+    <script id="float_dc" src="<?php echo $layout_name; ?>/js/dc_float_plugin.js<?php echo $css_version; ?>" data-href="<?=$config['social']['discord'] ?>" async></script>
      <!-- float discord end -->
-<?php }?>
+<?php
+} ?>
     <!-- float discord start -->
     <!-- <script id="float_discord" src="<?php echo $layout_name; ?>/js/discord/discord_float_plugin.js" data-id="528117503952551936&theme=dark"></script> -->
     <!-- float discord end --> 
-<script src="<?php echo $layout_name; ?>/js/ouibounce.min.js<?php echo $css_version;?>"></script>
+<script src="<?php echo $layout_name; ?>/js/ouibounce.min.js<?php echo $css_version; ?>"></script>
 <?php include_once "promo/promo.php"; ?>
 </body>
 </html>

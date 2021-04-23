@@ -493,7 +493,6 @@ $main_content .= '
 																	<table class="TableContent" width="100%" style="border:1px solid #faf0d7;">
 																		<tbody>
 																			<tr class="LabelH">
-																				
 																				<td style="width:40%;">Name</td>
 																				<td style="width:120px!important;">World</td>
 																				<td style="width:90px!important;">Status</td>
@@ -551,13 +550,11 @@ foreach ($account_players as $account_player) {
 
 
 	$main_content .= '
-																				
 																					<span id="CharacterNumberOf_' . $player_number_counter . '" style="display: ' . $displayNum . ';">' . $player_number_counter . '.</span>';
 
 	$main_content .= '
 																						<!-- </span> -->
 																					</span>
-																			
 																				<td id="CharacterCell2_' . $player_number_counter . '">
 																					<span style="white-space:nowrap;vertical-align:middle;">
 																						<span id="CharacterNameOf_' . $player_number_counter . '" style="font-size: ' . $displayFont . 'pt;">' . htmlspecialchars($account_player->getName()) . '</span><br>
@@ -667,3 +664,4 @@ $main_content .= '
 						</div>
 					</div>
 					<br>';
+?>

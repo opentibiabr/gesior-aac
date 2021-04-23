@@ -54,7 +54,6 @@ if ($logged) {
 									<form action="?subtopic=accountmanagement" method="post" style="padding:0px;margin:0px;" >
 										<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_red.gif)" >
 											<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_red_over.gif);" ></div>
-												
 												<input class="ButtonText" type="image" name="Cancel" alt="Cancel" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
 											</div>
 										</div>
@@ -112,7 +111,6 @@ if ($logged) {
 											<td style="border:0px;" >
 												<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 													<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-														
 														<input class="ButtonText" type="image" name="Ativar" alt="Ativar" src="' . $layout_name . '/images/global/buttons/_sbutton_confirm.gif" >
 													</div>
 												</div>
@@ -128,7 +126,6 @@ if ($logged) {
 												<td style="border:0px;" >
 													<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 														<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-														
 														<input class="ButtonText" type="image" name="Voltar" alt="Voltar" src="' . $layout_name . '/images/global/buttons/_sbutton_cancel.gif" >
 													</div>
 												</td>
@@ -246,7 +243,6 @@ if ($logged) {
 										<td style="border:0px;" >
 											<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_green.gif)" >
 												<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_green_over.gif);" ></div>
-													
 													<input class="ButtonText" type="image" name="Desativar" alt="Desativar" src="' . $layout_name . '/images/global/buttons/_sbutton_confirm.gif" >
 												</div>
 											</div>
@@ -262,7 +258,6 @@ if ($logged) {
 											<td style="border:0px;" >
 												<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_red.gif)" >
 													<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_red_over.gif);" ></div>
-													
 													<input class="ButtonText" type="image" name="Voltar" alt="Voltar" src="' . $layout_name . '/images/global/buttons/_sbutton_cancel.gif" >
 												</div>
 											</td>
@@ -365,7 +360,6 @@ if ($logged) {
 						<form action="?subtopic=accountmanagement" method="post" style="padding:0px;margin:0px;" >
 							<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_red.gif)" >
 								<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_red_over.gif);" ></div>
-									
 									<input class="ButtonText" type="image" name="Back" alt="back" src="' . $layout_name . '/images/global/buttons/_sbutton_cancel.gif" >
 								</div>
 							</div>

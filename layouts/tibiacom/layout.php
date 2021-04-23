@@ -250,6 +250,28 @@ background-attachment: fixed;
     <?php }?>
 <?php }?>
     <div id="DeactivationContainer" onclick="DisableDeactivationContainer();"></div>
+    <!-- <style>
+    .wpptable{position:absolute;margin-left:60%;text-align:left;background:#01010185;border:2px solid #8595bb;padding:9px 8px 6px 47px;border-radius:0 0 10px 10px;color:#fff;margin-top:-2px;font:400 9pt Verdana,Arial,Times New Roman,sans-serif;box-shadow:2px 2px 18px 1px #67e9ff;z-index:10000;transition:all 600ms ease-out}.wpptable:hover{box-shadow:2px 2px 18px 1px #03ff0d;border:2px solid #03ff0d;background:#343f58;transition:all 600ms ease-out;z-index:10000;cursor:pointer}.wpptable img{position:absolute;margin-left:-47px;margin-top:-8px;width:43px}.wpptable small{transition:all 600ms ease-out;display:none}.wpptable:hover small{transition:all 600ms ease-out;display:block}
+    </style>
+    <style>
+    .discordtable{position:absolute;margin-left:40%;text-align:left;background:#01010185;border:2px solid #8595bb;padding:9px 8px 6px 47px;border-radius:0 0 10px 10px;color:#fff;margin-top:-2px;font:400 9pt Verdana,Arial,Times New Roman,sans-serif;box-shadow:2px 2px 18px 1px #67e9ff;z-index:10000;transition:all 600ms ease-out}.discordtable:hover{box-shadow:2px 2px 18px 1px #03ff0d;border:2px solid #8691F0;background:#0F52BA;transition:all 600ms ease-out;z-index:10000;cursor:pointer}.discordtable img{position:absolute;margin-left:-47px;margin-top:-8px;width:43px}.discordtable small{transition:all 600ms ease-out;display:none}.discordtable:hover small{transition:all 600ms ease-out;display:block}
+    </style>
+    <a href="" >
+        <div class="wpptable">
+            <div class="tsbox">
+                <img src="<?php echo $layout_name; ?>/images/global/header/whatsapp-logo.png"><strong></strong>Whatsapp group<br>
+                <strong></strong>Clique aqui: <strong style="color: green;text-shadow: 1px 1px black;">ONLINE</strong> <small style="color: #e32636;text-shadow: 1px 1px black;text-align:center;">Join our Whatsapp group.</small>
+            </div>
+        </div>
+    </a>
+    <a href="" >
+        <div class="discordtable">
+            <div class="tsbox">
+                <img src="<?php echo $layout_name; ?>/images/global/header/discord-logo.png"><strong></strong>Discord group<br>
+                <strong></strong>Clique aqui: <strong style="color: orange;text-shadow: 1px 1px black;">ONLINE</strong> <small style="color: #e32636;text-shadow: 1px 1px black;text-align:center;">Join our Discord group.</small>
+            </div>
+        </div>
+    </a> -->
     <!-- twitch -->
 <script src="<?php echo $layout_name; ?>/twitch/wiixzerNew.js?version=5e74b2841ba6b"></script>
 
@@ -315,13 +337,13 @@ background-attachment: fixed;
                                                     <div class="light_lu" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                     <div class="light_ld" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                     <div class="light_ru" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
-													<div class="light_rd" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
+                                                    <div class="light_rd" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                 </span>
-													<?php
-													$bg = array('icon-news01.gif', 'icon-news02.gif', 'icon-news03.gif', 'icon-news04.gif', 'icon-news05.gif', 'icon-news06.gif'); // array of filenames
-													$i = rand(0, count($bg)-1); // generate random number size of the array
-													$selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
-													?>											
+                                                    <?php
+                                                    $bg = array('icon-news01.gif', 'icon-news02.gif', 'icon-news03.gif', 'icon-news04.gif', 'icon-news05.gif', 'icon-news06.gif'); // array of filenames
+                                                    $i = rand(0, count($bg)-1); // generate random number size of the array
+                                                    $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+                                                    ?>
                                                 <div id="news_Icon" class="Icon" style="background: url(<?php echo $layout_name; ?>/images/global/menu/<?php echo $selectedBg; ?>) no-repeat;"></div>
                                                 <div id="news_Label" class="Label" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/label-news.gif);"></div>
                                                 <div id="news_Extend"  style="background-image: url(<?php echo $layout_name; ?>/images/global/general/minus.gif);"></div>
@@ -364,13 +386,13 @@ background-attachment: fixed;
                                                     <div class="light_lu" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                     <div class="light_ld" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                     <div class="light_ru" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
-													<div class="light_rd" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
+                                                    <div class="light_rd" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                 </span>
-													<?php
-													$bg = array('icon-community01.gif', 'icon-community02.gif', 'icon-community03.gif', 'icon-community04.gif', 'icon-community05.gif', 'icon-community06.gif', 'icon-community07.gif', 'icon-community08.gif'); // array of filenames
-													$i = rand(0, count($bg)-1); // generate random number size of the array
-													$selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
-													?>
+                                                    <?php
+                                                    $bg = array('icon-community01.gif', 'icon-community02.gif', 'icon-community03.gif', 'icon-community04.gif', 'icon-community05.gif', 'icon-community06.gif', 'icon-community07.gif', 'icon-community08.gif'); // array of filenames
+                                                    $i = rand(0, count($bg)-1); // generate random number size of the array
+                                                    $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+                                                    ?>
                                                 <div id="community_Icon" class="Icon" style="background: url(<?php echo $layout_name; ?>/images/global/menu/<?php echo $selectedBg; ?>) no-repeat;"></div>
                                                 <div id="community_Label" class="Label" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/label-community.gif);"></div>
                                                 <div id="community_Extend"  style="background-image: url(<?php echo $layout_name; ?>/images/global/general/plus.gif);"></div>
@@ -486,13 +508,13 @@ background-attachment: fixed;
                                                     <div class="light_lu" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                     <div class="light_ld" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                     <div class="light_ru" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
-													<div class="light_rd" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
+                                                    <div class="light_rd" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                 </span>
-													<?php
-													$bg = array('icon-forum01.gif', 'icon-forum02.gif', 'icon-forum03.gif', 'icon-forum04.gif', 'icon-forum05.gif', 'icon-forum06.gif', 'icon-forum07.gif', 'icon-forum08.gif', 'icon-forum09.gif', 'icon-forum10.gif'); // array of filenames
-													$i = rand(0, count($bg)-1); // generate random number size of the array
-													$selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
-													?>
+                                                    <?php
+                                                    $bg = array('icon-forum01.gif', 'icon-forum02.gif', 'icon-forum03.gif', 'icon-forum04.gif', 'icon-forum05.gif', 'icon-forum06.gif', 'icon-forum07.gif', 'icon-forum08.gif', 'icon-forum09.gif', 'icon-forum10.gif'); // array of filenames
+                                                    $i = rand(0, count($bg)-1); // generate random number size of the array
+                                                    $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+                                                    ?>
                                                 <div id="forum_Icon" class="Icon" style="background: url(<?php echo $layout_name; ?>/images/global/menu/<?php echo $selectedBg; ?>) no-repeat;"></div>
                                                 <div id="forum_Label" class="Label" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/label-forum.gif);"></div>
                                                 <div id="forum_Extend"  style="background-image: url(<?php echo $layout_name; ?>/images/global/general/plus.gif);"></div>
@@ -519,13 +541,13 @@ background-attachment: fixed;
                                                     <div class="light_lu" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                     <div class="light_ld" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                     <div class="light_ru" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
-													<div class="light_rd" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
+                                                    <div class="light_rd" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                 </span>
-													<?php
-													$bg = array('icon-account01.gif', 'icon-account02.gif', 'icon-account03.gif', 'icon-account04.gif', 'icon-account05.gif'); // array of filenames
-													$i = rand(0, count($bg)-1); // generate random number size of the array
-													$selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
-													?>
+                                                    <?php
+                                                    $bg = array('icon-account01.gif', 'icon-account02.gif', 'icon-account03.gif', 'icon-account04.gif', 'icon-account05.gif'); // array of filenames
+                                                    $i = rand(0, count($bg)-1); // generate random number size of the array
+                                                    $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+                                                    ?>
                                                 <div id="account_Icon" class="Icon" style="background: url(<?php echo $layout_name; ?>/images/global/menu/<?php echo $selectedBg; ?>) no-repeat;"></div>
                                                 <div id="account_Label" class="Label" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/label-account.gif);"></div>
                                                 <div id="account_Extend"  style="background-image: url(<?php echo $layout_name; ?>/images/global/general/plus.gif);"></div>
@@ -590,11 +612,11 @@ background-attachment: fixed;
                                                     <div class="light_ru" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                     <div class="light_rd" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                 </span>
-													<?php
-													$bg = array('icon-library01.gif', 'icon-library02.gif', 'icon-library03.gif', 'icon-library04.gif', 'icon-library05.gif'); // array of filenames
-													$i = rand(0, count($bg)-1); // generate random number size of the array
-													$selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
-													?>
+                                                    <?php
+                                                    $bg = array('icon-library01.gif', 'icon-library02.gif', 'icon-library03.gif', 'icon-library04.gif', 'icon-library05.gif'); // array of filenames
+                                                    $i = rand(0, count($bg)-1); // generate random number size of the array
+                                                    $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+                                                    ?>
                                                 <div id="library_Icon" class="Icon" style="background: url(<?php echo $layout_name; ?>/images/global/menu/<?php echo $selectedBg; ?>) no-repeat;"></div>
                                                 <div id="library_Label" class="Label" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/label-library.gif);"></div>
                                                 <div id="library_Extend"  style="background-image: url(<?php echo $layout_name; ?>/images/global/general/plus.gif);"></div>
@@ -653,13 +675,13 @@ background-attachment: fixed;
                                                 <div class="light_lu" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                 <div class="light_ld" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                 <div class="light_ru" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
-												<div class="light_rd" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
+                                                <div class="light_rd" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                             </span>
-													<?php
-													$bg = array('icon-wars01.gif', 'icon-wars02.gif', 'icon-wars03.gif', 'icon-wars04.gif', 'icon-wars05.gif', 'icon-wars06.gif', 'icon-wars07.gif', 'icon-wars08.gif', 'icon-wars09.gif', 'icon-wars10.gif', 'icon-wars11.gif', 'icon-wars12.gif', 'icon-wars13.gif', 'icon-wars14.gif'); // array of filenames
-													$i = rand(0, count($bg)-1); // generate random number size of the array
-													$selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
-													?>
+                                                <?php
+                                                $bg = array('icon-wars01.gif', 'icon-wars02.gif', 'icon-wars03.gif', 'icon-wars04.gif', 'icon-wars05.gif', 'icon-wars06.gif', 'icon-wars07.gif', 'icon-wars08.gif', 'icon-wars09.gif', 'icon-wars10.gif', 'icon-wars11.gif', 'icon-wars12.gif', 'icon-wars13.gif', 'icon-wars14.gif'); // array of filenames
+                                                $i = rand(0, count($bg)-1); // generate random number size of the array
+                                                $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+                                                ?>
                                             <div id="wars_Icon" class="Icon" style="background: url(<?php echo $layout_name; ?>/images/global/menu/<?php echo $selectedBg; ?>) no-repeat;"></div>
                                             <div id="wars_Label" class="Label" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/label-wars.gif);"></div>
                                             <div id="wars_Extend"  style="background-image: url(<?php echo $layout_name; ?>/images/global/general/plus.gif);"></div>
@@ -695,13 +717,13 @@ background-attachment: fixed;
                                                 <div class="light_lu" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                 <div class="light_ld" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                 <div class="light_ru" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
-												<div class="light_rd" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
+                                                <div class="light_rd" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                             </span>
-													<?php
-													$bg = array('icon-events01.gif', 'icon-events02.gif', 'icon-events03.gif', 'icon-events04.gif', 'icon-events05.gif', 'icon-events06.gif', 'icon-events07.gif', 'icon-events08.gif', 'icon-events09.gif', 'icon-events10.gif', 'icon-events11.gif', 'icon-events12.gif', 'icon-events13.gif'); // array of filenames
-													$i = rand(0, count($bg)-1); // generate random number size of the array
-													$selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
-													?>
+                                                <?php
+                                                $bg = array('icon-events01.gif', 'icon-events02.gif', 'icon-events03.gif', 'icon-events04.gif', 'icon-events05.gif', 'icon-events06.gif', 'icon-events07.gif', 'icon-events08.gif', 'icon-events09.gif', 'icon-events10.gif', 'icon-events11.gif', 'icon-events12.gif', 'icon-events13.gif'); // array of filenames
+                                                $i = rand(0, count($bg)-1); // generate random number size of the array
+                                                $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+                                                ?>
                                             <div id="events_Icon" class="Icon" style="background: url(<?php echo $layout_name; ?>/images/global/menu/<?php echo $selectedBg; ?>) no-repeat;"></div>
                                             <div id="events_Label" class="Label" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/label-events.gif);"></div>
                                             <div id="events_Extend"  style="background-image: url(<?php echo $layout_name; ?>/images/global/general/plus.gif);"></div>
@@ -752,13 +774,13 @@ background-attachment: fixed;
                                                     <div class="light_lu" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                     <div class="light_ld" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                     <div class="light_ru" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
-													<div class="light_rd" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
+                                                    <div class="light_rd" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                 </span>
-													<?php
-													$bg = array('icon-support01.gif', 'icon-support02.gif', 'icon-support03.gif', 'icon-support04.gif', 'icon-support05.gif', 'icon-support06.gif', 'icon-support07.gif', 'icon-support08.gif', 'icon-support09.gif', 'icon-support10.gif', 'icon-support11.gif'); // array of filenames
-													$i = rand(0, count($bg)-1); // generate random number size of the array
-													$selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
-													?>
+                                                    <?php
+                                                    $bg = array('icon-support01.gif', 'icon-support02.gif', 'icon-support03.gif', 'icon-support04.gif', 'icon-support05.gif', 'icon-support06.gif', 'icon-support07.gif', 'icon-support08.gif', 'icon-support09.gif', 'icon-support10.gif', 'icon-support11.gif'); // array of filenames
+                                                    $i = rand(0, count($bg)-1); // generate random number size of the array
+                                                    $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+                                                    ?>
                                                 <div id="support_Icon" class="Icon" style="background: url(<?php echo $layout_name; ?>/images/global/menu/<?php echo $selectedBg; ?>) no-repeat;"></div>
                                                 <div id="support_Label" class="Label" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/label-support.gif);"></div>
                                                 <div id="support_Extend"  style="background-image: url(<?php echo $layout_name; ?>/images/global/general/plus.gif);"></div>
@@ -812,13 +834,13 @@ background-attachment: fixed;
                                                     <div class="light_lu" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                     <div class="light_ld" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                     <div class="light_ru" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
-													<div class="light_rd" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
+                                                    <div class="light_rd" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/green-light.gif);"></div>
                                                 </span>
-													<?php
-													$bg = array('icon-shops01.gif', 'icon-shops02.gif', 'icon-shops03.gif', 'icon-shops04.gif'); // array of filenames
-													$i = rand(0, count($bg)-1); // generate random number size of the array
-													$selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
-													?>
+                                                    <?php
+                                                    $bg = array('icon-shops01.gif', 'icon-shops02.gif', 'icon-shops03.gif', 'icon-shops04.gif'); // array of filenames
+                                                    $i = rand(0, count($bg)-1); // generate random number size of the array
+                                                    $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+                                                    ?>
                                                 <div id="shop_Icon" class="Icon" style="background: url(<?php echo $layout_name; ?>/images/global/menu/<?php echo $selectedBg; ?>) no-repeat;"></div>
                                                 <div id="shop_Label" class="Label" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/label-shops.gif);"></div>
                                                 <div id="shop_Extend"  style="background-image: url(<?php echo $layout_name; ?>/images/global/general/plus.gif);"></div>
@@ -844,7 +866,7 @@ background-attachment: fixed;
                                             <div class="RightChain" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);"></div>
                                         </div>
                                     </a>
-									 <a href="?subtopic=donate_tc">
+                                     <a href="?subtopic=donate_tc">
                                         <div id="submenu_donate_tc" data-menu="shop" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
                                             <div class="LeftChain" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);"></div>
                                             <div id="ActiveSubmenuItemIcon_donate_tc" class="ActiveSubmenuItemIcon" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/icon-activesubmenu.gif);"></div>
@@ -852,7 +874,7 @@ background-attachment: fixed;
                                             <div class="RightChain" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);"></div>
                                         </div>
                                     </a>
-									<a href="?subtopic=eventshop">
+                                    <a href="?subtopic=eventshop">
                                         <div id="submenu_eventshop" data-menu="eventshop" class="Submenuitem" onmouseover="MouseOverSubmenuItem(this)" onmouseout="MouseOutSubmenuItem(this)">
                                             <div class="LeftChain" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);"></div>
                                             <div id="ActiveSubmenuItemIcon_eventshop" class="ActiveSubmenuItemIcon" style="background-image:url(<?php echo $layout_name; ?>/images/global/menu/icon-activesubmenu.gif);"></div>
@@ -1036,8 +1058,8 @@ background-attachment: fixed;
                                     </div>
                                 </div>
                                 <div id="ThemeboxesColumn">
-                                	<?PHP
-                                		$monsterquery = $SQL->query("SELECT `boostname`, `looktype`, `lookfeet` , `looklegs` , `lookhead` , `lookbody` , `lookaddons` , `lookmount`   FROM `boosted_creature`")->fetch();
+                                    <?PHP
+                                        $monsterquery = $SQL->query("SELECT `boostname`, `looktype`, `lookfeet` , `looklegs` , `lookhead` , `lookbody` , `lookaddons` , `lookmount`   FROM `boosted_creature`")->fetch();
                                         $monstername = $monsterquery["boostname"];
                                         $monstertype = $monsterquery["looktype"];
                                         $monsterfeet = $monsterquery["lookfeet"];
@@ -1046,7 +1068,7 @@ background-attachment: fixed;
                                         $monsterbody = $monsterquery["lookbody"];
                                         $monsteraddons = $monsterquery["lookaddons"];
                                         $monstermount= $monsterquery["lookmount"];
-                                	?>
+                                    ?>
                                     <div id="DeactivationContainerThemebox" onclick="DisableDeactivationContainer();"></div>
                                     <?php if(Website::getWebsiteConfig()->getValue('info_bar_active')){?>
                                     <div id="RightArtwork">
@@ -1086,13 +1108,12 @@ background-attachment: fixed;
                                             <img id="PedestalAndOnline" style="" src="<?php echo $layout_name; ?>/images/global/header/pedestal-and-online.gif" alt="Monster Pedestal and Online">
                                             <div id="PlayersOnline" onclick="window.location = '?subtopic=worlds';"><?php echo $players_online; ?></div>
                                         </div>
-									<?php }?>
-										  <div id="Themeboxes">
-										<?php $files = array('widgets/widget_PremiumBox.php', 'widgets/widget_PremiumBox2.php', 'widgets/widget_PremiumBox3.php', 'widgets/widget_PremiumBox4.php', 'widgets/widget_PremiumBox5.php', 'widgets/widget_PremiumBox6.php', 'widgets/widget_PremiumBox7.php');
-										// randomly include a file
-										include_once $files[array_rand($files)];?>							
-										<?php //include_once "widgets/widget_PremiumBox.php"?>								
-                                        <?php include_once "widgets/widget_rank.php"?>                                          
+                                    <?php }?>
+                                          <div id="Themeboxes">
+                                        <?php $files = array('widgets/widget_PremiumBox.php', 'widgets/widget_PremiumBox2.php', 'widgets/widget_PremiumBox3.php', 'widgets/widget_PremiumBox4.php', 'widgets/widget_PremiumBox5.php', 'widgets/widget_PremiumBox6.php', 'widgets/widget_PremiumBox7.php');
+                                        // randomly include a file
+                                        include_once $files[array_rand($files)];?>
+                                        <?php include_once "widgets/widget_rank.php"?> 
                                         <?php include_once "widgets/widget_Serverinfobox.php"?>
                                         <?php include_once "widgets/widget_NetworksBox.php"?>
                                         <?php include_once "widgets/widget_CurrentPollBox.php"?>
@@ -1120,8 +1141,8 @@ background-attachment: fixed;
                                             position: absolute;text - align: center;margin - left: auto;margin - right: auto;top: 0;height: 30px;max - width: 140 px;overflow: visible;padding - top: 155 px;padding - left: 20 px
                                         }
                                         </style>
-                                        <!-- Search Character -->              
-                                        <!--<div id="searchcharButton" class="Themebox" style="background-image:url(<?php echo $layout_name; ?>/images/global/themeboxes/searchplayer.png);">
+                                        <!-- Search Character -->
+                                        <!-- <div id="searchcharButton" class="Themebox" style="background-image:url(<?php echo $layout_name; ?>/images/global/themeboxes/searchplayer.png);">
                                                 <form method="post" action="?subtopic=characters">
                                                     <input style="margin:50px 20px" name="name" type="text" placeholder="Character name" class="pesquiserplayer" required>
                                                     <div class="BigButton" style="background-image:url(<?php echo $layout_name; ?>/images/global/buttons/sbutton.gif);margin-left: 23px; margin-top: -30px;">
@@ -1133,7 +1154,7 @@ background-attachment: fixed;
                                                 </form>
                                                 <div class="Bottom" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/box-bottom.gif);">
                                             </div>
-                                        </div>--> 
+                                        </div>-->
                                     </div>
                                 </div>
                             </div>
@@ -1236,11 +1257,14 @@ background-attachment: fixed;
     <!-- float facebook like box start -->
 <?php if (Website::getWebsiteConfig()->getValue('widget_Serverinfoboxfloat')) { ?>
     <script id="float_fb" src="<?=$layout_name?>/js/fb_float_plugin.js<?php echo $css_version;?>" data-href="<?=$config['social']['facebook']?>" async></script>
-    <!-- float facebook like box end --> 
-	<!-- float facebook like box start -->
+    <!-- float facebook like box end -->
+    <!-- float discord start -->
     <script id="float_dc" src="<?php echo $layout_name; ?>/js/dc_float_plugin.js<?php echo $css_version;?>" data-href="<?=$config['social']['discord']?>" async></script>
-    <!-- float facebook like box end -->			
-<?php }?>   
+     <!-- float discord end -->
+<?php }?>
+    <!-- float discord start -->
+    <!-- <script id="float_discord" src="<?php echo $layout_name; ?>/js/discord/discord_float_plugin.js" data-id="528117503952551936&theme=dark"></script> -->
+    <!-- float discord end --> 
 <script src="<?php echo $layout_name; ?>/js/ouibounce.min.js<?php echo $css_version;?>"></script>
 <?php include_once "promo/promo.php"; ?>
 </body>

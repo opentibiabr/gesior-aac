@@ -493,7 +493,7 @@ $main_content .= '
 																	<table class="TableContent" width="100%" style="border:1px solid #faf0d7;">
 																		<tbody>
 																			<tr class="LabelH">
-																				<td></td>
+																				
 																				<td style="width:40%;">Name</td>
 																				<td style="width:120px!important;">World</td>
 																				<td style="width:90px!important;">Status</td>
@@ -551,24 +551,13 @@ foreach ($account_players as $account_player) {
 
 
 	$main_content .= '
-																				<td style="width:40px;text-align:center;padding:2px;">
-																					<span id="CharacterNumberOf_' . $player_number_counter . '" style="display: ' . $displayNum . ';">' . $player_number_counter . '.</span>
-																					<span id="PlayButtonOf_' . $player_number_counter . '" style="display: ' . $display . ';">
-																						<!--<span name="FlashClientPlayButton" id="FlashClientPlayButton" playlink="?subtopic=play&name=' . htmlspecialchars($account_player->getName()) . '" ' . $preview . '> -->';
-
-	if ($account_player->isDeleted()) {
-		$main_content .= '<img style="border:0px;" src="' . $layout_name . '/images/account/play-not-button.gif">';
-	} else if (!$config['site']['flash_client_enabled']) {
-		$main_content .= '<img style="border:0px;" alt="Flash client disabled" src="' . $layout_name . '/images/account/play-button-disabled.gif">';
-	} else {
-		$main_content .= '
-																								<img style="border:0px;" onmouseover="InMiniButton(this, &#39;&#39;);" onmouseout="OutMiniButton(this, &#39;&#39;);" src="' . $layout_name . '/images/account/play-button.gif">';
-	}
+																				
+																					<span id="CharacterNumberOf_' . $player_number_counter . '" style="display: ' . $displayNum . ';">' . $player_number_counter . '.</span>';
 
 	$main_content .= '
 																						<!-- </span> -->
 																					</span>
-																				</td>
+																			
 																				<td id="CharacterCell2_' . $player_number_counter . '">
 																					<span style="white-space:nowrap;vertical-align:middle;">
 																						<span id="CharacterNameOf_' . $player_number_counter . '" style="font-size: ' . $displayFont . 'pt;">' . htmlspecialchars($account_player->getName()) . '</span><br>
@@ -650,10 +639,6 @@ $main_content .= '
 					</div>
 				</div>
 				<br>';
-$main_content .= '
-				<script>
-					EnablePlayButton();
-				</script>';
 //MIGRATION TOOL ;D
 $main_content .= '
 					<div class="SmallBox">

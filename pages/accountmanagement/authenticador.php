@@ -1,5 +1,4 @@
-<?php
-
+<?php if (Website::getWebsiteConfig()->getValue('twoAuthentication2')) {
 if (!defined('INITIALIZED'))
 	exit;
 $step = $_REQUEST['step'];
@@ -38,7 +37,6 @@ if ($logged) {
 										<form action="?subtopic=accountmanagement&action=twoAuthentication" method="post" style="padding:0px;margin:0px;" >
 											<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_red.gif)" >
 												<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_red_over.gif);" ></div>
-													<span class="ButtonTextInputs" >Voltar</span>
 													<input class="ButtonText" type="image" name="Cancel" alt="cancel" src="' . $layout_name . '/images/global/buttons/_sbutton_cancel.gif" >
 												</div>
 											</div>
@@ -56,7 +54,7 @@ if ($logged) {
 									<form action="?subtopic=accountmanagement" method="post" style="padding:0px;margin:0px;" >
 										<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_red.gif)" >
 											<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_red_over.gif);" ></div>
-												<span class="ButtonTextInputs" >Voltar</span>
+												
 												<input class="ButtonText" type="image" name="Cancel" alt="Cancel" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
 											</div>
 										</div>
@@ -114,7 +112,7 @@ if ($logged) {
 											<td style="border:0px;" >
 												<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 													<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-														<span class="ButtonTextInputs" >Ativar 2FA!</span>
+														
 														<input class="ButtonText" type="image" name="Ativar" alt="Ativar" src="' . $layout_name . '/images/global/buttons/_sbutton_confirm.gif" >
 													</div>
 												</div>
@@ -130,7 +128,7 @@ if ($logged) {
 												<td style="border:0px;" >
 													<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 														<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-														<span class="ButtonTextInputs" >Voltar</span>
+														
 														<input class="ButtonText" type="image" name="Voltar" alt="Voltar" src="' . $layout_name . '/images/global/buttons/_sbutton_cancel.gif" >
 													</div>
 												</td>
@@ -177,7 +175,7 @@ if ($logged) {
 									<form action="?subtopic=accountmanagement&action=twoAuthentication" method="post" style="padding:0px;margin:0px;" >
 										<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_red.gif)" >
 											<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_red_over.gif);" ></div>
-												<span class="ButtonTextInputs" >Voltar</span>
+											
 												<input class="ButtonText" type="image" name="Change Password" alt="Change Password" src="' . $layout_name . '/images/global/buttons/_sbutton_cancel.gif" >
 											</div>
 										</div>
@@ -190,18 +188,18 @@ if ($logged) {
 				$SQL->query("UPDATE `accounts` SET `secret`= NULL WHERE `id`= '" . $account_logged->getID() . "';");
 				$main_content .= tibiaTable("2FA desativado!", "O 2FA foi desativado com sucesso da sua conta.");
 				$main_content .= '
-						<div class="SubmitButtonRow" >
-							<div class="CenterButton" >
-								<form action="?subtopic=accountmanagement" method="post" style="padding:0px;margin:0px;" >
-									<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_red.gif)" >
-										<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_red_over.gif);" ></div>
-											<span class="ButtonTextInputs" >Voltar</span>
-											<input class="ButtonText" type="image" name="Back" alt="back" src="' . $layout_name . '/images/global/buttons/sbutton_back.gif" >
-										</div>
-									</div>
-								</form>
+			<div class="SubmitButtonRow">
+					<div class="CenterButton">
+						<form action="?subtopic=accountmanagement" method="post" style="padding:0px;margin:0px;">
+							<div class="BigButton" style="background-image:url(./layouts/tibiacom/images/global/buttons/sbutton_red.gif)">
+								<div onmouseover="MouseOverBigButton(this);" onmouseout="MouseOutBigButton(this);"><div class="BigButtonOver" style="background-image: url(&quot;./layouts/tibiacom/images/global/buttons/sbutton_red_over.gif&quot;); visibility: hidden;"></div>
+									
+									<input class="ButtonText" type="image" name="Back" alt="back" src="./layouts/tibiacom/images/global/buttons/_sbutton_back.gif">
+								</div>
 							</div>
-						</div>';
+						</form>
+					</div>
+				</div>';
 				return;
 			}
 
@@ -248,7 +246,7 @@ if ($logged) {
 										<td style="border:0px;" >
 											<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_green.gif)" >
 												<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_green_over.gif);" ></div>
-													<span class="ButtonTextInputs" >Desativar 2FA!</span>
+													
 													<input class="ButtonText" type="image" name="Desativar" alt="Desativar" src="' . $layout_name . '/images/global/buttons/_sbutton_confirm.gif" >
 												</div>
 											</div>
@@ -264,7 +262,7 @@ if ($logged) {
 											<td style="border:0px;" >
 												<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_red.gif)" >
 													<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_red_over.gif);" ></div>
-													<span class="ButtonTextInputs" >Voltar</span>
+													
 													<input class="ButtonText" type="image" name="Voltar" alt="Voltar" src="' . $layout_name . '/images/global/buttons/_sbutton_cancel.gif" >
 												</div>
 											</td>
@@ -367,7 +365,7 @@ if ($logged) {
 						<form action="?subtopic=accountmanagement" method="post" style="padding:0px;margin:0px;" >
 							<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_red.gif)" >
 								<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_red_over.gif);" ></div>
-									<span class="ButtonTextInputs" >Voltar</span>
+									
 									<input class="ButtonText" type="image" name="Back" alt="back" src="' . $layout_name . '/images/global/buttons/_sbutton_cancel.gif" >
 								</div>
 							</div>
@@ -377,3 +375,35 @@ if ($logged) {
 } else {
 	header("location: ./?subtopic=accountmanagement");
 }
+}
+else {
+	header('Refresh: 5; ?subtopic=accountmanagement&action=manage');
+		$main_content .= '
+			<div class="TableContainer" >
+				<table class="Table1" cellpadding="0" cellspacing="0" >
+					<div class="CaptionContainer" >
+						<div class="CaptionInnerContainer" >
+							<span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
+							<span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
+							<span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
+							<span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
+							<div class="Text">Two-Step Authenticator Is Disabled</div>
+							<span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
+							<span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
+							<span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
+							<span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
+						</div>
+					</div>
+					<tr>
+						<td><div class="InnerTableContainer" >
+								<table style="width:100%;" >
+									<tr>
+										<td>[' . htmlspecialchars($config['server']['serverName']) . ' :Information] The two-step authenticator is disabled you will be redirected to the previous page in 5 seconds. Or click here to be redirected <a href="?subtopic=accountmanagement&action=manage">now</a>.</td>
+									</tr>
+								</table>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>'; }
+?>

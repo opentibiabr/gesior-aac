@@ -308,13 +308,13 @@ function MouseOutMenuItem(source) {
 
 function MouseOverSubmenuItem(source) {
     if(source.style){
-        source.style.backgroundColor = "#14433F";
+        source.style.backgroundColor = "#070808";
     }
 }
 
 function MouseOutSubmenuItem(source) {
     if(source.style){
-        source.style.backgroundColor = "#0D2E2B";
+        source.style.backgroundColor = "#1d211f";
     }
 }
 

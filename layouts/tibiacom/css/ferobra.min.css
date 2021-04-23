@@ -860,6 +860,15 @@ body {
     left: 3px
 }
 
+.light_rd {
+    position: absolute;
+    top: 28px;
+    right: 3px;
+    height: 2px;
+    width: 2px;
+    background-repeat: no-repeat
+}
+
 .Lights {
     visibility: hidden
 }
@@ -914,7 +923,7 @@ body {
 .Submenu {
     position: relative;
     margin: 0 auto;
-    background-color: #0D2E2B
+    background-color: #1d211f
 }
 
 .ActiveSubmenuItemIcon {
@@ -933,33 +942,33 @@ body {
     padding-top: 2px;
     padding-bottom: 2px;
     padding-left: 23px;
-    border-bottom: 1px solid #4b7874;
+    border-bottom: 1px solid #4d4b4b;
     overflow: hidden
 }
 
 .Submenu a:link {
-    color: #d7d7d7;
-    text-decoration: none
+    color: #cab667;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.50), 1px -1px 0 rgba(0, 0, 0, 0.50), -1px 1px 0 rgba(0, 0, 0, 0.50), 1px 1px 0 rgba(0, 0, 0, 0.50);
+    text-decoration: none;
 }
-
 .Submenu a:visited {
-    color: #d7d7d7;
-    text-decoration: none
+    color: #cab667;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.50), 1px -1px 0 rgba(0, 0, 0, 0.50), -1px 1px 0 rgba(0, 0, 0, 0.50), 1px 1px 0 rgba(0, 0, 0, 0.50);
+    text-decoration: none;
 }
-
 .Submenu a:focus {
-    color: #d7d7d7;
-    text-decoration: none
+    color: #cab667;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.50), 1px -1px 0 rgba(0, 0, 0, 0.50), -1px 1px 0 rgba(0, 0, 0, 0.50), 1px 1px 0 rgba(0, 0, 0, 0.50);
+    text-decoration: none;
 }
-
 .Submenu a:active {
-    color: white;
-    text-decoration: none
+    color: #cab667;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.50), 1px -1px 0 rgba(0, 0, 0, 0.50), -1px 1px 0 rgba(0, 0, 0, 0.50), 1px 1px 0 rgba(0, 0, 0, 0.50);
+    text-decoration: none;
 }
-
 .Submenu a:hover {
-    color: white;
-    text-decoration: none
+    color: #d2d8d9;
+    text-decoration: none;
 }
 
 .Content .BoxContent {
@@ -1317,7 +1326,6 @@ body {
 
 #Themeboxes #Serverinfobox {
     position: relative;
-    top: 0px
 }
 
 #Themeboxes #ScreenshotBox #ScreenshotContentFrame {
@@ -1461,7 +1469,6 @@ body {
 #Themeboxes #NetworksBox {
     position: relative;
     height: 204px;
-	top: 0px;
 }
 
 #Themeboxes #NetworksBox #FacebookBlock {
@@ -3715,19 +3722,15 @@ table.fixed td {
 }
 #supportButton {
     opacity: 0.8;
-	top: 0px;
 }
 #buycharButton {
     opacity: 0.8;
-	top: 0px;
 }
 #supportButton:hover {
     opacity: 1;
-	top: 0px;
 }
 #buycharButton:hover {
     opacity: 1;
-	top: 0px;
 }
 #ReCaptchaPositionContainer {
     position: absolute;
@@ -4510,11 +4513,11 @@ table.fixed td {
     color: #d3e7f2;
     line-height: 1.2 !important;
     position: relative;
-    width: 290px;
-	height: 495px;
+    width: 223px;
+	height: 358px;
     background: url(../images/themeboxes/bk_themebox.png) no-repeat center;
-    top: 15px;
-	right: 85px;
+    top: 120px;
+	right: 12px;
     text-align: justify;
 }
 .top1 {
@@ -4540,15 +4543,15 @@ table.fixed td {
 .TopLvl_title {
     z-index: 10;
     position: relative;
-    top: 80px;
-	left: 95px;
+    top: -28px;
+	left: 25px;
     text-align: center;
     background: url(../images/themeboxes/bks_top.png) no-repeat center bottom;
     background-size: 100%;
-    width: 75%;
+    width: 100%;
     color: #ffdf8e;
     text-shadow: 0 1px 2px #000, 0 1px 5px #000;
-    font-size: 13px;
+    font-size: 15px;
 	font: 600 8pt sans-serif;
     margin: 18px 0 0 -25px;
     line-height: 76px;
@@ -4584,8 +4587,8 @@ table.fixed td {
     margin: -10px 0 0 0;
     padding: 0 0 6px 40px;
     position: relative;
-	left: 100px;
-    top: 90px
+	left: 30px;
+    top: -20px
 }
 .tplevellayout:last-child {
     padding: 0 0 -10px 40px
@@ -4633,7 +4636,7 @@ table.fixed td {
     left: 58px;
     z-index: 1
 }
-.rankinglevel span.fifthlevel {
+.rankinglevel span.sevenlevel {
     background: transparent url(../images/themeboxes/rank2.png) no-repeat center;
     position: absolute;
     width: 19px;
@@ -4690,7 +4693,7 @@ table.fixed td {
     top: -31px;
     left: -52px
 }
-.rankinglevel #fifthlevel_nomount {
+.rankinglevel #sevenlevel_nomount {
     z-index: 101;
     background: transparent url(../images/themeboxes/t_blue.png) no-repeat;
     background-size: 111%;
@@ -4745,7 +4748,7 @@ table.fixed td {
     top: -49px;
     left: -65px
 }
-.rankinglevel #fifthlevel_mount {
+.rankinglevel #sevenlevel_mount {
     z-index: 101;
     background: transparent url(../images/themeboxes/t_blue.png) no-repeat;
     background-size: 100%;
@@ -4989,7 +4992,6 @@ table.fixed td {
 }
 
 #CastleWarBox {
-	top: 0px;
 }
 
 #header-image

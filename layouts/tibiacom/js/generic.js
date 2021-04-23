@@ -264,23 +264,6 @@ function OutMiniButton(a_Button, a_IsPreview)
 }
 
 // TibiaWebsite_flashclientrelease/html/account/?subtopic=play&name=First+Char
-function EnablePlayButton()
-{
-    l_Elements = document.getElementsByName("FlashClientPlayButton");
-    for (var i = 0; i < l_Elements.length; i++) {
-        l_PlayLink = l_Elements[i].getAttribute("playlink");
-        l_PreviewState = l_Elements[i].getAttribute("previewstate");
-        l_IsPreviewString = '';
-        if (l_PreviewState > 1) {
-            l_IsPreviewString = 'preview-';
-        }
-        if (g_FlashClientInPopUp == true) {
-            l_Elements[i].innerHTML = '<a href="' + l_PlayLink + '" onClick="openGameWindow(\'' + l_PlayLink + '\'); return false;" ><img style="border:0px;" onMouseOver="InMiniButton(this, \'' + l_IsPreviewString + '\');" onMouseOut="OutMiniButton(this, \'' + l_IsPreviewString + '\');" src="' + JS_DIR_IMAGES + 'account/' + l_IsPreviewString + 'play-button.gif" /></a>';
-        } else {
-            l_Elements[i].innerHTML = '<a href="' + l_PlayLink + '" ><img style="border:0px;" onMouseOver="InMiniButton(this, \'' + l_IsPreviewString + '\');" onMouseOut="OutMiniButton(this, \'' + l_IsPreviewString + '\');" src="' + JS_DIR_IMAGES + 'account/' + l_IsPreviewString + 'play-button.gif" /></a>';
-        }
-    }
-}
 
 function ShowHelperDiv(a_ID)
 {

@@ -63,6 +63,7 @@ $config['site']['widget_Serverinfoboxfloat'] = true;
 $config['site']['widget_NetworksBox'] = false;
 $config['site']['widget_CurrentPollBox'] = false;
 $config['site']['widget_CastleWarBox'] = false;
+$config['site']['twoAuthentication2'] = true;
 
 /** WIDGETS 'widget_rank' TOP LVL CONFIGS */
 $config['site']['top_lvl_qtd'] = 5; // 1 -- 5

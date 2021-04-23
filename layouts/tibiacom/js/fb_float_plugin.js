@@ -1,10 +1,10 @@
 (function(){
     var load_float_fb = function($){
         var defaults = {
-                container_width:280,
-                height:224,
+                container_width:300,
+                height:350,
                 show_facepile:'true',
-                tabs:'',
+                tabs:'timeline',
                 href:''
             },
             cfg = $("#float_fb").data(),
@@ -25,7 +25,7 @@
         var status_ = 'hide'; // showing, hiding, show, hide
         $("body").append(
             ['<div id="float_fb_plugin" style="visibility:hidden">',
-                '<img src="' + png + '" style="cursor:pointer;position:absolute;margin-left:-47px;" border=0 />',
+                '<img src="' + png + '" style="cursor:pointer;position:absolute;margin-left:-44px;" border=0 />',
                 '<iframe scrolling="no" frameborder="0" allowTransparency="true"></iframe>',
             '</div>'].join(''));
         var w = $("#float_fb_plugin");
@@ -91,4 +91,3 @@
         load_float_fb(jQuery);
 
 })();
-

@@ -42,7 +42,7 @@ if (!$logged)
 			</div>';
 	} else {
 		$passB = '<span>Password:</span>';
-		$logB = '<span>Account Name:</span>';
+		$logB = '<span>Account Name Or Email:</span>';
 		$secretL = '<span>Secret Code:</span>';
 		if (isset($action) && $action != '') {
 			$main_content .= "
@@ -448,3 +448,4 @@ if (!$logged)
 		if ($action == "showtickets") include 'accountmanagement/showtickets.php';
 	}
 }
+?>
